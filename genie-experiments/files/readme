@@ -1,0 +1,9 @@
+Filelists.
+
+These filelists allow the creation of 'standalone' experiments by listing the
+data input files (boundary conditions, topography etc) stored in the genie
+source tree, which are required for a model run, allowing build_experiment.sh to
+copy them into the experiment directory (e.g.
+genie/genie-experiments/my_experiment/). File lists ate likely to be pretty
+standard for a particular setup of experiment, so these should be explicitly
+named and stored in this directory.  MJ 21/05/09

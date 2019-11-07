@@ -1,0 +1,1 @@
+genie_ini_wrappers.o genie_ini_wrappers.dep : genie_ini_wrappers.f90 

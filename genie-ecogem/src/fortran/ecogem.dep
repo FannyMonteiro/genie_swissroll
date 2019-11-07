@@ -1,0 +1,1 @@
+ecogem.o ecogem.dep : ecogem.f90 

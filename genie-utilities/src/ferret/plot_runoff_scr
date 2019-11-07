@@ -1,0 +1,28 @@
+#!/usr/bin/ksh
+
+cat << ENDCAT > runoff.jnl
+set mode metafile:runoff.plt
+!use  "/home/ggdjl/genie/genie-utilities/data/output/runoff_t21.nc"
+use  "/home/ggdjl/genie/genie-utilities/data/output/runoff_new_t21.nc"
+use "/home/ggdjl/genie/genie-igcm3/data/input/landmask_std_t21"
+def var u=(destination_indices[k=1,d=1]-simple_array[k=1,d=1])*lsm[d=2]
+def var v=(destination_indices[k=2,d=1]-simple_array[k=2,d=1])*lsm[d=2]*-1
+vector/xskip=1/yskip=1/length=3 u,v
+go land
+cancel mode metafile
+exit/program
+ENDCAT
+
+echo "go runoff" | ferret
+\rm runoff.jnl
+
+Fprint -o runoff.ps runoff.plt
+#convert runoff.ps runoff.eps
+convert runoff.ps runoff_new.eps
+\rm runoff.ps
+
+\rm ferret*
+\rm *.plt*
+
+
+exit

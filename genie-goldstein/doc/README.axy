@@ -1,0 +1,461 @@
+01/12/03
+========
+
+  *** initialise_ocean.F ***
+- Copied variable setups from mains.F to a new common block called
+  extra.cmn.  The intention is to ultimately combine this with the
+  existing common block and delete superfluous variables and/or EMBM
+  or sea-ice variables when the whole common block issue is resolved
+  (will need to contact Dan/David/Ian/Chris to make sense of what's
+  required when this is "sorted out").
+- Subroutine call includes a series of variables that should be set
+  up in initialise_ocean.F
+- The initialisation of the IGCM feeds in grid resolutions, I've done
+  this here as well, but haven't been able to use the variables that
+  do this.  In the IGCM setup, variables that make use of these
+  dimensions are declared with a (*), possibly denoting as yet
+  undeclared size.
+  *** Question for Bob ***
+- Added a reference to this new common block into initialise_ocean.f
+- Copied goin to goin_AXY.dat
+- Stripped out obvious EMBM and sea-ice parameters
+- Added in (fake) input and output directory names
+- Added these character arrays (plus integer array size variables
+  to extra.cmn
+- Added code to initialise_ocean.f to read in these directory names
+  to their variables - this code comes from earlier IGCM-coupling.
+  ? Don't quite understand the convention of referring to character
+  array positioning (i.e. indir_name(indir_len:indir_len) - but why
+  not just indir_name(indir_len)?)
+  *** Question for Dan ***
+- Adding code to read in remainder of GOIN information
+	- nsteps is a bit redundant now, only used by BioGEM (excised)
+	  (but remember it's used once usefully later!)
+	- npstp is still useful (kept)
+	- iwstp is still useful (kept)
+	- itstp is still useful (kept)
+	- ianav is still useful (kept)
+	- not sure yet if "new/continuing" is useful (kept for now)
+- After this, I'm back into gseto.F proper (i.e. what
+  initialise_ocean.f used to be)
+- Commented out EMBM definitions rfluxsc, saln0, rpmesco
+- Leaving in commented out code for now (probably want shot of this in
+  the future)
+- Read line for timesteps per year and A/O dt ratio altered so that
+  only timesteps per year read in
+- EMBM definitions for dtatm, rdtdim commented out
+- Added a print line to remind users what the vertical grid numbers
+  mean (it's not always obvious)
+- ?  What to do with BioGEM references?
+  *** Question for Andy/Dan/Neil ***
+- Read in line for temp0, temp1, rel, scl_tau unaltered
+  ?  What to do with scl_tau?  Presumably we'll still need this even
+  when we're using IGCM/alternative winds.  Leave for now.
+  *** Question for Bob ***
+- Read in diff(1) and diff(2) line unaltered
+- Read in adrag line unaltered
+- NOTE : have altered print* statements here so that GOLDSTEIN output
+  is easily identified (this might be completely unnecessary - but may
+  become an issue when lots of submodels are coupled together)
+- Commented out wind stress read in lines
+- *** May need to do something clever in goldstein.F ***
+- NOTE : may have an issue here re: scl_tau
+  We might need to multiply winds coming into GOLDSTEIN by scl_tau
+  in the main goldstein.F routine - ordinarily this is done here where
+  wind stresses are read in.
+- Modified file open line for topography so that it refers to input
+  directory.
+- ? May want to do something with runoff mask at this point?
+  *** Question for Bob ***
+- ? No idea what Neil's code following count of wet cells means.  It
+  might need modifying in the future if we're to use arbitrary
+  bathymetry.
+  *** Finds ocean basins - needs to be told where to start looking,
+  and in future it might be an idea to put this information in with
+  the bathymetry, or not ***
+- ? Lots of commented out code here - can I get rid of it?
+  *** Probably ***
+- Modified file open line for island geometry so that it refers to
+input directory
+- Modified file open line for island path integral so that it refers
+  to input directory
+- Added print* line above gseto.F's list of ocean model variables,
+  just to make things slightly easier for those who come after me ...
+- Finished with gseto.F code, moving back to mains.F
+- Skipping gseta.F code entirely
+  ?  Is there anything at all from here I'll need just now?
+- Adding call to radfor.f
+  ?  This should be necessary, but Bob has deleted it from the
+  genie-goldstein directory.  Is this because its work is being done
+  somewhere else?  In the IGCM or within the EMBM?
+  *** Question for Bob ***
+- Not adding call to radfor.f at this time (commenting it out).
+- Added read in for file extension name
+- Added "ifdef dosc" line.  This opens a file - file location modified
+  to include a reference to the output directory read in previously.
+  ?  This opens a file, which is fed by calls to diagosc.f, but this
+  routine needs editting so that it only outputs ocean data - at the
+  moment it does the EMBM and the sea-ice as well.
+  NOTE : don't forget to edit this routine!
+- Added code to open *.t and *.s files.  Not familiar with these, but
+  will leave them in for now.  File locations modified to include a
+  reference to the output directory read in previously.
+- Added some comments around the "new or continuing" part of the code.
+- If a "continuing" run is requested, this opens a restart file.  The
+  file's location has been modified to reference the output directory.
+  NOTE : this section of the code calls inm.f - this routine will need
+  modification to remove references to EMBM and sea-ice.
+- Not adding in the bit of code that updates tq1, etc. after reading
+  in the restart file.
+- Have removed commented out portion regarding "perturbing the
+  salinity"
+- ?  Code next calls invert.f - it looks like this needs the drag
+  variables calculated in drgset.f.  Am I right in thinking that we
+  don't need winds read in or anything to run drgset.f and then
+  invert.f?  It sounds like drgset.f generates "arbitrary" drag
+  variables, with no hint of the EMBM.  Which might make sense given
+  the evolutionary history of the model.
+  *** Answer : I'm OK here. ***
+- Copied more code from mains.F relating to islands and path integrals.
+- ?  Subroutine wind.f called.  From what I can make of it, looks like
+  it'll need changing.
+- *** Answer : needs to go in goldstein.F - called once for EMBM, every
+  timestep for IGCM, periodically for asynchronous coupling, etc. ***
+- Seem to have reached end of mains.F (up to start of time-loop).
+- Inserted code from D. Lunt's previous c-GOLDSTEIN and IGCM
+  coupling.  It calculates the grid structure, to allow the model to
+  spatially average properties that are communicated between the ocean
+  and atmosphere submodels.  Code does not appear to relate to any
+  other piece of code, so has been placed somewhat arbitrarily at the
+  end of initialise_ocean.F
+- Setup calls for BioGeM, SedGeM, AtCheM, GeMlite, etc. left at the
+  very end of this routine.
+
+- At end of recoding, may need to modify the following subroutines ...
+	diagosc.f	(definite changes needed)
+	drgset.f	(looks unlikely)
+	radfor.f	(probably excised from code)
+	inm.f		(definite changes needed)
+	invert.f	(looks possible)
+	ubarsolv.f	(looks unlikely)
+	island.f	(looks unlikely)
+	wind.f		(definite changes needed)
+- Plus, potentially, BioGeM, etc.
+	
+  *** diagosc.f ***
+- All references to EMBM and sea-ice removed.
+
+  *** inm.f ***
+- All references to EMBM and sea-ice removed.
+- ?  Will this routine be used in a reconstituted GENIE model?
+
+  *** wind.f ***
+- Not clear how best to edit this.  Maybe this part of the ocean
+  set-up needs to be executed once it's gotten data from the IGCM?
+  That seems unlikely however.
+
+- Await discussion with Bob re: other subroutines.
+
+  *** goldstein.F ***
+- Nothing done - bar insertion of headers to separate code sections.
+
+02/12/03
+========
+
+  *** var.cmn ***
+- Commented out all EMBM variables, plus a few v2 variables that
+  related to the EMBM.
+
+  *** goldstein.F ***
+- Altered subroutine declaration to include fields passed in from
+  genie.f
+- Field indices altered to imax and jmax sizes (see below)
+- Deleted code that's now in initialise_ocean.F
+- Added reference to extra.cmn
+- ?  Leaving in reference to GeMlite common block at present.
+- ?  Spotted/remembered that maxi, maxj, maxk are also defined in
+  genie_control.cmn, but I've been using both.  Should I instead
+  declare genie_control.cmn in the GOLDSTEIN modules and make use of
+  these there?  Perhaps by setting imax, jmax, kmax, etc. to match the
+  values in genie_control.cmn?  Otherwise there's a level of
+  redundancy that might cause problems later.  And can I declare one
+  common block within another?
+- List function calls currently in goldstein.F
+	- jbar				These 4 routines need to be
+	- ubarsolv			called only once if the EMBM 
+	- island			is being used, or every time-
+	- velc				step if variable winds are used
+	- surflux			(excised)
+	- tstipo			(OK)
+	- tstepo			(OK)
+	- tstipa			(excised)
+	- tstepa			(excised)
+	- * land stuff *		(land - excised)
+	- * AtCheM stuff *
+	- * GeMlite stuff *
+	- * BioGeM stuff *		Andy R.'s stuff kept for now,
+	- * AtCheM/BioGeM coupling *	but might wind up elsewhere
+	- * SedGeM stuff *
+	- * SedGeM/BioGeM coupling *
+	- diag				(OK)
+	- * diag_land *			(land - excised)
+	- outm				(EMBM references excised)
+	- outml				(land - excised)
+	- * more AtCheM *
+	- * more BioGeM *		As above
+	- * more SedGeM *
+	- * more GeMlite *
+	- diag2				(OK)
+	- diagopsi			(OK)
+	- diag3				(excised)
+	- diagosc			(EMBM references excised)
+- Some thoughts on the above ...
+	- surflux called AFTER velc - how well does this fit in with
+	  the genie.f framework?
+	- would it be possible to swap the order of surflux and velc?
+	- that should work (bar sea-ice issues) but there might be
+	  deep problems I'm not aware of (Answer : YES, can swap)
+	- after surflux is sorted, most of the rest of the work deals
+	  with non-GOLDSTEIN modules or output routines
+	- need to make sure that velc sees the same sort of winds as
+	  it's been getting from NCEP winds (comment added to remind
+	  me of this)
+	- also, have the atm and ocn grids been integrated such that
+	  winds are supplied at vector points rather than tracer
+	  points?  (I'll assume this for now)
+	- 
+- ?  General point : when it comes to output files, I presume that I
+  need to open and close them in the same subroutine?  I guess that I
+  can't open, say, *.opsit in initialise_ocean.F, feed values into it
+  in goldstein.F, and then close it in end_ocean.F - or can I?
+
+03/12/03
+========
+
+- Bob had a look yesterday at the coding so far.  Suggested a few
+  changes, which we generally implemented.  
+- A major suggestion (which makes sense really) is to create a
+  version of c-GOLDSTEIN via the genie.f framework to test that the
+  re-coding works correctly.  This would replace all of the options
+  currently in genie.f with GOLDSTEIN, EMBM and sea-ice.  Possibly
+  sic_dummy.f if we can't sort out sea-ice properly.
+- Examined, and editted where possible, the list of subroutines
+  called by goldstein.F during its execution.  EMBM and sea-ice
+  stuff removed where encountered.  Some issues remain.
+
+- ?  I don't send anything back to genie.f (e.g. albedo), where should
+  I be doing this?
+- ?  Where would be the best place to correct winds?  I could do it in
+  either wind.f or goldstein.F.  Have currently implemented it in
+  goldstein.F.
+
+*** goldstein.F ***
+
+- Continuing from yesterday ...
+- Removed all of the mains.F code that will ultimately become
+  end_ocean.F
+- Retained function conv.
+- Added in flag to call wind-driven circulation routines every
+  time-step when the IGCM is being used, or just the first time-step
+  if the EMBM is being used.  The use of flags could probably do with
+  being more elegant, given that other atmospheric models may wind up
+  being used.
+- *** wind.f still needs modifying so that it's fed the correct wind
+  stresses.  Modifying = getting variable names correct, and ensuring
+  that the wind stresses are in the correct units, and that they are
+  modified/scaled by drg_scl, etc. ***
+- Modified file calls so that they spit output to the correct place
+  in directory space.
+
+*** end_ocean.F ***
+
+- Subroutine end_ocean.F currently calls ...
+	- diagend		(OK, but see below)
+	- diagend_land		(land - excised)
+	- end_atchem
+	- end_biogem		These four routines are left in for
+	- end_sedgem		now until BioGeM, etc. are sorted
+	- end_gemlite
+
+- end_ocean.F file calls modified so that they point to the output
+  directory.
+
+*** diagend.f ***
+
+- EMBM and sea-ice variables removed from declarations
+- It looks like there's an inconsistency with seconds per year here.
+  Other parts of the code suggest 365.25 d/y, whereas it's shown as
+  365 d/y here.  Corrected.
+- Lines referring to Levitus fields of T and S altered to point to
+  input directory.
+- Lines referring to NCEP fields for EMBM comparison removed
+- Calculations of EMBM averages and variances removed
+- Lines referring to file output altered to point to output
+  directory (have done this for EMBM ones just in case I ultimately
+  do something with these here)
+- RMS error calculation altered to remove EMBM comparison
+- Including line where total error is divided by number of obs
+- EMBM outputs commented out (though ultimately they may be useful in
+  here somehow)
+- Final CO2 line commented out
+- Northward atm. heat flux calculation commented out
+
+08/12/03
+========
+
+- Trying to sort out parameters in extra.cmn
+- Have classified them into dead, local and global
+- Simple it seemed, but now need a bit more thought with "global" ones
+- Have spotted that end_ocean.F needs "local" variables from
+  goldstein.F
+	- Can instead re-calculate them in end_ocean.F
+	- Code altered to do this
+	- Probably better anyway
+- Reinstated some EMBM flux scaling parameters needed in goldstein.F
+	- rfluxsc, saln0, rpmesco
+- In initialise_ocean.F, have passed total simulation length (in
+  steps) into routine and set variable nsteps equal to it.  This will
+  help with some output-timing issues.
+
+*** end_ocean.F ***
+
+- Functions diag2 and diagopsi are executed within the timestep but
+  their outputs are sent out after the model run has completed
+- Rather than pass these outputs to end_ocean.F from goldstein.F,
+  they are re-calculated in the end_ocean.F
+- This only happens the once so is not a computational burden, and
+  it does save passing a lot of otherwise useless stuff between
+  code modules
+- State variable RMS error isn't calculated in end_ocean.F and was
+  formerly calculated in what has become goldstein.F
+- Rather than pass it to end_ocean.F it is no longer printed out
+  by end_ocean.F, although it is still printed out by goldstein.F
+
+09/12/03
+========
+
+*** initialise_ocean.F ***
+
+- Reintroduced variable 'albsc' to var.cmn (climatological albedo)
+- Reintroduced its setup into initialise_ocean.F
+- Added albedo output (together with outputs for SST, SSS and surface
+  ocean velocity) to end of goldstein.F - these are needed in other
+  modules (e.g. surflux.F and the as-yet-unwritten seaice.F)
+- Note though : albedo should really be calculated in surflux.F - am
+  putting it in here just now 'cos that's what the IGCM wants
+- Reverse this - need to really have sea-ice to do albedo properly,
+  i.e. really should be in surflux.F
+
+*** goldstein.F ***
+
+- Introduced code at end of goldstein.F to output required fields
+  for other modules
+- These include SST, SSS and surface velocity field
+- Albedo left out for now (probably should be handled by surflux.F
+
+10/12/03
+========
+
+*** goldstein.F ***
+
+- Implemented heat and FW fluxes correctly (i.e. as Bob suggested)
+
+11/12/03
+========
+
+- Spent most of this day compiling and editting (when it failed) the
+  GOLDSTEIN code
+- By the end of the day, had managed to sort out code sufficient for
+  it to compile without error (although not to a library)
+- Some changes ...
+
+*** initialise_ocean.F ***
+
+- introduced lnsig1, ioff1 and ioff2 integer variables
+- lnsig1 involved in getting the length of a string
+- ioff1 and ioff2 involved in the code used by Dan to calculate grid
+  dimensions for genie.f
+
+12/12/03
+========
+
+*** In Bristol ***
+
+- While in Bristol, made several changes to the code to get it to
+  compile and "run" with the IGCM
+- Some changes ...
+
+*** initialise_ocean.F ***
+
+- time-series files opened incorrectly (caused model to fail if the
+  file either existed already, or didn't exist), so that new versions
+  of files always created
+- variable lout read in erroneously - turns out that I've declared it
+  as a seven letter long string, when previously it's been a three
+  letter string, fixed now (and in ocean.cmn)
+
+*** goldstein.F ***
+
+- nothing substantial
+
+*** end_ocean.F ***
+
+- nothing substantial
+
+*** diagosc.F ***
+
+- has variable lout declared in it, shouldn't do
+- lout declaration excised (why the compiler missed this, I've
+  no idea!)
+
+15/12/03
+========
+
+*** invert.f ***
+
+- Dan suggests replacing continue statements with enddo because of
+  clash with IGCM code
+- Can see no reason not to, so replaced
+- Similar problems may subsequently result
+- Personally, I prefer enddo statements, but am not going to hunt
+  through the code to find all the continue statements
+
+19/12/03
+========
+
+*** goldstein.F ***
+
+- Corrected wind stress calculations to use fields sent in by
+  embm.F
+- These calculate dztau, dztav and tau as per gseto.F previously
+- Not 100% on the units - can't find a reference to these in the
+  code, so they might not yet match up with IGCM, etc.
+- Inclusion of these calculations raises an issue ...
+- If the model's using the simple EMBM, it only needs to calculate
+  the wind stresses once, and then can just use the same values
+  again and again.  Hence the if (igcm.or.timestep=1) statement.
+- If using a complex atmosphere, e.g. IGCM, then the calculations
+  are done every time.
+- To go back to the EMBM case, if the calculations are only done
+  once, the variables associated with them (dztau, dztav, tau)
+  need to be in the common block.  Otherwise the values assigned
+  to them might get lost (I understand that this can happen with
+  some compilers/compiler options).
+- Hence, need to reinstate dztau, dztav and tau to ocean.cmn
+
+- With regards to the above, some redundancy has crept back into
+  the code.  Originally, the EMBM and surflux were to be separate
+  routines, but they've now been brought back together.  They also
+  now share a common block.  Which makes the passing of certain
+  fields, like wind stresses, a bit redundant.  Still, leave it
+  this way for just now since GOLDSTEIN still needs said wind
+  stresses, even if surflux doesn't need to have them passed this
+  way.
+- See the EMBM readme for further details about this (am now tying
+  myself in knots!)
+
+*** ocean.cmn ***
+
+- dztau, dztav, tau reinstated as described above in goldstein.F
+  comments - turns out I'd never actually removed them - thinking
+  ahead probably (ha ha)

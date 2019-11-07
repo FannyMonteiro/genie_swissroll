@@ -1,0 +1,51 @@
+#!/bin/ksh
+
+# This script makes a concatenated hada file for use with
+#   making boundary conditions.
+
+exp=$1
+
+monthname[1]='jan'
+monthname[2]='feb'
+monthname[3]='mar'
+monthname[4]='apr'
+monthname[5]='may'
+monthname[6]='jun'
+monthname[7]='jul'
+monthname[8]='aug'
+monthname[9]='sep'
+monthname[10]='oct'
+monthname[11]='nov'
+monthname[12]='dec'
+
+dataoutdir='/home/ggdjl/genie/genie-utilities/data/input'
+dataindir='/home/swsvalde/ummodel/data/'$1'/'
+
+cd $dataindir
+pwd
+
+filenames=''
+for month in 1 2 3 4 5 6 7 8 9 10 11 12 ; do
+filenames=$filenames' '$exp'a.pdcl'${monthname[$month]}'.nc'
+done
+
+if [ $exp = 'xajpa' ]; then
+  vars=temp_1,lh,precip,field61,field62,sh,field186,field187,field111,field112
+  echo 'experiment is '$exp
+fi
+
+if [ $exp = 'xakxd' ]; then
+  vars=temp_1,lh,precip,taux,tauy,sh,solar,longwave
+  echo 'experiment is '$exp
+fi
+
+
+ncecat -O $filenames $dataoutdir'/tmp2.nc'
+cd $dataoutdir
+ncwa -O -a t tmp2.nc tmp3.nc
+ncwa -O -a surface tmp3.nc tmp4.nc
+ncwa -O -a hybrid_x1000 tmp4.nc tmp5.nc
+ncks -O -v $vars tmp5.nc $exp'_climate.nc'
+\rm tmp2.nc tmp3.nc tmp4.nc tmp5.nc
+
+exit

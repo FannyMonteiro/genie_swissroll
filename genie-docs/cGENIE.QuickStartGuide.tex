@@ -1,0 +1,67 @@
+
+\documentclass[10pt,twoside]{article}
+\usepackage[paper=a4paper,portrait=true,margin=2.5cm,ignorehead,footnotesep=1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{paralist}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{wasysym}
+
+\linespread{1.1}
+\setlength{\pltopsep}{2.5pt}
+\setlength{\plparsep}{2.5pt}
+\setlength{\partopsep}{2.5pt}
+\setlength{\parskip}{2.5pt}
+
+\title{cGENIE Quick-start Guide}
+\author{Andy Ridgwell}
+\date{\today}
+
+\begin{document}
+
+
+
+%=================================================================================================================================
+%=== BEGIN DOCUMENT ==============================================================================================================
+%=================================================================================================================================
+
+\maketitle
+
+
+%---------------------------------------------------------------------------------------------------------------------------------
+%--- Quick-start guide for cGENIE-------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------------------------------
+
+
+\begin{compactenum}
+\item	To get a (read-only) copy of the new (development) branch of cGENIE source code; from your home directory (\texttt{\~{}}):
+\vspace{-5pt}\begin{verbatim}
+svn co https://svn.ggy.bris.ac.uk/subversion/genie/branches/cgenie
+--username=genie-user cgenie
+\end{verbatim}\vspace{-5pt}
+NOTE: All this must be typed continuously on ONE LINE, with a S P A C E before `\texttt{--username}', and before `\texttt{genie}'.
+You will be asked for a password -- it is \texttt{g3n1e-user}.
+		
+\item	Change directory to \texttt{\~{}/cgenie/genie-main} and type:
+\vspace{-5pt}\begin{verbatim}
+make testbiogem
+\end{verbatim}\vspace{-5pt}
+This compiles a carbon cycle enabed configuration of cGENIE and runs a short test, comparing the results against those of a pre-run experiment (also downloaded alongside the model source code). It serves to check that you have the software environment correctly configured. If you are unsuccessful here ... too bad. Try editing \texttt{user.mak} or \texttt{user.sh} which are located in \texttt{\~{}/cgenie/genie-main} and which set the environment.
+
+\item	At this point, the science modules are currently compiled in a grid and/or number of tracers configuration that is unlikely to be what you want for running experiments. Clean up all the compiled cGENIE modules, ready for re-compiling from the source code, by:
+\vspace{-5pt}\begin{verbatim}
+make cleanall
+\end{verbatim}\vspace{-5pt}
+
+That is it as far as basic installation goes. Except to read the \textit{cGENIE User Manual} ;)
+(Also see the \textit{cGENIE READ-ME}.)
+  
+\end{compactenum}
+
+
+%=================================================================================================================================
+%=== END DOCUMENT ================================================================================================================
+%=================================================================================================================================
+
+\end{document}

@@ -1,0 +1,208 @@
+<info>
+
+A parameter is read from a text file specified in the file tag from the dir specified in
+runData.xml
+
+To access a parameter from a file the following code is used:
+
+for(nIMs=1 to nInitialMaps){
+	for(i=1 to iMax){
+		for(j=1 to jMax){
+			READ PAST VALUE
+		}
+	}
+}
+for(nOLsi=1 to nOuterLayers){
+	for(i=1 to iMax){ !! OR backwards depending on dir attribute of file tag ("NS" or "SN")
+		for(j=1 to jMax){ !! OR backwards depending on dir attribute of file tag ("EW" or "WE")
+											!! j loop can be done first if dir attribute = "WENS", "EWNS", "EWSN" or "WESN"
+      for(k=1 to nKLayers){
+ 	    	for(l=1 to nLLayers){
+					READ VALUE
+					if(l==lLayer){
+						if(k==kLayer){
+							if(nOLs==outerLayer){
+								STORE VALUE
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+</info>
+<variable type="ocean3D">
+	<name>Ocean: temperature</name>
+	<units><degrees/>C</units>
+	<file nKLayers="8" kLayer="8" nLLayers="5" lLayer="1" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		goldstein/spn.osc.1
+	</file>
+	<initialFile>goldstein/spn.osc.1</initialFile>
+</variable>
+<variable type="ocean3D">
+	<name>Ocean: salinity</name>
+	<units>psu</units>
+	<file nKLayers="8" kLayer="8" nLLayers="5" lLayer="2" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		goldstein/spn.osc.1
+	</file>
+	<initialFile>goldstein/spn.osc.1</initialFile>
+</variable>
+<variable type="ocean3D">
+	<name>Ocean: density</name>
+	<units>kg m<sup>-3</sup></units>
+	<file nKLayers="8" kLayer="8" nLLayers="5" lLayer="5" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		goldstein/spn.osc.1
+	</file>
+	<initialFile>goldstein/spn.osc.1</initialFile>
+</variable>
+<variable type="atmosphere">
+	<name>Atmosphere: temperature</name>
+	<units><degrees/>C</units>
+	<file nKLayers="2" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		embm/spn.osc.1
+	</file>
+	<initialFile>embm/spn.osc.1</initialFile>
+</variable>
+<variable type="atmosphere">
+	<name>Atmosphere: humidity</name>
+	<units> </units>
+	<file nKLayers="2" kLayer="2" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		embm/spn.osc.1
+	</file>
+	<initialFile>embm/spn.osc.1</initialFile>
+</variable>
+<variable type="atmosphere">
+	<name>Precipitation</name>
+	<units>mm s<sup>-1</sup></units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="6" nOuterLayers="2" outerLayer="1" dirn="NSEW">
+		embm/spn.osc.1
+	</file>
+	<initialFile>embm/spn.osc.1</initialFile>
+</variable>
+<variable type="atmosphere">
+	<name>Evaporation</name>
+	<units>mm s<sup>-1</sup></units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="6" nOuterLayers="2" outerLayer="2" dirn="NSEW">
+		embm/spn.osc.1
+	</file>
+	<initialFile>embm/spn.osc.1</initialFile>
+</variable>
+<variable type="land">
+	<name>Photosynthesis</name>  
+	<info>Note NSEW needs checking</info>
+	<units>kgC m<sup>-2</sup> year<sup>-1</sup></units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="8" outerLayer="1" dirn="WESN">
+		ents/spn.sland.avg
+	</file>
+	<initialFile>ents/spn.sland.avg</initialFile>
+</variable>
+<variable type="land">
+	<name>Vegetation respiration</name>
+	<units>kgC m<sup>-2</sup> year<sup>-1</sup></units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="8" outerLayer="2" dirn="WESN">
+		ents/spn.sland.avg
+	</file>
+	<initialFile>ents/spn.sland.avg</initialFile>
+</variable>
+<variable type="land">
+	<name>Leaf litter</name>
+	<units>kgC m<sup>-2</sup> year<sup>-1</sup></units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="8" outerLayer="3" dirn="WESN">
+		ents/spn.sland.avg
+	</file>
+	<initialFile>ents/spn.sland.avg</initialFile>
+</variable>
+<variable type="land">
+	<name>Soil respiration</name>
+	<units>kgC m<sup>-2</sup> year<sup>-1</sup></units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="8" outerLayer="4" dirn="WESN">
+		ents/spn.sland.avg
+	</file>
+	<initialFile>ents/spn.sland.avg</initialFile>
+</variable>
+<variable type="land">
+	<name>Vegetation carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="8" outerLayer="5" dirn="WESN">
+		ents/spn.sland.avg
+	</file>
+	<initialFile>ents/spn.sland.avg</initialFile>
+</variable>
+<variable type="land">
+	<name>Soil carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="8" outerLayer="6" dirn="WESN">
+		ents/spn.sland.avg
+	</file>
+	<initialFile>ents/spn.sland.avg</initialFile>
+</variable>
+<variable type="land">
+	<name>Fractional vegetation cover</name>
+	<units> </units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="8" outerLayer="7" dirn="WESN">
+		ents/spn.sland.avg
+	</file>
+	<initialFile>ents/spn.sland.avg</initialFile>
+</variable>
+<variable type="land">
+	<name>epsv</name>
+	<units> </units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="8" outerLayer="8" dirn="WESN">
+		ents/spn.sland.avg
+	</file>
+	<initialFile>ents/spn.sland.avg</initialFile>
+</variable>
+<variable type="land">
+	<name>Land: temperature</name>
+	<units><degrees/>C</units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		ents/spn.ltavg
+	</file>
+	<initialFile>ents/spn.ltavg</initialFile>
+</variable>
+<variable type="land">
+	<name>Land: moisture</name>
+	<units>m</units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		ents/spn.lqavg
+	</file>
+	<initialFile>ents/spn.lqavg</initialFile>
+</variable>
+<variable type="all">
+	<name>Surface albedo</name>
+	<units> </units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		ents/spn.albsavg
+	</file>
+	<initialFile>ents/spn.albavg</initialFile>
+</variable>
+<variable type="ocean">
+	<name>Ice thickness</name>
+	<units>m</units>
+	<file nKLayers="2" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		goldsteinseaice/spn.osc.1
+	</file>
+	<initialFile>goldsteinseaice/spn.osc.1</initialFile>
+</variable>
+<variable type="ocean">
+	<name>Ice fractional area coverage</name>
+	<units></units>
+	<file nKLayers="2" kLayer="2" nLLayers="1" lLayer="1" nInitialMaps="0" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		goldsteinseaice/spn.osc.1
+	</file>
+	<initialFile>goldsteinseaice/spn.osc.1</initialFile>
+</variable>
+<variable type="ocean">
+	<name>Sea ice temperature</name>
+	<units><degrees/>C</units>
+	<file nKLayers="1" kLayer="1" nLLayers="1" lLayer="1" nInitialMaps="2" nOuterLayers="1" outerLayer="1" dirn="NSEW">
+		goldsteinseaice/spn.osc.1
+	</file>
+	<initialFile>goldsteinseaice/spn.osc.1</initialFile>
+</variable>
+</end>
+
+
+

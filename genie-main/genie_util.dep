@@ -1,0 +1,1 @@
+genie_util.o genie_util.dep : genie_util.f90 

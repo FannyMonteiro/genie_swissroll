@@ -1,0 +1,1 @@
+rokgem_data.o rokgem_data.dep : rokgem_data.f90 

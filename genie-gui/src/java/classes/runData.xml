@@ -1,0 +1,65 @@
+<run>
+	<name>local . testData</name>
+	<outputDir>testData</outputDir>
+	<runDir>eb_go_gs_el_ac_bg_restart</runDir>
+	<initialDir>eb_go_gs_el_ac_bg_spinup10ka</initialDir>
+	<program>genie</program>
+	<definitionXMLFile>definition.xml</definitionXMLFile>
+	<jobXMLFile>ENGAGEtest.xml</jobXMLFile>
+	<graphVarFile>graphVarData.xml</graphVarFile>
+	<mapVarFile>mapVarData.xml</mapVarFile>
+	<RUNTIME_ROOT>../../genie</RUNTIME_ROOT>
+	<RUNTIME_OUTDIR>.</RUNTIME_OUTDIR>
+</run>
+<run>
+	<name>../../../../../genie_output/ENGAGEtest</name>
+	<outputDir>../../../../../genie_output</outputDir>
+	<runDir>ENGAGEtest</runDir>
+	<initialDir>ENGAGEtest</initialDir>
+	<program>genie</program>
+	<definitionXMLFile>definition.xml</definitionXMLFile>
+	<jobXMLFile>ENGAGEtest.xml</jobXMLFile>
+	<graphVarFile>graphVarData.xml</graphVarFile>
+	<mapVarFile>mapVarData.xml</mapVarFile>
+	<RUNTIME_ROOT>../../genie</RUNTIME_ROOT>
+	<RUNTIME_OUTDIR>.</RUNTIME_OUTDIR>
+</run><run>
+	<name>engage testData</name>
+	<outputDir>C:\Engage\genie\genie-gui\test\testData</outputDir>
+	<runDir>eb_go_gs_el_ac_bg_restart</runDir>
+	<initialDir>eb_go_gs_el_ac_bg_spinup10ka</initialDir>
+	<program>genie</program>
+	<definitionXMLFile>definition.xml</definitionXMLFile>
+	<jobXMLFile>ENGAGEtest.xml</jobXMLFile>
+	<graphVarFile>graphVarData.xml</graphVarFile>
+	<mapVarFile>mapVarData.xml</mapVarFile>
+	<RUNTIME_ROOT>../../genie</RUNTIME_ROOT>
+	<RUNTIME_OUTDIR>.</RUNTIME_OUTDIR>
+</run>
+<run>
+	<name>docs&Setting</name>
+	<outputDir>C:/Documents and Settings/wlr3/S396/climateModel/genie_output</outputDir>
+	<runDir>eb_go_gs_el_ac_bg_restart</runDir>
+	<initialDir>eb_go_gs_el_ac_bg_spinup10ka</initialDir>
+	<program>genie</program>
+	<definitionXMLFile>definition.xml</definitionXMLFile>
+	<jobXMLFile>ENGAGEtest.xml</jobXMLFile>
+	<graphVarFile>graphVarData.xml</graphVarFile>
+	<mapVarFile>mapVarData.xml</mapVarFile>
+	<RUNTIME_ROOT>../../genie</RUNTIME_ROOT>
+	<RUNTIME_OUTDIR>.</RUNTIME_OUTDIR>
+</run>
+<run>
+	<name>eb_go_gs_el_ac_bg_restart</name>
+	<outputDir>C:/S396/genie_output</outputDir>
+	<runDir>eb_go_gs_el_ac_bg_restart</runDir>
+	<initialDir>eb_go_gs_el_ac_bg_spinup10ka</initialDir>
+	<program>genie</program>
+	<definitionXMLFile>C:/Engage/genie/genie-main/src/xml-config/xml/definition.xml</definitionXMLFile>
+	<jobXMLFile>C:/Engage/genie/genie-main/configs/ENGAGEtest.xml</jobXMLFile>
+	<graphVarFile>graphVarData.xml</graphVarFile>
+	<mapVarFile>mapVarData.xml</mapVarFile>
+	<RUNTIME_ROOT>../../genie</RUNTIME_ROOT>
+	<RUNTIME_OUTDIR>.</RUNTIME_OUTDIR>
+</run>
+

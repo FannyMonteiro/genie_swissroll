@@ -1,0 +1,3539 @@
+GFORTRAN module version '0' created from genie_loop_wrappers.f90 on Tue Oct 30 11:01:37 2018
+MD5:711e9409bf2abeac1a7de9365f919384 -- If you edit this, you'll get what you deserve.
+
+(() () () () () () () () () () () () () () () () () () () () () ()
+() () () () ())
+
+()
+
+(('omp_get_ancestor_thread_num' 'omp_lib' 2 3) ('omp_get_team_size'
+'omp_lib' 4 5) ('omp_get_schedule' 'omp_lib' 6 7) (
+'omp_set_max_active_levels' 'omp_lib' 8 9) ('omp_set_nested' 'omp_lib'
+10 11) ('omp_set_schedule' 'omp_lib' 12 13) ('omp_set_num_threads'
+'omp_lib' 14 15) ('omp_set_dynamic' 'omp_lib' 16 17))
+
+()
+
+()
+
+(18 '__convert_i4_r8' '(intrinsic)' '__convert_i4_r8' 1 ((PROCEDURE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN FUNCTION ELEMENTAL PURE) (
+REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+19 'aboxedge1_lat_atm' 'genie_global' 'aboxedge1_lat_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+20 'aboxedge1_lat_ocn' 'genie_global' 'aboxedge1_lat_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+21 'aboxedge1_lat_sic' 'genie_global' 'aboxedge1_lat_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+22 'aboxedge1_lon_atm' 'genie_global' 'aboxedge1_lon_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+23 'aboxedge1_lon_ocn' 'genie_global' 'aboxedge1_lon_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+24 'aboxedge1_lon_sic' 'genie_global' 'aboxedge1_lon_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+25 'aboxedge2_lat_atm' 'genie_global' 'aboxedge2_lat_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+26 'aboxedge2_lat_ocn' 'genie_global' 'aboxedge2_lat_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+27 'aboxedge2_lat_sic' 'genie_global' 'aboxedge2_lat_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+28 'aboxedge2_lon_atm' 'genie_global' 'aboxedge2_lon_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+29 'aboxedge2_lon_ocn' 'genie_global' 'aboxedge2_lon_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+30 'aboxedge2_lon_sic' 'genie_global' 'aboxedge2_lon_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+31 'aboxedge3_lat_atm' 'genie_global' 'aboxedge3_lat_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+32 'aboxedge3_lat_ocn' 'genie_global' 'aboxedge3_lat_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+33 'aboxedge3_lat_sic' 'genie_global' 'aboxedge3_lat_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+34 'aboxedge3_lon_atm' 'genie_global' 'aboxedge3_lon_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+35 'aboxedge3_lon_ocn' 'genie_global' 'aboxedge3_lon_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+36 'aboxedge3_lon_sic' 'genie_global' 'aboxedge3_lon_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '37')) 0 () () () 0 0)
+37 'alat1_atm' 'genie_global' 'alat1_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+38 'alat1_ocn' 'genie_global' 'alat1_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+39 'alat1_sic' 'genie_global' 'alat1_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+40 'alat2_atm' 'genie_global' 'alat2_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+41 'alat2_ocn' 'genie_global' 'alat2_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+42 'alat2_sic' 'genie_global' 'alat2_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+43 'alat3_atm' 'genie_global' 'alat3_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+44 'alat3_ocn' 'genie_global' 'alat3_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+45 'alat3_sic' 'genie_global' 'alat3_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+46 'albavg_ocn' 'genie_global' 'albavg_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+47 'albd_sic' 'genie_global' 'albd_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+48 'albedo_atm' 'genie_global' 'albedo_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+49 'albedo_land' 'genie_global' 'albedo_land' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+50 'albedo_ocn' 'genie_global' 'albedo_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+51 'albedo_sic' 'genie_global' 'albedo_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+52 'albs_atm' 'genie_global' 'albs_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+53 'alon1_atm' 'genie_global' 'alon1_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+54 'alon1_ocn' 'genie_global' 'alon1_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+55 'alon1_sic' 'genie_global' 'alon1_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+56 'alon2_atm' 'genie_global' 'alon2_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+57 'alon2_ocn' 'genie_global' 'alon2_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+58 'alon2_sic' 'genie_global' 'alon2_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+59 'alon3_atm' 'genie_global' 'alon3_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+60 'alon3_ocn' 'genie_global' 'alon3_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+61 'alon3_sic' 'genie_global' 'alon3_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+62 'at1' 'genie_global' 'at1' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+63 'at1_tmp' 'genie_global' 'at1_tmp' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 ()
+() () 0 0)
+64 'at2' 'genie_global' 'at2' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+65 'at2_tmp' 'genie_global' 'at2_tmp' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 ()
+() () 0 0)
+66 'at3' 'genie_global' 'at3' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+67 'at3_tmp' 'genie_global' 'at3_tmp' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 ()
+() () 0 0)
+68 'at_mask' 'genie_global' 'at_mask' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+69 'atchem_restart_wrapper' 'genie_loop_wrappers' 'atchem_restart_wrapper'
+1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+70 'atchem_wrapper' 'genie_loop_wrappers' 'atchem_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+71 'atmos_dt_tim' 'genie_global' 'atmos_dt_tim' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+72 'atmos_evap_atm' 'genie_global' 'atmos_evap_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+73 'atmos_evap_ocn' 'genie_global' 'atmos_evap_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+74 'atmos_latent_atm' 'genie_global' 'atmos_latent_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+75 'atmos_latent_ocn' 'genie_global' 'atmos_latent_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+76 'atmos_lowestlh_atm' 'genie_global' 'atmos_lowestlh_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+77 'atmos_lowestlp_atm' 'genie_global' 'atmos_lowestlp_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+78 'atmos_lowestlq_atm' 'genie_global' 'atmos_lowestlq_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+79 'atmos_lowestlt_atm' 'genie_global' 'atmos_lowestlt_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+80 'atmos_lowestlu2_atm' 'genie_global' 'atmos_lowestlu2_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+81 'atmos_lowestlu_atm' 'genie_global' 'atmos_lowestlu_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+82 'atmos_lowestlv3_atm' 'genie_global' 'atmos_lowestlv3_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+83 'atmos_lowestlv_atm' 'genie_global' 'atmos_lowestlv_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+84 'atmos_netlong_atm' 'genie_global' 'atmos_netlong_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+85 'atmos_netlong_ocn' 'genie_global' 'atmos_netlong_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+86 'atmos_netsolar_atm' 'genie_global' 'atmos_netsolar_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+87 'atmos_netsolar_ocn' 'genie_global' 'atmos_netsolar_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+88 'atmos_precip_atm' 'genie_global' 'atmos_precip_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+89 'atmos_precip_ocn' 'genie_global' 'atmos_precip_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+90 'atmos_sensible_atm' 'genie_global' 'atmos_sensible_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+91 'atmos_sensible_ocn' 'genie_global' 'atmos_sensible_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+92 'biogem_climate_wrapper' 'genie_loop_wrappers' 'biogem_climate_wrapper'
+1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+93 'biogem_forcing_wrapper' 'genie_loop_wrappers' 'biogem_forcing_wrapper'
+1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+94 'biogem_restart_wrapper' 'genie_loop_wrappers' 'biogem_restart_wrapper'
+1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+95 'biogem_tracercoupling_wrapper' 'genie_loop_wrappers'
+'biogem_tracercoupling_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () ()
+0 0)
+96 'biogem_wrapper' 'genie_loop_wrappers' 'biogem_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+97 'bufsiz' 'genie_control' 'bufsiz' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1024') () 0 () () () 0 0)
+98 'ch4_atm' 'genie_global' 'ch4_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+99 'char' '(intrinsic)' 'char' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN FUNCTION) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 99 () ()
+() 0 0)
+100 'co2_atm' 'genie_global' 'co2_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+101 'conductflux_atm' 'genie_global' 'conductflux_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+102 'conductflux_atm_meanocn' 'genie_global' 'conductflux_atm_meanocn' 1
+((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL
+8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0
+0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 ()
+() () 0 0)
+103 'conductflux_ocn' 'genie_global' 'conductflux_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+104 'conductflux_sic' 'genie_global' 'conductflux_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+105 'conv_kocn_katchem' 'genie_control' 'conv_kocn_katchem' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+106 'conv_kocn_kbiogem' 'genie_control' 'conv_kocn_kbiogem' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+107 'conv_kocn_kecogem' 'genie_control' 'conv_kocn_kecogem' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+108 'conv_kocn_kgoldlite' 'genie_control' 'conv_kocn_kgoldlite' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+109 'conv_kocn_kocnlite' 'genie_control' 'conv_kocn_kocnlite' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+110 'conv_kocn_krokgem' 'genie_control' 'conv_kocn_krokgem' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+111 'conv_kocn_ksedgem' 'genie_control' 'conv_kocn_ksedgem' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+112 'cpl_comp_atmgem_wrapper' 'genie_loop_wrappers'
+'cpl_comp_atmgem_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+113 'cpl_comp_atmlnd_wrapper' 'genie_loop_wrappers'
+'cpl_comp_atmlnd_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+114 'cpl_comp_atmocn_wrapper' 'genie_loop_wrappers'
+'cpl_comp_atmocn_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+115 'cpl_comp_embm_wrapper' 'genie_loop_wrappers' 'cpl_comp_embm_wrapper'
+1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+116 'cpl_comp_gematm1_wrapper' 'genie_loop_wrappers'
+'cpl_comp_gematm1_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+117 'cpl_comp_gematm_wrapper' 'genie_loop_wrappers'
+'cpl_comp_gematm_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+118 'cpl_comp_gemglt_wrapper' 'genie_loop_wrappers'
+'cpl_comp_gemglt_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+119 'cpl_comp_gemocn_wrapper' 'genie_loop_wrappers'
+'cpl_comp_gemocn_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+120 'cpl_comp_gltgem_d_wrapper' 'genie_loop_wrappers'
+'cpl_comp_gltgem_d_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () ()
+0 0)
+121 'cpl_comp_gltgem_dsum_wrapper' 'genie_loop_wrappers'
+'cpl_comp_gltgem_dsum_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () ()
+0 0)
+122 'cpl_comp_lndembm_wrapper' 'genie_loop_wrappers'
+'cpl_comp_lndembm_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+123 'cpl_comp_ocngem_wrapper' 'genie_loop_wrappers'
+'cpl_comp_ocngem_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+124 'cpl_comp_ocnsed_gem_wrapper' 'genie_loop_wrappers'
+'cpl_comp_ocnsed_gem_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () ()
+0 0)
+125 'cpl_comp_ocnsed_wrapper' 'genie_loop_wrappers'
+'cpl_comp_ocnsed_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+126 'cpl_comp_rokembm_wrapper' 'genie_loop_wrappers'
+'cpl_comp_rokembm_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+127 'cpl_comp_sedocn_wrapper' 'genie_loop_wrappers'
+'cpl_comp_sedocn_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+128 'cpl_flux_lndatm_wrapper' 'genie_loop_wrappers'
+'cpl_flux_lndatm_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+129 'cpl_flux_ocnatm_wrapper' 'genie_loop_wrappers'
+'cpl_flux_ocnatm_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+130 'cpl_flux_ocnsed_wrapper' 'genie_loop_wrappers'
+'cpl_flux_ocnsed_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+131 'cpl_flux_rokatm_wrapper' 'genie_loop_wrappers'
+'cpl_flux_rokatm_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+132 'cpl_flux_rokocn_gem_wrapper' 'genie_loop_wrappers'
+'cpl_flux_rokocn_gem_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () ()
+0 0)
+133 'cpl_flux_rokocn_wrapper' 'genie_loop_wrappers'
+'cpl_flux_rokocn_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+134 'cpl_flux_sedocn_wrapper' 'genie_loop_wrappers'
+'cpl_flux_sedocn_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+135 'cpl_flux_sedsed1_wrapper' 'genie_loop_wrappers'
+'cpl_flux_sedsed1_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+136 'ddtmass14co2' 'genie_global' 'ddtmass14co2' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '7')) 0 () () () 0 0)
+137 'debug_end' 'genie_control' 'debug_end' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+138 'debug_init' 'genie_control' 'debug_init' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+139 'debug_loop' 'genie_control' 'debug_loop' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+140 'depth1_ocn' 'genie_global' 'depth1_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '8')) 0 () () () 0 0)
+141 'depth2_ocn' 'genie_global' 'depth2_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '9')) 0 () () () 0 0)
+142 'dfrac_sic' 'genie_global' 'dfrac_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+143 'dhght_sic' 'genie_global' 'dhght_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+144 'diag_biogem_gem_timeseries_wrapper' 'genie_loop_wrappers'
+'diag_biogem_gem_timeseries_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+145 'diag_biogem_gem_timeslice_wrapper' 'genie_loop_wrappers'
+'diag_biogem_gem_timeslice_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+146 'diag_biogem_gem_wrapper' 'genie_loop_wrappers'
+'diag_biogem_gem_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+147 'diag_biogem_pco2_wrapper' 'genie_loop_wrappers'
+'diag_biogem_pco2_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+148 'diag_biogem_timeseries_wrapper' 'genie_loop_wrappers'
+'diag_biogem_timeseries_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+149 'diag_biogem_timeslice_wrapper' 'genie_loop_wrappers'
+'diag_biogem_timeslice_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () ()
+0 0)
+150 'diag_biogem_wrapper' 'genie_loop_wrappers' 'diag_biogem_wrapper' 1
+((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+151 'dt_write' 'genie_control' 'dt_write' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+152 'dtcarry_ocn_sic' 'genie_global' 'dtcarry_ocn_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+153 'dumalb_ocn' 'genie_global' 'dumalb_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+154 'dummy_atm' 'genie_global' 'dummy_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+155 'dummy_ocn' 'genie_global' 'dummy_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+156 'dumtmp_ocn' 'genie_global' 'dumtmp_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+157 'ea_co2' 'genie_global' 'ea_co2' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+158 'ea_fxplw' 'genie_global' 'ea_fxplw' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+159 'eb_ca' 'genie_global' 'eb_ca' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+160 'eb_dphi' 'genie_global' 'eb_dphi' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+161 'eb_evap' 'genie_global' 'eb_evap' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+162 'eb_fx0a' 'genie_global' 'eb_fx0a' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+163 'eb_fx0o' 'genie_global' 'eb_fx0o' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+164 'eb_fxlw' 'genie_global' 'eb_fxlw' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+165 'eb_fxsen' 'genie_global' 'eb_fxsen' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+166 'eb_pptn' 'genie_global' 'eb_pptn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+167 'eb_rdtdim' 'genie_global' 'eb_rdtdim' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+168 'eb_relh' 'genie_global' 'eb_relh' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+169 'eb_rmax' 'genie_global' 'eb_rmax' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+170 'ecogem_wrapper' 'genie_loop_wrappers' 'ecogem_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+171 'el_leaf' 'genie_global' 'el_leaf' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+172 'el_photo' 'genie_global' 'el_photo' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+173 'el_respsoil' 'genie_global' 'el_respsoil' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+174 'el_respveg' 'genie_global' 'el_respveg' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+175 'embm_wrapper' 'genie_loop_wrappers' 'embm_wrapper' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0
+UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+176 'en_lice_vect' 'genie_global' 'en_lice_vect' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '50')) 0 () () () 0 0)
+177 'en_licesteps' 'genie_global' 'en_licesteps' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+178 'en_nlice' 'genie_global' 'en_nlice' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+179 'en_norog' 'genie_global' 'en_norog' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+180 'en_ntimes_max' 'genie_global' 'en_ntimes_max' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '50') () 0 ()
+() () 0 0)
+181 'en_orog_vect' 'genie_global' 'en_orog_vect' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '50')) 0 () () () 0 0)
+182 'en_orogsteps' 'genie_global' 'en_orogsteps' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+183 'en_t_lice' 'genie_global' 'en_t_lice' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+184 'en_t_orog' 'genie_global' 'en_t_orog' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+185 'energycarry_ocn_sic' 'genie_global' 'energycarry_ocn_sic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+186 'energycarry_sic_ocn' 'genie_global' 'energycarry_sic_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+187 'enet_atm' 'genie_global' 'enet_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+188 'enet_ocn' 'genie_global' 'enet_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+189 'enetnoconduct_atm' 'genie_global' 'enetnoconduct_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+190 'ents_wrapper' 'genie_loop_wrappers' 'ents_wrapper' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0
+UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+191 'error_cal' 'genie_global' 'error_cal' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+192 'escn_conductflux_atm_meanocn' 'genie_global'
+'escn_conductflux_atm_meanocn' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+193 'escn_conductflux_ocn' 'genie_global' 'escn_conductflux_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ())
+0 0 () () 0 () () () 0 0)
+194 'escn_latent_atm_meanocn' 'genie_global' 'escn_latent_atm_meanocn' 1
+((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL
+()) 0 0 () () 0 () () () 0 0)
+195 'escn_latent_atm_meansi' 'genie_global' 'escn_latent_atm_meansi' 1 (
+(VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL
+()) 0 0 () () 0 () () () 0 0)
+196 'escn_latent_atm_meansurf' 'genie_global' 'escn_latent_atm_meansurf'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+197 'escn_latent_ocn' 'genie_global' 'escn_latent_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+198 'escn_netlong_atm_meanocn' 'genie_global' 'escn_netlong_atm_meanocn'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+199 'escn_netlong_atm_meansi' 'genie_global' 'escn_netlong_atm_meansi' 1
+((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL
+()) 0 0 () () 0 () () () 0 0)
+200 'escn_netlong_atm_meansurf' 'genie_global' 'escn_netlong_atm_meansurf'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+201 'escn_netlong_ocn' 'genie_global' 'escn_netlong_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+202 'escn_netsolar_atm_meanocn' 'genie_global' 'escn_netsolar_atm_meanocn'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+203 'escn_netsolar_atm_meansi' 'genie_global' 'escn_netsolar_atm_meansi'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+204 'escn_netsolar_atm_meansurf' 'genie_global'
+'escn_netsolar_atm_meansurf' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+205 'escn_netsolar_ocn' 'genie_global' 'escn_netsolar_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+206 'escn_sensible_atm_meanocn' 'genie_global' 'escn_sensible_atm_meanocn'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+207 'escn_sensible_atm_meansi' 'genie_global' 'escn_sensible_atm_meansi'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+208 'escn_sensible_atm_meansurf' 'genie_global'
+'escn_sensible_atm_meansurf' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+209 'escn_sensible_ocn' 'genie_global' 'escn_sensible_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+210 'evap_atm' 'genie_global' 'evap_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+211 'evap_atm_meanocn' 'genie_global' 'evap_atm_meanocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+212 'evap_atm_meansic' 'genie_global' 'evap_atm_meansic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+213 'evap_land' 'genie_global' 'evap_land' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+214 'evap_ocn' 'genie_global' 'evap_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+215 'evap_save1' 'genie_global' 'evap_save1' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+216 'evap_save2' 'genie_global' 'evap_save2' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+217 'evap_sic' 'genie_global' 'evap_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+218 'flag_atchem' 'genie_control' 'flag_atchem' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+219 'flag_biogem' 'genie_control' 'flag_biogem' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+220 'flag_checkfluxes_atlantic' 'genie_control'
+'flag_checkfluxes_atlantic' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 () () () 0 0)
+221 'flag_checkfluxes_ocn' 'genie_control' 'flag_checkfluxes_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0
+LOGICAL ()) 0 0 () () 0 () () () 0 0)
+222 'flag_checkfluxes_sic' 'genie_control' 'flag_checkfluxes_sic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0
+LOGICAL ()) 0 0 () () 0 () () () 0 0)
+223 'flag_checkfluxes_surf' 'genie_control' 'flag_checkfluxes_surf' 1 (
+(VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0
+LOGICAL ()) 0 0 () () 0 () () () 0 0)
+224 'flag_ebatmos' 'genie_control' 'flag_ebatmos' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+225 'flag_ecogem' 'genie_control' 'flag_ecogem' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+226 'flag_ents' 'genie_control' 'flag_ents' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 ()
+() () 0 0)
+227 'flag_fakeatmos' 'genie_control' 'flag_fakeatmos' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+228 'flag_fixedatmos' 'genie_control' 'flag_fixedatmos' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+229 'flag_fixedchem' 'genie_control' 'flag_fixedchem' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+230 'flag_fixedicesheet' 'genie_control' 'flag_fixedicesheet' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0
+LOGICAL ()) 0 0 () () 0 () () () 0 0)
+231 'flag_fixedland' 'genie_control' 'flag_fixedland' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+232 'flag_fixedocean' 'genie_control' 'flag_fixedocean' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+233 'flag_fixedseaice' 'genie_control' 'flag_fixedseaice' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+234 'flag_gemlite' 'genie_control' 'flag_gemlite' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+235 'flag_glim_pforce' 'genie_control' 'flag_glim_pforce' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (LOGICAL 4 0 0
+LOGICAL ()) 0 0 () () 0 () () () 0 0)
+236 'flag_glim_t2m_force' 'genie_global' 'flag_glim_t2m_force' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0
+LOGICAL ()) 0 0 () () 0 () () () 0 0)
+237 'flag_goldlite' 'genie_control' 'flag_goldlite' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+238 'flag_goldsteinocean' 'genie_control' 'flag_goldsteinocean' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0
+LOGICAL ()) 0 0 () () 0 () () () 0 0)
+239 'flag_goldsteinseaice' 'genie_control' 'flag_goldsteinseaice' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0
+LOGICAL ()) 0 0 () () 0 () () () 0 0)
+240 'flag_icesheet' 'genie_control' 'flag_icesheet' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+241 'flag_ichem' 'genie_control' 'flag_ichem' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+242 'flag_igcmatmos' 'genie_control' 'flag_igcmatmos' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+243 'flag_land' 'genie_control' 'flag_land' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 ()
+() () 0 0)
+244 'flag_ocnlite' 'genie_control' 'flag_ocnlite' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+245 'flag_rokgem' 'genie_control' 'flag_rokgem' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+246 'flag_sedgem' 'genie_control' 'flag_sedgem' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+247 'flag_slabocean' 'genie_control' 'flag_slabocean' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+248 'flag_slabseaice' 'genie_control' 'flag_slabseaice' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+249 'flag_wind' 'genie_control' 'flag_wind' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 ()
+() () 0 0)
+250 'fname_fluxrestart' 'genie_control' 'fname_fluxrestart' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (CHARACTER 1 0 0
+CHARACTER ((CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1024'))) 0 0 () () 0
+() () () 0 0)
+251 'fname_restart_main' 'genie_control' 'fname_restart_main' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (CHARACTER 1 0 0
+CHARACTER ((CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1024'))) 0 0 () () 0
+() () () 0 0)
+252 'frac_sic' 'genie_global' 'frac_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+253 'fx_le_land' 'genie_global' 'fx_le_land' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+254 'fx_momx_land' 'genie_global' 'fx_momx_land' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+255 'fx_momy_land' 'genie_global' 'fx_momy_land' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+256 'fx_sen_land' 'genie_global' 'fx_sen_land' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+257 'gem_adapt_auto' 'genie_global' 'gem_adapt_auto' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+258 'gem_adapt_auto_unlimitedgem' 'genie_global'
+'gem_adapt_auto_unlimitedgem' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 () () () 0 0)
+259 'gem_adapt_dgemyr' 'genie_global' 'gem_adapt_dgemyr' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+260 'gem_adapt_diag_biogem_full' 'genie_global'
+'gem_adapt_diag_biogem_full' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 () () () 0 0)
+261 'gem_adapt_dpco2' 'genie_global' 'gem_adapt_dpco2' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+262 'gem_adapt_dpco2dt' 'genie_global' 'gem_adapt_dpco2dt' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+263 'gem_notyr' 'genie_control' 'gem_notyr' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+264 'gem_notyr0' 'genie_global' 'gem_notyr0' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+265 'gem_pco2' 'genie_global' 'gem_pco2' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+266 'gem_pco2_init' 'genie_global' 'gem_pco2_init' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+267 'gem_pco2_old' 'genie_global' 'gem_pco2_old' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+268 'gem_yr' 'genie_control' 'gem_yr' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+269 'gem_yr0' 'genie_global' 'gem_yr0' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+270 'gem_yr_max' 'genie_control' 'gem_yr_max' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+271 'gemlite_climate_wrapper' 'genie_loop_wrappers'
+'gemlite_climate_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+272 'gemlite_cycleclean_wrapper' 'genie_loop_wrappers'
+'gemlite_cycleclean_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () ()
+0 0)
+273 'gemlite_cycleinit_wrapper' 'genie_loop_wrappers'
+'gemlite_cycleinit_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () ()
+0 0)
+274 'gemlite_gltts_wrapper' 'genie_loop_wrappers' 'gemlite_gltts_wrapper'
+1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+275 'gemlite_wrapper' 'genie_loop_wrappers' 'gemlite_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+276 'genie_atm1' 'genie_global' 'genie_atm1' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0 REAL ()) 0 0 ()
+(3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '19') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0
+0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 ()
+() () 0 0)
+277 'genie_clock' 'genie_global' 'genie_clock' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+278 'genie_control' 'genie_control' 'genie_control' 1 ((MODULE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (UNKNOWN 0 0 0 UNKNOWN ())
+0 0 () () 0 () () () 0 0)
+279 'genie_global' 'genie_global' 'genie_global' 1 ((MODULE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (UNKNOWN 0 0 0 UNKNOWN ())
+0 0 () () 0 () () () 0 0)
+280 'genie_loop_wrappers' 'genie_loop_wrappers' 'genie_loop_wrappers' 1
+((MODULE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (UNKNOWN 0 0 0
+UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+281 'genie_ocn' 'genie_global' 'genie_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0 REAL ()) 0 0 ()
+(4 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '77') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0
+0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '8')) 0 () () () 0 0)
+282 'genie_sfcatm' 'genie_global' 'genie_sfcatm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '19') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+283 'genie_sfcatm1' 'genie_global' 'genie_sfcatm1' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '19') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+284 'genie_sfcatm_lnd' 'genie_global' 'genie_sfcatm_lnd' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '19') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+285 'genie_sfcocn1' 'genie_global' 'genie_sfcocn1' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '77') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+286 'genie_sfcsed' 'genie_global' 'genie_sfcsed' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '56') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+287 'genie_sfcsed1' 'genie_global' 'genie_sfcsed1' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '56') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+288 'genie_sfcsumocn' 'genie_global' 'genie_sfcsumocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '77') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+289 'genie_sfxatm1' 'genie_global' 'genie_sfxatm1' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '19') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+290 'genie_sfxatm_lnd' 'genie_global' 'genie_sfxatm_lnd' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '19') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+291 'genie_sfxocn' 'genie_global' 'genie_sfxocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '77') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+292 'genie_sfxocn1' 'genie_global' 'genie_sfxocn1' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '77') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+293 'genie_sfxrok' 'genie_global' 'genie_sfxrok' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '77') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+294 'genie_sfxsed1' 'genie_global' 'genie_sfxsed1' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '56') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+295 'genie_sfxsumatm' 'genie_global' 'genie_sfxsumatm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '19') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+296 'genie_sfxsumrok1' 'genie_global' 'genie_sfxsumrok1' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '77') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+297 'genie_sfxsumrok1_gem' 'genie_global' 'genie_sfxsumrok1_gem' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '77') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+298 'genie_sfxsumsed' 'genie_global' 'genie_sfxsumsed' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '56') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+299 'genie_sfxsumsed1' 'genie_global' 'genie_sfxsumsed1' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '56') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+300 'genie_solar_constant' 'genie_global' 'genie_solar_constant' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ())
+0 0 () () 0 () () () 0 0)
+301 'genie_timestep' 'genie_global' 'genie_timestep' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+302 'genie_version' 'genie_global' 'genie_version' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '9955') () 0 ()
+() () 0 0)
+303 'getversion' 'genie_global' 'getversion' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN FUNCTION) (INTEGER 4 0 0 INTEGER
+()) 0 0 () () 303 () () () 0 0)
+304 'glim_albedo' 'genie_global' 'glim_albedo' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+305 'glim_covmap' 'genie_global' 'glim_covmap' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+306 'glim_covmap_orog' 'genie_global' 'glim_covmap_orog' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+307 'glim_flag' 'genie_global' 'glim_flag' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 ()
+() () 0 0)
+308 'glim_icefrac' 'genie_global' 'glim_icefrac' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+309 'glim_icets' 'genie_global' 'glim_icets' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 ()
+() () 0 0)
+310 'glim_orog' 'genie_global' 'glim_orog' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+311 'glim_prcp_adj' 'genie_global' 'glim_prcp_adj' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+312 'glim_runoff_adj' 'genie_global' 'glim_runoff_adj' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+313 'glim_snow_model' 'genie_global' 'glim_snow_model' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+314 'glim_snowdepth' 'genie_global' 'glim_snowdepth' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+315 'glim_snowicefrac' 'genie_global' 'glim_snowicefrac' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+316 'glim_snowvegfrac' 'genie_global' 'glim_snowvegfrac' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+317 'glim_tempmask' 'genie_global' 'glim_tempmask' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (LOGICAL 4 0 0
+LOGICAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+318 'glim_timestep' 'genie_global' 'glim_timestep' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+319 'glim_vegfrac' 'genie_global' 'glim_vegfrac' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+320 'glim_waterin' 'genie_global' 'glim_waterin' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+321 'glim_waterout' 'genie_global' 'glim_waterout' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+322 'global_daysperyear' 'genie_control' 'global_daysperyear' 1 ((
+PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0
+REAL ()) 0 0 () (CONSTANT (REAL 8 0 0 REAL ()) 0 '0.16d40000000000@3') ()
+0 () () () 0 0)
+323 'go_c' 'genie_global' 'go_c' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '0') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+324 'go_cd' 'genie_global' 'go_cd' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 ()
+() () 0 0)
+325 'go_cost' 'genie_global' 'go_cost' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+326 'go_cpsc' 'genie_global' 'go_cpsc' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+327 'go_cv' 'genie_global' 'go_cv' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '0') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+328 'go_dphi' 'genie_global' 'go_dphi' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+329 'go_ds' 'genie_global' 'go_ds' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+330 'go_dsc' 'genie_global' 'go_dsc' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 ()
+() () 0 0)
+331 'go_dt' 'genie_global' 'go_dt' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+332 'go_dz' 'genie_global' 'go_dz' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '8')) 0 () () () 0 0)
+333 'go_dza' 'genie_global' 'go_dza' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '8')) 0 () () () 0 0)
+334 'go_ec' 'genie_global' 'go_ec' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '4')) 0 () () () 0 0)
+335 'go_fsc' 'genie_global' 'go_fsc' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 ()
+() () 0 0)
+336 'go_fxsw' 'genie_global' 'go_fxsw' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+337 'go_iaf' 'genie_global' 'go_iaf' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+338 'go_ianav' 'genie_global' 'go_ianav' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+339 'go_ias' 'genie_global' 'go_ias' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+340 'go_ipf' 'genie_global' 'go_ipf' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+341 'go_ips' 'genie_global' 'go_ips' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+342 'go_istep0' 'genie_global' 'go_istep0' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+343 'go_itstp' 'genie_global' 'go_itstp' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+344 'go_iwstp' 'genie_global' 'go_iwstp' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+345 'go_jsf' 'genie_global' 'go_jsf' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+346 'go_k1' 'genie_global' 'go_k1' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+347 'go_lin' 'genie_global' 'go_lin' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (CHARACTER 1 0 0 CHARACTER ((CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '13'))) 0 0 () () 0 () () () 0 0)
+348 'go_mldta' 'genie_global' 'go_mldta' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+349 'go_npstp' 'genie_global' 'go_npstp' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+350 'go_nyear' 'genie_global' 'go_nyear' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+351 'go_rh0sc' 'genie_global' 'go_rh0sc' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 ()
+() () 0 0)
+352 'go_rho' 'genie_global' 'go_rho' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (3
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '8')) 0 () ()
+() 0 0)
+353 'go_rhoair' 'genie_global' 'go_rhoair' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () () 0 ()
+() () 0 0)
+354 'go_rhosc' 'genie_global' 'go_rhosc' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+355 'go_rsc' 'genie_global' 'go_rsc' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+356 'go_s' 'genie_global' 'go_s' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '0') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+357 'go_saln0' 'genie_global' 'go_saln0' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+358 'go_scf' 'genie_global' 'go_scf' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+359 'go_solconst' 'genie_global' 'go_solconst' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+360 'go_solfor' 'genie_global' 'go_solfor' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+361 'go_sv' 'genie_global' 'go_sv' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '0') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+362 'go_syr' 'genie_global' 'go_syr' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+363 'go_tau' 'genie_global' 'go_tau' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (3
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '2') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+364 'go_ts' 'genie_global' 'go_ts' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (4
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '14') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '8')) 0 () () () 0 0)
+365 'go_ts1' 'genie_global' 'go_ts1' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (4
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '14') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '8')) 0 () () () 0 0)
+366 'go_u' 'genie_global' 'go_u' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (4
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '3') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '8')) 0 () () () 0 0)
+367 'go_usc' 'genie_global' 'go_usc' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+368 'gold_seaice_wrapper' 'genie_loop_wrappers' 'gold_seaice_wrapper' 1
+((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+369 'goldlite_wrapper' 'genie_loop_wrappers' 'goldlite_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+370 'goldstein_wrapper' 'genie_loop_wrappers' 'goldstein_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+371 'grid_type_fixedatmos' 'genie_global' 'grid_type_fixedatmos' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+372 'hght_sic' 'genie_global' 'hght_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+373 'hrlats_atm' 'genie_global' 'hrlats_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '160')) 0 () () () 0 0)
+374 'hrlatsedge_atm' 'genie_global' 'hrlatsedge_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '161')) 0 () () () 0 0)
+375 'hrlons_atm' 'genie_global' 'hrlons_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '320')) 0 () () () 0 0)
+376 'hrlonsedge_atm' 'genie_global' 'hrlonsedge_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '321')) 0 () () () 0 0)
+377 'i' 'genie_global' 'i' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+378 'iaf_out' 'genie_global' 'iaf_out' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+379 'ias_out' 'genie_global' 'ias_out' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+380 'ice_icefrac_atm' 'genie_global' 'ice_icefrac_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+381 'iconv4lnd' 'genie_global' 'iconv4lnd' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+382 'iconv_che' 'genie_global' 'iconv_che' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () ()
+0 () () () 0 0)
+383 'iconv_ice' 'genie_global' 'iconv_ice' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () ()
+0 () () () 0 0)
+384 'ifirst' 'genie_global' 'ifirst' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DATA) (INTEGER 4 0 0 INTEGER ()) 0 0 () ()
+0 () () () 0 0)
+385 'ilandmask1_atm' 'genie_global' 'ilandmask1_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+386 'ilandmask1_ocn' 'genie_global' 'ilandmask1_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+387 'ilandmask1_sic' 'genie_global' 'ilandmask1_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+388 'ilandmask2_atm' 'genie_global' 'ilandmask2_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+389 'ilandmask2_ocn' 'genie_global' 'ilandmask2_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+390 'ilandmask2_sic' 'genie_global' 'ilandmask2_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+391 'ilandmask3_atm' 'genie_global' 'ilandmask3_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+392 'ilandmask3_ocn' 'genie_global' 'ilandmask3_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+393 'ilandmask3_sic' 'genie_global' 'ilandmask3_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+394 'ilat1_atm' 'genie_control' 'ilat1_atm' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+395 'ilat1_lic' 'genie_control' 'ilat1_lic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+396 'ilat1_lnd' 'genie_control' 'ilat1_lnd' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+397 'ilat1_ocn' 'genie_control' 'ilat1_ocn' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+398 'ilat1_rok' 'genie_control' 'ilat1_rok' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+399 'ilat1_sed' 'genie_control' 'ilat1_sed' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+400 'ilat1_sic' 'genie_control' 'ilat1_sic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+401 'ilat2_atm' 'genie_control' 'ilat2_atm' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+402 'ilat2_lic' 'genie_control' 'ilat2_lic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+403 'ilat2_lnd' 'genie_control' 'ilat2_lnd' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+404 'ilat2_ocn' 'genie_control' 'ilat2_ocn' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+405 'ilat2_sic' 'genie_control' 'ilat2_sic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+406 'ilat3_atm' 'genie_control' 'ilat3_atm' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+407 'ilat3_lic' 'genie_control' 'ilat3_lic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+408 'ilat3_lnd' 'genie_control' 'ilat3_lnd' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+409 'ilat3_ocn' 'genie_control' 'ilat3_ocn' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+410 'ilat3_sic' 'genie_control' 'ilat3_sic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+411 'ilon1_atm' 'genie_control' 'ilon1_atm' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+412 'ilon1_lic' 'genie_control' 'ilon1_lic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+413 'ilon1_lnd' 'genie_control' 'ilon1_lnd' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+414 'ilon1_ocn' 'genie_control' 'ilon1_ocn' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+415 'ilon1_rok' 'genie_control' 'ilon1_rok' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+416 'ilon1_sed' 'genie_control' 'ilon1_sed' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+417 'ilon1_sic' 'genie_control' 'ilon1_sic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+418 'ilon2_atm' 'genie_control' 'ilon2_atm' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+419 'ilon2_lic' 'genie_control' 'ilon2_lic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+420 'ilon2_lnd' 'genie_control' 'ilon2_lnd' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+421 'ilon2_ocn' 'genie_control' 'ilon2_ocn' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+422 'ilon2_sic' 'genie_control' 'ilon2_sic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+423 'ilon3_atm' 'genie_control' 'ilon3_atm' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+424 'ilon3_lic' 'genie_control' 'ilon3_lic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+425 'ilon3_lnd' 'genie_control' 'ilon3_lnd' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+426 'ilon3_ocn' 'genie_control' 'ilon3_ocn' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+427 'ilon3_sic' 'genie_control' 'ilon3_sic' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') () 0 () () () 0 0)
+428 'increment_genie_clock' 'genie_global' 'increment_genie_clock' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+429 'inl1_atm' 'genie_control' 'inl1_atm' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '7') () 0 () () () 0 0)
+430 'inl1_ocn' 'genie_control' 'inl1_ocn' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
+431 'inl2_atm' 'genie_control' 'inl2_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+432 'inl2_ocn' 'genie_control' 'inl2_ocn' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '9') () 0 () () () 0 0)
+433 'interpmask_atm' 'genie_global' 'interpmask_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+434 'interpmask_ocn' 'genie_global' 'interpmask_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+435 'intrac_atm_max' 'genie_control' 'intrac_atm_max' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '19') () 0 ()
+() () 0 0)
+436 'intrac_ocn' 'genie_control' 'intrac_ocn' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '14') () 0 ()
+() () 0 0)
+437 'intrac_ocn_max' 'genie_control' 'intrac_ocn_max' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '77') () 0 ()
+() () 0 0)
+438 'intrac_sed_max' 'genie_control' 'intrac_sed_max' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '56') () 0 ()
+() () 0 0)
+439 'ipf_out' 'genie_global' 'ipf_out' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+440 'ips_out' 'genie_global' 'ips_out' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(1 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+441 'istep_atm' 'genie_global' 'istep_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+442 'istep_bgm' 'genie_global' 'istep_bgm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+443 'istep_che' 'genie_global' 'istep_che' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+444 'istep_gem' 'genie_global' 'istep_gem' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+445 'istep_gsurf' 'genie_global' 'istep_gsurf' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+446 'istep_lic' 'genie_global' 'istep_lic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+447 'istep_ocn' 'genie_global' 'istep_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+448 'istep_sic' 'genie_global' 'istep_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+449 'istep_tot' 'genie_global' 'istep_tot' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+450 'iwork1_atm' 'genie_global' 'iwork1_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+451 'iwork1_ocn' 'genie_global' 'iwork1_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+452 'iwork2_atm' 'genie_global' 'iwork2_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+453 'iwork2_ocn' 'genie_global' 'iwork2_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+454 'iwork3_atm' 'genie_global' 'iwork3_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+455 'iwork3_ocn' 'genie_global' 'iwork3_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (INTEGER 4 0 0 INTEGER ()) 0 0 ()
+(2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+456 'j' 'genie_global' 'j' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+457 'jsf_out' 'genie_global' 'jsf_out' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+458 'katm' 'genie_global' 'katm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+459 'katm_loop' 'genie_control' 'katm_loop' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+460 'katmos' 'genie_global' 'katmos' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+461 'kgem' 'genie_global' 'kgem' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+462 'kgemlite' 'genie_control' 'kgemlite' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+463 'klnd_loop' 'genie_control' 'klnd_loop' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+464 'kocn_loop' 'genie_control' 'kocn_loop' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+465 'koverall' 'genie_global' 'koverall' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+466 'koverall_total' 'genie_control' 'koverall_total' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+467 'ksic_loop' 'genie_control' 'ksic_loop' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+468 'land_albice_ice' 'genie_global' 'land_albice_ice' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+469 'land_albs_nosnow_lnd' 'genie_global' 'land_albs_nosnow_lnd' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+470 'land_albs_snow_lnd' 'genie_global' 'land_albs_snow_lnd' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+471 'land_bcap_lnd' 'genie_global' 'land_bcap_lnd' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+472 'land_evap_atm' 'genie_global' 'land_evap_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+473 'land_evapinst_atm' 'genie_global' 'land_evapinst_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+474 'land_fxco2_atm' 'genie_global' 'land_fxco2_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+475 'land_latent_atm' 'genie_global' 'land_latent_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+476 'land_latentinst_atm' 'genie_global' 'land_latentinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+477 'land_lowestlq_atm' 'genie_global' 'land_lowestlq_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+478 'land_lowestlt_atm' 'genie_global' 'land_lowestlt_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+479 'land_lowestlu_atm' 'genie_global' 'land_lowestlu_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+480 'land_lowestlv_atm' 'genie_global' 'land_lowestlv_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+481 'land_moisture_lnd' 'genie_global' 'land_moisture_lnd' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+482 'land_niter_tim' 'genie_global' 'land_niter_tim' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+483 'land_qstar_atm' 'genie_global' 'land_qstar_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+484 'land_rough_atm' 'genie_global' 'land_rough_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+485 'land_runoff_atm' 'genie_global' 'land_runoff_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+486 'land_salb_atm' 'genie_global' 'land_salb_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+487 'land_sensible_atm' 'genie_global' 'land_sensible_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+488 'land_sensibleinst_atm' 'genie_global' 'land_sensibleinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+489 'land_snow_lnd' 'genie_global' 'land_snow_lnd' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+490 'land_stressx_atm' 'genie_global' 'land_stressx_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+491 'land_stressxinst_atm' 'genie_global' 'land_stressxinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+492 'land_stressy_atm' 'genie_global' 'land_stressy_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+493 'land_stressyinst_atm' 'genie_global' 'land_stressyinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+494 'land_temp_lnd' 'genie_global' 'land_temp_lnd' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+495 'land_tice_ice' 'genie_global' 'land_tice_ice' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+496 'land_tstarinst_atm' 'genie_global' 'land_tstarinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+497 'land_z0_lnd' 'genie_global' 'land_z0_lnd' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+498 'landice_slicemask_lic' 'genie_global' 'landice_slicemask_lic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+499 'landicealbedo_atm' 'genie_global' 'landicealbedo_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+500 'landicefrac_atm' 'genie_global' 'landicefrac_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+501 'landsnowdepth_atm' 'genie_global' 'landsnowdepth_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+502 'landsnowicefrac_atm' 'genie_global' 'landsnowicefrac_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+503 'landsnowvegfrac_atm' 'genie_global' 'landsnowvegfrac_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+504 'late_save1' 'genie_global' 'late_save1' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+505 'late_save2' 'genie_global' 'late_save2' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+506 'latent_atm_meanocn' 'genie_global' 'latent_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+507 'latent_atm_meansic' 'genie_global' 'latent_atm_meansic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+508 'latent_ocn' 'genie_global' 'latent_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+509 'latent_sic' 'genie_global' 'latent_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+510 'lowestlh_atm_meanocn' 'genie_global' 'lowestlh_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+511 'lowestlp_atm_meanocn' 'genie_global' 'lowestlp_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+512 'lowestlq_atm_meanocn' 'genie_global' 'lowestlq_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+513 'lowestlt_atm_meanocn' 'genie_global' 'lowestlt_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+514 'lowestlu_atm_meanocn' 'genie_global' 'lowestlu_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+515 'lowestlv_atm_meanocn' 'genie_global' 'lowestlv_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+516 'lrestart_genie' 'genie_global' 'lrestart_genie' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+517 'mass14co2' 'genie_global' 'mass14co2' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (3
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '7')) 0 () ()
+() 0 0)
+518 'massair' 'genie_global' 'massair' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (3
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '7')) 0 () ()
+() 0 0)
+519 'merwind_atm' 'genie_global' 'merwind_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+520 'n2o_atm' 'genie_global' 'n2o_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+521 'nall' 'genie_control' 'nall' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '100') () 0 () () () 0 0)
+522 'ncwritedata' 'genie_global' 'ncwritedata' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN ALLOCATABLE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (3 DEFERRED () () () () () ()) 0 () () () 0 0)
+523 'ncwritevarnames' 'genie_global' 'ncwritevarnames' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN ALLOCATABLE DIMENSION) (
+CHARACTER 1 0 0 CHARACTER ((CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1024')))
+0 0 () (1 DEFERRED () ()) 0 () () () 0 0)
+524 'netlong_atm' 'genie_global' 'netlong_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+525 'netlong_atm_meanocn' 'genie_global' 'netlong_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+526 'netlong_atm_meansic' 'genie_global' 'netlong_atm_meansic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+527 'netlong_ocn' 'genie_global' 'netlong_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+528 'netlong_sic' 'genie_global' 'netlong_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+529 'netsolar_atm' 'genie_global' 'netsolar_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+530 'netsolar_atm_meanocn' 'genie_global' 'netsolar_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+531 'netsolar_atm_meansic' 'genie_global' 'netsolar_atm_meansic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+532 'netsolar_ocn' 'genie_global' 'netsolar_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+533 'netsolar_sic' 'genie_global' 'netsolar_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+534 'nfiles' 'genie_control' 'nfiles' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
+535 'nhrlat' 'genie_global' 'nhrlat' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '160') () 0 () () () 0 0)
+536 'nhrlon' 'genie_global' 'nhrlon' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '320') () 0 () () () 0 0)
+537 'nmaxdims' 'genie_control' 'nmaxdims' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0 INTEGER ()) 0 0 () (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
+538 'nthreads' 'genie_global' 'nthreads' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+539 'ocean_atm_netlong_ocn' 'genie_global' 'ocean_atm_netlong_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+540 'ocean_atm_netsolar_ocn' 'genie_global' 'ocean_atm_netsolar_ocn' 1 (
+(VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+541 'ocean_evap_atm' 'genie_global' 'ocean_evap_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+542 'ocean_evap_ocn' 'genie_global' 'ocean_evap_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+543 'ocean_evapinst_atm' 'genie_global' 'ocean_evapinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+544 'ocean_latent_atm' 'genie_global' 'ocean_latent_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+545 'ocean_latent_ocn' 'genie_global' 'ocean_latent_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+546 'ocean_latentinst_atm' 'genie_global' 'ocean_latentinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+547 'ocean_lowestlh_atm' 'genie_global' 'ocean_lowestlh_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+548 'ocean_lowestlh_ocn' 'genie_global' 'ocean_lowestlh_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+549 'ocean_lowestlp_atm' 'genie_global' 'ocean_lowestlp_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+550 'ocean_lowestlp_ocn' 'genie_global' 'ocean_lowestlp_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+551 'ocean_lowestlq_atm' 'genie_global' 'ocean_lowestlq_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+552 'ocean_lowestlq_ocn' 'genie_global' 'ocean_lowestlq_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+553 'ocean_lowestlt_atm' 'genie_global' 'ocean_lowestlt_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+554 'ocean_lowestlt_ocn' 'genie_global' 'ocean_lowestlt_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+555 'ocean_lowestlu2_ocn' 'genie_global' 'ocean_lowestlu2_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+556 'ocean_lowestlu3_ocn' 'genie_global' 'ocean_lowestlu3_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+557 'ocean_lowestlu_atm' 'genie_global' 'ocean_lowestlu_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+558 'ocean_lowestlv2_ocn' 'genie_global' 'ocean_lowestlv2_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+559 'ocean_lowestlv3_ocn' 'genie_global' 'ocean_lowestlv3_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+560 'ocean_lowestlv_atm' 'genie_global' 'ocean_lowestlv_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+561 'ocean_netlong_ocn' 'genie_global' 'ocean_netlong_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+562 'ocean_netsolar_ocn' 'genie_global' 'ocean_netsolar_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+563 'ocean_niter_tim' 'genie_global' 'ocean_niter_tim' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+564 'ocean_precip_ocn' 'genie_global' 'ocean_precip_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+565 'ocean_qstar_atm' 'genie_global' 'ocean_qstar_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+566 'ocean_rough_atm' 'genie_global' 'ocean_rough_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+567 'ocean_runoff_ocn' 'genie_global' 'ocean_runoff_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+568 'ocean_salb_atm' 'genie_global' 'ocean_salb_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+569 'ocean_sensible_atm' 'genie_global' 'ocean_sensible_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+570 'ocean_sensible_ocn' 'genie_global' 'ocean_sensible_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+571 'ocean_sensibleinst_atm' 'genie_global' 'ocean_sensibleinst_atm' 1 (
+(VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+572 'ocean_stressx2_ocn' 'genie_global' 'ocean_stressx2_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+573 'ocean_stressx3_ocn' 'genie_global' 'ocean_stressx3_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+574 'ocean_stressx_atm' 'genie_global' 'ocean_stressx_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+575 'ocean_stressxinst_atm' 'genie_global' 'ocean_stressxinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+576 'ocean_stressy2_ocn' 'genie_global' 'ocean_stressy2_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+577 'ocean_stressy3_ocn' 'genie_global' 'ocean_stressy3_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+578 'ocean_stressy_atm' 'genie_global' 'ocean_stressy_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (REAL 8 0 0
+REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+579 'ocean_stressyinst_atm' 'genie_global' 'ocean_stressyinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+580 'ocean_tstarinst_atm' 'genie_global' 'ocean_tstarinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE DIMENSION) (
+REAL 8 0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER
+()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (
+INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0
+'36')) 0 () () () 0 0)
+581 'ocnlite_wrapper' 'genie_loop_wrappers' 'ocnlite_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+582 'omp_destroy_lock' 'omp_lib' 'omp_destroy_lock' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 583 0 (584) () 0 () () () 0 0)
+585 'omp_destroy_nest_lock' 'omp_lib' 'omp_destroy_nest_lock' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 586 0 (587) () 0 () () () 0 0)
+588 'omp_get_active_level' 'omp_lib' 'omp_get_active_level' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (
+INTEGER 4 0 0 INTEGER ()) 589 0 () () 588 () () () 0 0)
+3 'omp_get_ancestor_thread_num' 'omp_lib' 'omp_get_ancestor_thread_num'
+1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION
+GENERIC) (INTEGER 4 0 0 INTEGER ()) 590 0 (591) () 3 () () () 0 0)
+2 'omp_get_ancestor_thread_num_8' 'omp_lib'
+'omp_get_ancestor_thread_num_8' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+BODY UNKNOWN EXTERNAL FUNCTION) (INTEGER 4 0 0 INTEGER ()) 592 0 (593) ()
+2 () () () 0 0)
+594 'omp_get_dynamic' 'omp_lib' 'omp_get_dynamic' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (LOGICAL 4 0
+0 LOGICAL ()) 595 0 () () 594 () () () 0 0)
+596 'omp_get_level' 'omp_lib' 'omp_get_level' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (INTEGER 4 0
+0 INTEGER ()) 597 0 () () 596 () () () 0 0)
+598 'omp_get_max_active_levels' 'omp_lib' 'omp_get_max_active_levels' 1
+((PROCEDURE UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (
+INTEGER 4 0 0 INTEGER ()) 599 0 () () 598 () () () 0 0)
+600 'omp_get_max_threads' 'omp_lib' 'omp_get_max_threads' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (INTEGER 4 0
+0 INTEGER ()) 601 0 () () 600 () () () 0 0)
+602 'omp_get_nested' 'omp_lib' 'omp_get_nested' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (LOGICAL 4 0
+0 LOGICAL ()) 603 0 () () 602 () () () 0 0)
+604 'omp_get_num_procs' 'omp_lib' 'omp_get_num_procs' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (INTEGER 4 0
+0 INTEGER ()) 605 0 () () 604 () () () 0 0)
+606 'omp_get_num_threads' 'omp_lib' 'omp_get_num_threads' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (INTEGER 4 0
+0 INTEGER ()) 607 0 () () 606 () () () 0 0)
+7 'omp_get_schedule' 'omp_lib' 'omp_get_schedule' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE GENERIC) (
+UNKNOWN 0 0 0 UNKNOWN ()) 608 0 (609 610) () 0 () () () 0 0)
+6 'omp_get_schedule_8' 'omp_lib' 'omp_get_schedule_8' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 611 0 (612 613) () 0 () () () 0 0)
+5 'omp_get_team_size' 'omp_lib' 'omp_get_team_size' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION GENERIC) (
+INTEGER 4 0 0 INTEGER ()) 614 0 (615) () 5 () () () 0 0)
+4 'omp_get_team_size_8' 'omp_lib' 'omp_get_team_size_8' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (INTEGER 4 0
+0 INTEGER ()) 616 0 (617) () 4 () () () 0 0)
+618 'omp_get_thread_limit' 'omp_lib' 'omp_get_thread_limit' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (
+INTEGER 4 0 0 INTEGER ()) 619 0 () () 618 () () () 0 0)
+620 'omp_get_thread_num' 'omp_lib' 'omp_get_thread_num' 1 ((PROCEDURE
+UNKNOWN-INTENT EXTERNAL-PROC BODY UNKNOWN EXTERNAL FUNCTION) (INTEGER 4
+0 0 INTEGER ()) 621 0 () () 620 () () () 0 0)
+622 'omp_get_wtick' 'omp_lib' 'omp_get_wtick' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (REAL 8 0 0
+REAL ()) 623 0 () () 622 () () () 0 0)
+624 'omp_get_wtime' 'omp_lib' 'omp_get_wtime' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (REAL 8 0 0
+REAL ()) 625 0 () () 624 () () () 0 0)
+626 'omp_in_parallel' 'omp_lib' 'omp_in_parallel' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (LOGICAL 4 0
+0 LOGICAL ()) 627 0 () () 626 () () () 0 0)
+628 'omp_init_lock' 'omp_lib' 'omp_init_lock' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 629 0 (630) () 0 () () () 0 0)
+631 'omp_init_nest_lock' 'omp_lib' 'omp_init_nest_lock' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 632 0 (633) () 0 () () () 0 0)
+634 'omp_integer_kind' 'omp_lib_kinds' 'omp_integer_kind' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '4') () 0 () ()
+() 0 0)
+635 'omp_lib' 'omp_lib' 'omp_lib' 1 ((MODULE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+636 'omp_lib_kinds' 'omp_lib_kinds' 'omp_lib_kinds' 1 ((MODULE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (UNKNOWN 0 0 0 UNKNOWN ())
+0 0 () () 0 () () () 0 0)
+637 'omp_lock_kind' 'omp_lib_kinds' 'omp_lock_kind' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '4') () 0 () ()
+() 0 0)
+638 'omp_logical_kind' 'omp_lib_kinds' 'omp_logical_kind' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '4') () 0 () ()
+() 0 0)
+639 'omp_nest_lock_kind' 'omp_lib_kinds' 'omp_nest_lock_kind' 1 ((
+PARAMETER UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4
+0 0 INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '8') () 0
+() () () 0 0)
+640 'omp_sched_auto' 'omp_lib' 'omp_sched_auto' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '4') () 0 () ()
+() 0 0)
+641 'omp_sched_dynamic' 'omp_lib' 'omp_sched_dynamic' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '2') () 0 () ()
+() 0 0)
+642 'omp_sched_guided' 'omp_lib' 'omp_sched_guided' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '3') () 0 () ()
+() 0 0)
+643 'omp_sched_kind' 'omp_lib_kinds' 'omp_sched_kind' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '4') () 0 () ()
+() 0 0)
+644 'omp_sched_static' 'omp_lib' 'omp_sched_static' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') () 0 () ()
+() 0 0)
+17 'omp_set_dynamic' 'omp_lib' 'omp_set_dynamic' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE GENERIC) (
+UNKNOWN 0 0 0 UNKNOWN ()) 645 0 (646) () 0 () () () 0 0)
+16 'omp_set_dynamic_8' 'omp_lib' 'omp_set_dynamic_8' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 647 0 (648) () 0 () () () 0 0)
+649 'omp_set_lock' 'omp_lib' 'omp_set_lock' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ())
+650 0 (651) () 0 () () () 0 0)
+9 'omp_set_max_active_levels' 'omp_lib' 'omp_set_max_active_levels' 1 (
+(PROCEDURE UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE
+GENERIC) (UNKNOWN 0 0 0 UNKNOWN ()) 652 0 (653) () 0 () () () 0 0)
+8 'omp_set_max_active_levels_8' 'omp_lib' 'omp_set_max_active_levels_8'
+1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL
+SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 654 0 (655) () 0 () () () 0 0)
+656 'omp_set_nest_lock' 'omp_lib' 'omp_set_nest_lock' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 657 0 (658) () 0 () () () 0 0)
+11 'omp_set_nested' 'omp_lib' 'omp_set_nested' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE GENERIC) (
+UNKNOWN 0 0 0 UNKNOWN ()) 659 0 (660) () 0 () () () 0 0)
+10 'omp_set_nested_8' 'omp_lib' 'omp_set_nested_8' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 661 0 (662) () 0 () () () 0 0)
+15 'omp_set_num_threads' 'omp_lib' 'omp_set_num_threads' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE GENERIC) (
+UNKNOWN 0 0 0 UNKNOWN ()) 663 0 (664) () 0 () () () 0 0)
+14 'omp_set_num_threads_8' 'omp_lib' 'omp_set_num_threads_8' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 665 0 (666) () 0 () () () 0 0)
+13 'omp_set_schedule' 'omp_lib' 'omp_set_schedule' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE GENERIC) (
+UNKNOWN 0 0 0 UNKNOWN ()) 667 0 (668 669) () 0 () () () 0 0)
+12 'omp_set_schedule_8' 'omp_lib' 'omp_set_schedule_8' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 670 0 (671 672) () 0 () () () 0 0)
+673 'omp_test_lock' 'omp_lib' 'omp_test_lock' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (LOGICAL 4 0
+0 LOGICAL ()) 674 0 (675) () 673 () () () 0 0)
+676 'omp_test_nest_lock' 'omp_lib' 'omp_test_nest_lock' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL FUNCTION) (INTEGER 4 0
+0 INTEGER ()) 677 0 (678) () 676 () () () 0 0)
+679 'omp_unset_lock' 'omp_lib' 'omp_unset_lock' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 680 0 (681) () 0 () () () 0 0)
+682 'omp_unset_nest_lock' 'omp_lib' 'omp_unset_nest_lock' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN EXTERNAL SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 683 0 (684) () 0 () () () 0 0)
+685 'openmp_version' 'omp_lib' 'openmp_version' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (INTEGER 4 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '200805') () 0
+() () () 0 0)
+686 'outputdir_name' 'genie_control' 'outputdir_name' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (CHARACTER 1 0 0 CHARACTER
+((CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1024'))) 0 0 () () 0 () () () 0
+0)
+687 'pi' 'genie_global' 'pi' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ()) 0 0 () (CONSTANT (REAL 8 0 0
+REAL ()) 0 '0.3243f6a8a48aa0@1') () 0 () () () 0 0)
+688 'plumin' 'genie_global' 'plumin' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+689 'precip_atm' 'genie_global' 'precip_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+690 'precip_atm_meanocn' 'genie_global' 'precip_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+691 'precip_atm_meansic' 'genie_global' 'precip_atm_meansic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+692 'precip_ocn' 'genie_global' 'precip_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+693 'precip_sic' 'genie_global' 'precip_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+694 'psigma' 'genie_global' 'psigma' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (1
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '7')) 0 () () () 0 0)
+695 'q2m_atm' 'genie_global' 'q2m_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+696 'radfor_wrapper' 'genie_loop_wrappers' 'radfor_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+697 'radn_energy' 'genie_global' 'radn_energy' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+698 'ratio_sd_dense' 'genie_global' 'ratio_sd_dense' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE) (REAL 8 0 0 REAL ())
+0 0 () (CONSTANT (REAL 8 0 0 REAL ()) 0 '0.35555555555556@1') () 0 () ()
+() 0 0)
+699 'reinit_flux_rokocn_gem_wrapper' 'genie_loop_wrappers'
+'reinit_flux_rokocn_gem_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+700 'reinit_flux_rokocn_wrapper' 'genie_loop_wrappers'
+'reinit_flux_rokocn_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () ()
+0 0)
+701 'rh2m_atm' 'genie_global' 'rh2m_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+702 'rokgem_restart_wrapper' 'genie_loop_wrappers'
+'rokgem_restart_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+703 'rokgem_wrapper' 'genie_loop_wrappers' 'rokgem_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+704 'rough_ocn' 'genie_global' 'rough_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+705 'runoff_atm_meanocn' 'genie_global' 'runoff_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+706 'runoff_land' 'genie_global' 'runoff_land' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+707 'runoff_ocn' 'genie_global' 'runoff_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+708 'runoff_sic' 'genie_global' 'runoff_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+709 'seaicefrac_atm' 'genie_global' 'seaicefrac_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+710 'seaicefrac_atm_meanocn' 'genie_global' 'seaicefrac_atm_meanocn' 1 (
+(VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+711 'seaicefrac_ocn' 'genie_global' 'seaicefrac_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+712 'seaicefrac_sic' 'genie_global' 'seaicefrac_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+713 'sedgem_dsedage_wrapper' 'genie_loop_wrappers'
+'sedgem_dsedage_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+714 'sedgem_glt_wrapper' 'genie_loop_wrappers' 'sedgem_glt_wrapper' 1 (
+(PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN
+0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+715 'sedgem_restart_wrapper' 'genie_loop_wrappers'
+'sedgem_restart_wrapper' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN SUBROUTINE) (UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+716 'sedgem_wrapper' 'genie_loop_wrappers' 'sedgem_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+717 'sens_save1' 'genie_global' 'sens_save1' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+718 'sens_save2' 'genie_global' 'sens_save2' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+719 'sensible_atm_meanocn' 'genie_global' 'sensible_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+720 'sensible_atm_meansic' 'genie_global' 'sensible_atm_meansic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+721 'sensible_ocn' 'genie_global' 'sensible_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+722 'sensible_sic' 'genie_global' 'sensible_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+723 'srest_ocn' 'genie_global' 'srest_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+724 'sstar_ocn' 'genie_global' 'sstar_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+725 'stressx_atm_meanocn' 'genie_global' 'stressx_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+726 'stressx_atm_meansic' 'genie_global' 'stressx_atm_meansic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+727 'stressx_ocn' 'genie_global' 'stressx_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '2') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+728 'stressx_sic' 'genie_global' 'stressx_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+729 'stressy_atm_meanocn' 'genie_global' 'stressy_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+730 'stressy_atm_meansic' 'genie_global' 'stressy_atm_meansic' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+731 'stressy_ocn' 'genie_global' 'stressy_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (3 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '2') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '36')) 0 () () () 0 0)
+732 'stressy_sic' 'genie_global' 'stressy_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+733 'surf_evap_atm' 'genie_global' 'surf_evap_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+734 'surf_iter_tim' 'genie_global' 'surf_iter_tim' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ())
+0 0 () () 0 () () () 0 0)
+735 'surf_latent_atm' 'genie_global' 'surf_latent_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+736 'surf_ocn_sic_wrapper' 'genie_loop_wrappers' 'surf_ocn_sic_wrapper'
+1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (
+UNKNOWN 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+737 'surf_orog_atm' 'genie_global' 'surf_orog_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+738 'surf_qstar_atm' 'genie_global' 'surf_qstar_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+739 'surf_rough_atm' 'genie_global' 'surf_rough_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+740 'surf_salb_atm' 'genie_global' 'surf_salb_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+741 'surf_sensible_atm' 'genie_global' 'surf_sensible_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+742 'surf_stressx2_atm' 'genie_global' 'surf_stressx2_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+743 'surf_stressx3_atm' 'genie_global' 'surf_stressx3_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+744 'surf_stressx_atm' 'genie_global' 'surf_stressx_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+745 'surf_stressy2_atm' 'genie_global' 'surf_stressy2_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+746 'surf_stressy3_atm' 'genie_global' 'surf_stressy3_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+747 'surf_stressy_atm' 'genie_global' 'surf_stressy_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+748 'surf_tstarinst_atm' 'genie_global' 'surf_tstarinst_atm' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+749 'surfdsigma' 'genie_global' 'surfdsigma' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+750 'surflux_wrapper' 'genie_loop_wrappers' 'surflux_wrapper' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN SUBROUTINE) (UNKNOWN 0
+0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+751 'surfsigma' 'genie_global' 'surfsigma' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+752 't2m_atm' 'genie_global' 't2m_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+753 'tab' 'genie_global' 'tab' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE) (CHARACTER 1 0 0 CHARACTER ((CONSTANT (INTEGER 4
+0 0 INTEGER ()) 0 '1'))) 0 0 () (CONSTANT (CHARACTER 1 0 0 CHARACTER (()))
+0 1 '\U00000009') () 0 () () () 0 0)
+754 'tavg_ocn' 'genie_global' 'tavg_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+755 'temp_energy' 'genie_global' 'temp_energy' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+756 'temp_sic' 'genie_global' 'temp_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+757 'temptop_atm' 'genie_global' 'temptop_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+758 'test_energy_ocean' 'genie_global' 'test_energy_ocean' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+759 'test_energy_radocean' 'genie_global' 'test_energy_radocean' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+760 'test_energy_radseaice' 'genie_global' 'test_energy_radseaice' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+761 'test_energy_radsurf' 'genie_global' 'test_energy_radsurf' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+762 'test_energy_seaice' 'genie_global' 'test_energy_seaice' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ())
+0 0 () () 0 () () () 0 0)
+763 'test_water_land' 'genie_global' 'test_water_land' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+764 'test_water_ocean' 'genie_global' 'test_water_ocean' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+765 'test_water_seaice' 'genie_global' 'test_water_seaice' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+766 'thicktop_atm' 'genie_global' 'thicktop_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+767 'thread_id' 'genie_global' 'thread_id' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+768 'tmp_check' 'genie_global' 'tmp_check' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+769 'tmpavg_ocn' 'genie_global' 'tmpavg_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+770 'torog_atm' 'genie_global' 'torog_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+771 'trest_ocn' 'genie_global' 'trest_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+772 'tstar_atm' 'genie_global' 'tstar_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+773 'tstar_gb_land' 'genie_global' 'tstar_gb_land' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+774 'tstar_ocn' 'genie_global' 'tstar_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+775 'tstar_sic' 'genie_global' 'tstar_sic' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+776 'u10m_atm' 'genie_global' 'u10m_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+777 'ustar_ocn' 'genie_global' 'ustar_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+778 'v10m_atm' 'genie_global' 'v10m_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+779 'verbosity' 'genie_global' 'verbosity' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 ()
+() () 0 0)
+780 'vstar_ocn' 'genie_global' 'vstar_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+781 'waterflux_atm' 'genie_global' 'waterflux_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+782 'waterflux_atm_meanocn' 'genie_global' 'waterflux_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8
+0 0 REAL ()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1')
+(CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+783 'waterflux_ocn' 'genie_global' 'waterflux_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+784 'waterflux_sic' 'genie_global' 'waterflux_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+785 'weight_atm' 'genie_global' 'weight_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+786 'weight_ocn' 'genie_global' 'weight_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL ()) 0 0 () (2
+EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER
+4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () () () 0 0)
+787 'weightcheck' 'genie_global' 'weightcheck' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+788 'weighttot_atm' 'genie_global' 'weighttot_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+789 'weighttot_ocn' 'genie_global' 'weighttot_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+790 'wnet_atm' 'genie_global' 'wnet_atm' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+791 'wnet_atm_l' 'genie_global' 'wnet_atm_l' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+792 'wnet_atm_o' 'genie_global' 'wnet_atm_o' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+793 'wnet_ocn' 'genie_global' 'wnet_ocn' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () ()
+0 0)
+794 'write_flag_atm' 'genie_control' 'write_flag_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+795 'write_flag_ocn' 'genie_control' 'write_flag_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+796 'write_flag_sic' 'genie_control' 'write_flag_sic' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (LOGICAL 4 0 0 LOGICAL ())
+0 0 () () 0 () () () 0 0)
+797 'wscn_evap_atm_meanocn' 'genie_global' 'wscn_evap_atm_meanocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ())
+0 0 () () 0 () () () 0 0)
+798 'wscn_evap_atm_meansurf' 'genie_global' 'wscn_evap_atm_meansurf' 1 (
+(VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL
+()) 0 0 () () 0 () () () 0 0)
+799 'wscn_evap_atm_meansurf_l' 'genie_global' 'wscn_evap_atm_meansurf_l'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+800 'wscn_evap_atm_meansurf_o' 'genie_global' 'wscn_evap_atm_meansurf_o'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+801 'wscn_evap_ocn' 'genie_global' 'wscn_evap_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+802 'wscn_precip_atm_meanocn' 'genie_global' 'wscn_precip_atm_meanocn' 1
+((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL
+()) 0 0 () () 0 () () () 0 0)
+803 'wscn_precip_atm_meansurf' 'genie_global' 'wscn_precip_atm_meansurf'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+804 'wscn_precip_atm_meansurf_l' 'genie_global'
+'wscn_precip_atm_meansurf_l' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+805 'wscn_precip_atm_meansurf_o' 'genie_global'
+'wscn_precip_atm_meansurf_o' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+806 'wscn_precip_ocn' 'genie_global' 'wscn_precip_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+807 'wscn_runoff_atm_meanocn' 'genie_global' 'wscn_runoff_atm_meanocn' 1
+((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL
+()) 0 0 () () 0 () () () 0 0)
+808 'wscn_runoff_atm_meansurf' 'genie_global' 'wscn_runoff_atm_meansurf'
+1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+809 'wscn_runoff_ocn' 'genie_global' 'wscn_runoff_ocn' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 ()
+() 0 () () () 0 0)
+810 'wscn_waterflux_atm_meanocn' 'genie_global'
+'wscn_waterflux_atm_meanocn' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+811 'wscn_waterflux_atm_meansurf' 'genie_global'
+'wscn_waterflux_atm_meansurf' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+812 'wscn_waterflux_ocn' 'genie_global' 'wscn_waterflux_ocn' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN) (REAL 8 0 0 REAL ())
+0 0 () () 0 () () () 0 0)
+813 'zonwind_atm' 'genie_global' 'zonwind_atm' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN DIMENSION) (REAL 8 0 0 REAL
+()) 0 0 () (2 EXPLICIT (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36') (CONSTANT (INTEGER 4 0 0
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 INTEGER ()) 0 '36')) 0 () ()
+() 0 0)
+587 'lock' '' 'lock' 586 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+633 'lock' '' 'lock' 632 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+630 'lock' '' 'lock' 629 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+646 'set' '' 'set' 645 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN DUMMY)
+(LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 () () () 0 0)
+648 'set' '' 'set' 647 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN DUMMY)
+(LOGICAL 8 0 0 LOGICAL ()) 0 0 () () 0 () () () 0 0)
+653 'max_levels' '' 'max_levels' 652 ((VARIABLE IN UNKNOWN-PROC UNKNOWN
+UNKNOWN DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+651 'lock' '' 'lock' 650 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+655 'max_levels' '' 'max_levels' 654 ((VARIABLE IN UNKNOWN-PROC UNKNOWN
+UNKNOWN DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+660 'set' '' 'set' 659 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN DUMMY)
+(LOGICAL 4 0 0 LOGICAL ()) 0 0 () () 0 () () () 0 0)
+662 'set' '' 'set' 661 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN DUMMY)
+(LOGICAL 8 0 0 LOGICAL ()) 0 0 () () 0 () () () 0 0)
+664 'set' '' 'set' 663 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN DUMMY)
+(INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+669 'modifier' '' 'modifier' 667 ((VARIABLE IN UNKNOWN-PROC UNKNOWN
+UNKNOWN DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+671 'kind' '' 'kind' 670 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+672 'modifier' '' 'modifier' 670 ((VARIABLE IN UNKNOWN-PROC UNKNOWN
+UNKNOWN DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+668 'kind' '' 'kind' 667 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+666 'set' '' 'set' 665 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN DUMMY)
+(INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+681 'lock' '' 'lock' 680 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+684 'lock' '' 'lock' 683 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+678 'lock' '' 'lock' 677 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+584 'lock' '' 'lock' 583 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+591 'level' '' 'level' 590 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+593 'level' '' 'level' 592 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+609 'kind' '' 'kind' 608 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+613 'modifier' '' 'modifier' 611 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN
+UNKNOWN DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+612 'kind' '' 'kind' 611 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+610 'modifier' '' 'modifier' 608 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN
+UNKNOWN DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+615 'level' '' 'level' 614 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+617 'level' '' 'level' 616 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+658 'lock' '' 'lock' 657 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 8 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+675 'lock' '' 'lock' 674 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN
+DUMMY) (INTEGER 4 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+)
+
+('__convert_i4_r8' 0 18 'aboxedge1_lat_atm' 0 19 'aboxedge1_lat_ocn' 0
+20 'aboxedge1_lat_sic' 0 21 'aboxedge1_lon_atm' 0 22 'aboxedge1_lon_ocn'
+0 23 'aboxedge1_lon_sic' 0 24 'aboxedge2_lat_atm' 0 25 'aboxedge2_lat_ocn'
+0 26 'aboxedge2_lat_sic' 0 27 'aboxedge2_lon_atm' 0 28 'aboxedge2_lon_ocn'
+0 29 'aboxedge2_lon_sic' 0 30 'aboxedge3_lat_atm' 0 31 'aboxedge3_lat_ocn'
+0 32 'aboxedge3_lat_sic' 0 33 'aboxedge3_lon_atm' 0 34 'aboxedge3_lon_ocn'
+0 35 'aboxedge3_lon_sic' 0 36 'alat1_atm' 0 37 'alat1_ocn' 0 38
+'alat1_sic' 0 39 'alat2_atm' 0 40 'alat2_ocn' 0 41 'alat2_sic' 0 42
+'alat3_atm' 0 43 'alat3_ocn' 0 44 'alat3_sic' 0 45 'albavg_ocn' 0 46
+'albd_sic' 0 47 'albedo_atm' 0 48 'albedo_land' 0 49 'albedo_ocn' 0 50
+'albedo_sic' 0 51 'albs_atm' 0 52 'alon1_atm' 0 53 'alon1_ocn' 0 54
+'alon1_sic' 0 55 'alon2_atm' 0 56 'alon2_ocn' 0 57 'alon2_sic' 0 58
+'alon3_atm' 0 59 'alon3_ocn' 0 60 'alon3_sic' 0 61 'at1' 0 62 'at1_tmp'
+0 63 'at2' 0 64 'at2_tmp' 0 65 'at3' 0 66 'at3_tmp' 0 67 'at_mask' 0 68
+'atchem_restart_wrapper' 0 69 'atchem_wrapper' 0 70 'atmos_dt_tim' 0 71
+'atmos_evap_atm' 0 72 'atmos_evap_ocn' 0 73 'atmos_latent_atm' 0 74
+'atmos_latent_ocn' 0 75 'atmos_lowestlh_atm' 0 76 'atmos_lowestlp_atm' 0
+77 'atmos_lowestlq_atm' 0 78 'atmos_lowestlt_atm' 0 79
+'atmos_lowestlu2_atm' 0 80 'atmos_lowestlu_atm' 0 81 'atmos_lowestlv3_atm'
+0 82 'atmos_lowestlv_atm' 0 83 'atmos_netlong_atm' 0 84
+'atmos_netlong_ocn' 0 85 'atmos_netsolar_atm' 0 86 'atmos_netsolar_ocn'
+0 87 'atmos_precip_atm' 0 88 'atmos_precip_ocn' 0 89 'atmos_sensible_atm'
+0 90 'atmos_sensible_ocn' 0 91 'biogem_climate_wrapper' 0 92
+'biogem_forcing_wrapper' 0 93 'biogem_restart_wrapper' 0 94
+'biogem_tracercoupling_wrapper' 0 95 'biogem_wrapper' 0 96 'bufsiz' 0 97
+'ch4_atm' 0 98 'char' 0 99 'co2_atm' 0 100 'conductflux_atm' 0 101
+'conductflux_atm_meanocn' 0 102 'conductflux_ocn' 0 103 'conductflux_sic'
+0 104 'conv_kocn_katchem' 0 105 'conv_kocn_kbiogem' 0 106
+'conv_kocn_kecogem' 0 107 'conv_kocn_kgoldlite' 0 108 'conv_kocn_kocnlite'
+0 109 'conv_kocn_krokgem' 0 110 'conv_kocn_ksedgem' 0 111
+'cpl_comp_atmgem_wrapper' 0 112 'cpl_comp_atmlnd_wrapper' 0 113
+'cpl_comp_atmocn_wrapper' 0 114 'cpl_comp_embm_wrapper' 0 115
+'cpl_comp_gematm1_wrapper' 0 116 'cpl_comp_gematm_wrapper' 0 117
+'cpl_comp_gemglt_wrapper' 0 118 'cpl_comp_gemocn_wrapper' 0 119
+'cpl_comp_gltgem_d_wrapper' 0 120 'cpl_comp_gltgem_dsum_wrapper' 0 121
+'cpl_comp_lndembm_wrapper' 0 122 'cpl_comp_ocngem_wrapper' 0 123
+'cpl_comp_ocnsed_gem_wrapper' 0 124 'cpl_comp_ocnsed_wrapper' 0 125
+'cpl_comp_rokembm_wrapper' 0 126 'cpl_comp_sedocn_wrapper' 0 127
+'cpl_flux_lndatm_wrapper' 0 128 'cpl_flux_ocnatm_wrapper' 0 129
+'cpl_flux_ocnsed_wrapper' 0 130 'cpl_flux_rokatm_wrapper' 0 131
+'cpl_flux_rokocn_gem_wrapper' 0 132 'cpl_flux_rokocn_wrapper' 0 133
+'cpl_flux_sedocn_wrapper' 0 134 'cpl_flux_sedsed1_wrapper' 0 135
+'ddtmass14co2' 0 136 'debug_end' 0 137 'debug_init' 0 138 'debug_loop' 0
+139 'depth1_ocn' 0 140 'depth2_ocn' 0 141 'dfrac_sic' 0 142 'dhght_sic'
+0 143 'diag_biogem_gem_timeseries_wrapper' 0 144
+'diag_biogem_gem_timeslice_wrapper' 0 145 'diag_biogem_gem_wrapper' 0
+146 'diag_biogem_pco2_wrapper' 0 147 'diag_biogem_timeseries_wrapper' 0
+148 'diag_biogem_timeslice_wrapper' 0 149 'diag_biogem_wrapper' 0 150
+'dt_write' 0 151 'dtcarry_ocn_sic' 0 152 'dumalb_ocn' 0 153 'dummy_atm'
+0 154 'dummy_ocn' 0 155 'dumtmp_ocn' 0 156 'ea_co2' 0 157 'ea_fxplw' 0
+158 'eb_ca' 0 159 'eb_dphi' 0 160 'eb_evap' 0 161 'eb_fx0a' 0 162
+'eb_fx0o' 0 163 'eb_fxlw' 0 164 'eb_fxsen' 0 165 'eb_pptn' 0 166
+'eb_rdtdim' 0 167 'eb_relh' 0 168 'eb_rmax' 0 169 'ecogem_wrapper' 0 170
+'el_leaf' 0 171 'el_photo' 0 172 'el_respsoil' 0 173 'el_respveg' 0 174
+'embm_wrapper' 0 175 'en_lice_vect' 0 176 'en_licesteps' 0 177 'en_nlice'
+0 178 'en_norog' 0 179 'en_ntimes_max' 0 180 'en_orog_vect' 0 181
+'en_orogsteps' 0 182 'en_t_lice' 0 183 'en_t_orog' 0 184
+'energycarry_ocn_sic' 0 185 'energycarry_sic_ocn' 0 186 'enet_atm' 0 187
+'enet_ocn' 0 188 'enetnoconduct_atm' 0 189 'ents_wrapper' 0 190
+'error_cal' 0 191 'escn_conductflux_atm_meanocn' 0 192
+'escn_conductflux_ocn' 0 193 'escn_latent_atm_meanocn' 0 194
+'escn_latent_atm_meansi' 0 195 'escn_latent_atm_meansurf' 0 196
+'escn_latent_ocn' 0 197 'escn_netlong_atm_meanocn' 0 198
+'escn_netlong_atm_meansi' 0 199 'escn_netlong_atm_meansurf' 0 200
+'escn_netlong_ocn' 0 201 'escn_netsolar_atm_meanocn' 0 202
+'escn_netsolar_atm_meansi' 0 203 'escn_netsolar_atm_meansurf' 0 204
+'escn_netsolar_ocn' 0 205 'escn_sensible_atm_meanocn' 0 206
+'escn_sensible_atm_meansi' 0 207 'escn_sensible_atm_meansurf' 0 208
+'escn_sensible_ocn' 0 209 'evap_atm' 0 210 'evap_atm_meanocn' 0 211
+'evap_atm_meansic' 0 212 'evap_land' 0 213 'evap_ocn' 0 214 'evap_save1'
+0 215 'evap_save2' 0 216 'evap_sic' 0 217 'flag_atchem' 0 218
+'flag_biogem' 0 219 'flag_checkfluxes_atlantic' 0 220
+'flag_checkfluxes_ocn' 0 221 'flag_checkfluxes_sic' 0 222
+'flag_checkfluxes_surf' 0 223 'flag_ebatmos' 0 224 'flag_ecogem' 0 225
+'flag_ents' 0 226 'flag_fakeatmos' 0 227 'flag_fixedatmos' 0 228
+'flag_fixedchem' 0 229 'flag_fixedicesheet' 0 230 'flag_fixedland' 0 231
+'flag_fixedocean' 0 232 'flag_fixedseaice' 0 233 'flag_gemlite' 0 234
+'flag_glim_pforce' 0 235 'flag_glim_t2m_force' 0 236 'flag_goldlite' 0
+237 'flag_goldsteinocean' 0 238 'flag_goldsteinseaice' 0 239
+'flag_icesheet' 0 240 'flag_ichem' 0 241 'flag_igcmatmos' 0 242
+'flag_land' 0 243 'flag_ocnlite' 0 244 'flag_rokgem' 0 245 'flag_sedgem'
+0 246 'flag_slabocean' 0 247 'flag_slabseaice' 0 248 'flag_wind' 0 249
+'fname_fluxrestart' 0 250 'fname_restart_main' 0 251 'frac_sic' 0 252
+'fx_le_land' 0 253 'fx_momx_land' 0 254 'fx_momy_land' 0 255 'fx_sen_land'
+0 256 'gem_adapt_auto' 0 257 'gem_adapt_auto_unlimitedgem' 0 258
+'gem_adapt_dgemyr' 0 259 'gem_adapt_diag_biogem_full' 0 260
+'gem_adapt_dpco2' 0 261 'gem_adapt_dpco2dt' 0 262 'gem_notyr' 0 263
+'gem_notyr0' 0 264 'gem_pco2' 0 265 'gem_pco2_init' 0 266 'gem_pco2_old'
+0 267 'gem_yr' 0 268 'gem_yr0' 0 269 'gem_yr_max' 0 270
+'gemlite_climate_wrapper' 0 271 'gemlite_cycleclean_wrapper' 0 272
+'gemlite_cycleinit_wrapper' 0 273 'gemlite_gltts_wrapper' 0 274
+'gemlite_wrapper' 0 275 'genie_atm1' 0 276 'genie_clock' 0 277
+'genie_control' 0 278 'genie_global' 0 279 'genie_loop_wrappers' 0 280
+'genie_ocn' 0 281 'genie_sfcatm' 0 282 'genie_sfcatm1' 0 283
+'genie_sfcatm_lnd' 0 284 'genie_sfcocn1' 0 285 'genie_sfcsed' 0 286
+'genie_sfcsed1' 0 287 'genie_sfcsumocn' 0 288 'genie_sfxatm1' 0 289
+'genie_sfxatm_lnd' 0 290 'genie_sfxocn' 0 291 'genie_sfxocn1' 0 292
+'genie_sfxrok' 0 293 'genie_sfxsed1' 0 294 'genie_sfxsumatm' 0 295
+'genie_sfxsumrok1' 0 296 'genie_sfxsumrok1_gem' 0 297 'genie_sfxsumsed'
+0 298 'genie_sfxsumsed1' 0 299 'genie_solar_constant' 0 300
+'genie_timestep' 0 301 'genie_version' 0 302 'getversion' 0 303
+'glim_albedo' 0 304 'glim_covmap' 0 305 'glim_covmap_orog' 0 306
+'glim_flag' 0 307 'glim_icefrac' 0 308 'glim_icets' 0 309 'glim_orog' 0
+310 'glim_prcp_adj' 0 311 'glim_runoff_adj' 0 312 'glim_snow_model' 0
+313 'glim_snowdepth' 0 314 'glim_snowicefrac' 0 315 'glim_snowvegfrac' 0
+316 'glim_tempmask' 0 317 'glim_timestep' 0 318 'glim_vegfrac' 0 319
+'glim_waterin' 0 320 'glim_waterout' 0 321 'global_daysperyear' 0 322
+'go_c' 0 323 'go_cd' 0 324 'go_cost' 0 325 'go_cpsc' 0 326 'go_cv' 0 327
+'go_dphi' 0 328 'go_ds' 0 329 'go_dsc' 0 330 'go_dt' 0 331 'go_dz' 0 332
+'go_dza' 0 333 'go_ec' 0 334 'go_fsc' 0 335 'go_fxsw' 0 336 'go_iaf' 0
+337 'go_ianav' 0 338 'go_ias' 0 339 'go_ipf' 0 340 'go_ips' 0 341
+'go_istep0' 0 342 'go_itstp' 0 343 'go_iwstp' 0 344 'go_jsf' 0 345 'go_k1'
+0 346 'go_lin' 0 347 'go_mldta' 0 348 'go_npstp' 0 349 'go_nyear' 0 350
+'go_rh0sc' 0 351 'go_rho' 0 352 'go_rhoair' 0 353 'go_rhosc' 0 354
+'go_rsc' 0 355 'go_s' 0 356 'go_saln0' 0 357 'go_scf' 0 358 'go_solconst'
+0 359 'go_solfor' 0 360 'go_sv' 0 361 'go_syr' 0 362 'go_tau' 0 363
+'go_ts' 0 364 'go_ts1' 0 365 'go_u' 0 366 'go_usc' 0 367
+'gold_seaice_wrapper' 0 368 'goldlite_wrapper' 0 369 'goldstein_wrapper'
+0 370 'grid_type_fixedatmos' 0 371 'hght_sic' 0 372 'hrlats_atm' 0 373
+'hrlatsedge_atm' 0 374 'hrlons_atm' 0 375 'hrlonsedge_atm' 0 376 'i' 0
+377 'iaf_out' 0 378 'ias_out' 0 379 'ice_icefrac_atm' 0 380 'iconv4lnd'
+0 381 'iconv_che' 0 382 'iconv_ice' 0 383 'ifirst' 0 384 'ilandmask1_atm'
+0 385 'ilandmask1_ocn' 0 386 'ilandmask1_sic' 0 387 'ilandmask2_atm' 0
+388 'ilandmask2_ocn' 0 389 'ilandmask2_sic' 0 390 'ilandmask3_atm' 0 391
+'ilandmask3_ocn' 0 392 'ilandmask3_sic' 0 393 'ilat1_atm' 0 394
+'ilat1_lic' 0 395 'ilat1_lnd' 0 396 'ilat1_ocn' 0 397 'ilat1_rok' 0 398
+'ilat1_sed' 0 399 'ilat1_sic' 0 400 'ilat2_atm' 0 401 'ilat2_lic' 0 402
+'ilat2_lnd' 0 403 'ilat2_ocn' 0 404 'ilat2_sic' 0 405 'ilat3_atm' 0 406
+'ilat3_lic' 0 407 'ilat3_lnd' 0 408 'ilat3_ocn' 0 409 'ilat3_sic' 0 410
+'ilon1_atm' 0 411 'ilon1_lic' 0 412 'ilon1_lnd' 0 413 'ilon1_ocn' 0 414
+'ilon1_rok' 0 415 'ilon1_sed' 0 416 'ilon1_sic' 0 417 'ilon2_atm' 0 418
+'ilon2_lic' 0 419 'ilon2_lnd' 0 420 'ilon2_ocn' 0 421 'ilon2_sic' 0 422
+'ilon3_atm' 0 423 'ilon3_lic' 0 424 'ilon3_lnd' 0 425 'ilon3_ocn' 0 426
+'ilon3_sic' 0 427 'increment_genie_clock' 0 428 'inl1_atm' 0 429
+'inl1_ocn' 0 430 'inl2_atm' 0 431 'inl2_ocn' 0 432 'interpmask_atm' 0
+433 'interpmask_ocn' 0 434 'intrac_atm_max' 0 435 'intrac_ocn' 0 436
+'intrac_ocn_max' 0 437 'intrac_sed_max' 0 438 'ipf_out' 0 439 'ips_out'
+0 440 'istep_atm' 0 441 'istep_bgm' 0 442 'istep_che' 0 443 'istep_gem'
+0 444 'istep_gsurf' 0 445 'istep_lic' 0 446 'istep_ocn' 0 447 'istep_sic'
+0 448 'istep_tot' 0 449 'iwork1_atm' 0 450 'iwork1_ocn' 0 451 'iwork2_atm'
+0 452 'iwork2_ocn' 0 453 'iwork3_atm' 0 454 'iwork3_ocn' 0 455 'j' 0 456
+'jsf_out' 0 457 'katm' 0 458 'katm_loop' 0 459 'katmos' 0 460 'kgem' 0
+461 'kgemlite' 0 462 'klnd_loop' 0 463 'kocn_loop' 0 464 'koverall' 0
+465 'koverall_total' 0 466 'ksic_loop' 0 467 'land_albice_ice' 0 468
+'land_albs_nosnow_lnd' 0 469 'land_albs_snow_lnd' 0 470 'land_bcap_lnd'
+0 471 'land_evap_atm' 0 472 'land_evapinst_atm' 0 473 'land_fxco2_atm' 0
+474 'land_latent_atm' 0 475 'land_latentinst_atm' 0 476
+'land_lowestlq_atm' 0 477 'land_lowestlt_atm' 0 478 'land_lowestlu_atm'
+0 479 'land_lowestlv_atm' 0 480 'land_moisture_lnd' 0 481 'land_niter_tim'
+0 482 'land_qstar_atm' 0 483 'land_rough_atm' 0 484 'land_runoff_atm' 0
+485 'land_salb_atm' 0 486 'land_sensible_atm' 0 487
+'land_sensibleinst_atm' 0 488 'land_snow_lnd' 0 489 'land_stressx_atm' 0
+490 'land_stressxinst_atm' 0 491 'land_stressy_atm' 0 492
+'land_stressyinst_atm' 0 493 'land_temp_lnd' 0 494 'land_tice_ice' 0 495
+'land_tstarinst_atm' 0 496 'land_z0_lnd' 0 497 'landice_slicemask_lic' 0
+498 'landicealbedo_atm' 0 499 'landicefrac_atm' 0 500 'landsnowdepth_atm'
+0 501 'landsnowicefrac_atm' 0 502 'landsnowvegfrac_atm' 0 503 'late_save1'
+0 504 'late_save2' 0 505 'latent_atm_meanocn' 0 506 'latent_atm_meansic'
+0 507 'latent_ocn' 0 508 'latent_sic' 0 509 'lowestlh_atm_meanocn' 0 510
+'lowestlp_atm_meanocn' 0 511 'lowestlq_atm_meanocn' 0 512
+'lowestlt_atm_meanocn' 0 513 'lowestlu_atm_meanocn' 0 514
+'lowestlv_atm_meanocn' 0 515 'lrestart_genie' 0 516 'mass14co2' 0 517
+'massair' 0 518 'merwind_atm' 0 519 'n2o_atm' 0 520 'nall' 0 521
+'ncwritedata' 0 522 'ncwritevarnames' 0 523 'netlong_atm' 0 524
+'netlong_atm_meanocn' 0 525 'netlong_atm_meansic' 0 526 'netlong_ocn' 0
+527 'netlong_sic' 0 528 'netsolar_atm' 0 529 'netsolar_atm_meanocn' 0
+530 'netsolar_atm_meansic' 0 531 'netsolar_ocn' 0 532 'netsolar_sic' 0
+533 'nfiles' 0 534 'nhrlat' 0 535 'nhrlon' 0 536 'nmaxdims' 0 537
+'nthreads' 0 538 'ocean_atm_netlong_ocn' 0 539 'ocean_atm_netsolar_ocn'
+0 540 'ocean_evap_atm' 0 541 'ocean_evap_ocn' 0 542 'ocean_evapinst_atm'
+0 543 'ocean_latent_atm' 0 544 'ocean_latent_ocn' 0 545
+'ocean_latentinst_atm' 0 546 'ocean_lowestlh_atm' 0 547
+'ocean_lowestlh_ocn' 0 548 'ocean_lowestlp_atm' 0 549 'ocean_lowestlp_ocn'
+0 550 'ocean_lowestlq_atm' 0 551 'ocean_lowestlq_ocn' 0 552
+'ocean_lowestlt_atm' 0 553 'ocean_lowestlt_ocn' 0 554
+'ocean_lowestlu2_ocn' 0 555 'ocean_lowestlu3_ocn' 0 556
+'ocean_lowestlu_atm' 0 557 'ocean_lowestlv2_ocn' 0 558
+'ocean_lowestlv3_ocn' 0 559 'ocean_lowestlv_atm' 0 560 'ocean_netlong_ocn'
+0 561 'ocean_netsolar_ocn' 0 562 'ocean_niter_tim' 0 563
+'ocean_precip_ocn' 0 564 'ocean_qstar_atm' 0 565 'ocean_rough_atm' 0 566
+'ocean_runoff_ocn' 0 567 'ocean_salb_atm' 0 568 'ocean_sensible_atm' 0
+569 'ocean_sensible_ocn' 0 570 'ocean_sensibleinst_atm' 0 571
+'ocean_stressx2_ocn' 0 572 'ocean_stressx3_ocn' 0 573 'ocean_stressx_atm'
+0 574 'ocean_stressxinst_atm' 0 575 'ocean_stressy2_ocn' 0 576
+'ocean_stressy3_ocn' 0 577 'ocean_stressy_atm' 0 578
+'ocean_stressyinst_atm' 0 579 'ocean_tstarinst_atm' 0 580
+'ocnlite_wrapper' 0 581 'omp_destroy_lock' 0 582 'omp_destroy_nest_lock'
+0 585 'omp_get_active_level' 0 588 'omp_get_ancestor_thread_num' 0 3
+'omp_get_ancestor_thread_num_8' 0 2 'omp_get_dynamic' 0 594
+'omp_get_level' 0 596 'omp_get_max_active_levels' 0 598
+'omp_get_max_threads' 0 600 'omp_get_nested' 0 602 'omp_get_num_procs' 0
+604 'omp_get_num_threads' 0 606 'omp_get_schedule' 0 7
+'omp_get_schedule_8' 0 6 'omp_get_team_size' 0 5 'omp_get_team_size_8' 0
+4 'omp_get_thread_limit' 0 618 'omp_get_thread_num' 0 620 'omp_get_wtick'
+0 622 'omp_get_wtime' 0 624 'omp_in_parallel' 0 626 'omp_init_lock' 0
+628 'omp_init_nest_lock' 0 631 'omp_integer_kind' 0 634 'omp_lib' 0 635
+'omp_lib_kinds' 0 636 'omp_lock_kind' 0 637 'omp_logical_kind' 0 638
+'omp_nest_lock_kind' 0 639 'omp_sched_auto' 0 640 'omp_sched_dynamic' 0
+641 'omp_sched_guided' 0 642 'omp_sched_kind' 0 643 'omp_sched_static' 0
+644 'omp_set_dynamic' 0 17 'omp_set_dynamic_8' 0 16 'omp_set_lock' 0 649
+'omp_set_max_active_levels' 0 9 'omp_set_max_active_levels_8' 0 8
+'omp_set_nest_lock' 0 656 'omp_set_nested' 0 11 'omp_set_nested_8' 0 10
+'omp_set_num_threads' 0 15 'omp_set_num_threads_8' 0 14 'omp_set_schedule'
+0 13 'omp_set_schedule_8' 0 12 'omp_test_lock' 0 673 'omp_test_nest_lock'
+0 676 'omp_unset_lock' 0 679 'omp_unset_nest_lock' 0 682 'openmp_version'
+0 685 'outputdir_name' 0 686 'pi' 0 687 'plumin' 0 688 'precip_atm' 0
+689 'precip_atm_meanocn' 0 690 'precip_atm_meansic' 0 691 'precip_ocn' 0
+692 'precip_sic' 0 693 'psigma' 0 694 'q2m_atm' 0 695 'radfor_wrapper' 0
+696 'radn_energy' 0 697 'ratio_sd_dense' 0 698
+'reinit_flux_rokocn_gem_wrapper' 0 699 'reinit_flux_rokocn_wrapper' 0
+700 'rh2m_atm' 0 701 'rokgem_restart_wrapper' 0 702 'rokgem_wrapper' 0
+703 'rough_ocn' 0 704 'runoff_atm_meanocn' 0 705 'runoff_land' 0 706
+'runoff_ocn' 0 707 'runoff_sic' 0 708 'seaicefrac_atm' 0 709
+'seaicefrac_atm_meanocn' 0 710 'seaicefrac_ocn' 0 711 'seaicefrac_sic' 0
+712 'sedgem_dsedage_wrapper' 0 713 'sedgem_glt_wrapper' 0 714
+'sedgem_restart_wrapper' 0 715 'sedgem_wrapper' 0 716 'sens_save1' 0 717
+'sens_save2' 0 718 'sensible_atm_meanocn' 0 719 'sensible_atm_meansic' 0
+720 'sensible_ocn' 0 721 'sensible_sic' 0 722 'srest_ocn' 0 723
+'sstar_ocn' 0 724 'stressx_atm_meanocn' 0 725 'stressx_atm_meansic' 0
+726 'stressx_ocn' 0 727 'stressx_sic' 0 728 'stressy_atm_meanocn' 0 729
+'stressy_atm_meansic' 0 730 'stressy_ocn' 0 731 'stressy_sic' 0 732
+'surf_evap_atm' 0 733 'surf_iter_tim' 0 734 'surf_latent_atm' 0 735
+'surf_ocn_sic_wrapper' 0 736 'surf_orog_atm' 0 737 'surf_qstar_atm' 0
+738 'surf_rough_atm' 0 739 'surf_salb_atm' 0 740 'surf_sensible_atm' 0
+741 'surf_stressx2_atm' 0 742 'surf_stressx3_atm' 0 743 'surf_stressx_atm'
+0 744 'surf_stressy2_atm' 0 745 'surf_stressy3_atm' 0 746
+'surf_stressy_atm' 0 747 'surf_tstarinst_atm' 0 748 'surfdsigma' 0 749
+'surflux_wrapper' 0 750 'surfsigma' 0 751 't2m_atm' 0 752 'tab' 0 753
+'tavg_ocn' 0 754 'temp_energy' 0 755 'temp_sic' 0 756 'temptop_atm' 0
+757 'test_energy_ocean' 0 758 'test_energy_radocean' 0 759
+'test_energy_radseaice' 0 760 'test_energy_radsurf' 0 761
+'test_energy_seaice' 0 762 'test_water_land' 0 763 'test_water_ocean' 0
+764 'test_water_seaice' 0 765 'thicktop_atm' 0 766 'thread_id' 0 767
+'tmp_check' 0 768 'tmpavg_ocn' 0 769 'torog_atm' 0 770 'trest_ocn' 0 771
+'tstar_atm' 0 772 'tstar_gb_land' 0 773 'tstar_ocn' 0 774 'tstar_sic' 0
+775 'u10m_atm' 0 776 'ustar_ocn' 0 777 'v10m_atm' 0 778 'verbosity' 0
+779 'vstar_ocn' 0 780 'waterflux_atm' 0 781 'waterflux_atm_meanocn' 0
+782 'waterflux_ocn' 0 783 'waterflux_sic' 0 784 'weight_atm' 0 785
+'weight_ocn' 0 786 'weightcheck' 0 787 'weighttot_atm' 0 788
+'weighttot_ocn' 0 789 'wnet_atm' 0 790 'wnet_atm_l' 0 791 'wnet_atm_o' 0
+792 'wnet_ocn' 0 793 'write_flag_atm' 0 794 'write_flag_ocn' 0 795
+'write_flag_sic' 0 796 'wscn_evap_atm_meanocn' 0 797
+'wscn_evap_atm_meansurf' 0 798 'wscn_evap_atm_meansurf_l' 0 799
+'wscn_evap_atm_meansurf_o' 0 800 'wscn_evap_ocn' 0 801
+'wscn_precip_atm_meanocn' 0 802 'wscn_precip_atm_meansurf' 0 803
+'wscn_precip_atm_meansurf_l' 0 804 'wscn_precip_atm_meansurf_o' 0 805
+'wscn_precip_ocn' 0 806 'wscn_runoff_atm_meanocn' 0 807
+'wscn_runoff_atm_meansurf' 0 808 'wscn_runoff_ocn' 0 809
+'wscn_waterflux_atm_meanocn' 0 810 'wscn_waterflux_atm_meansurf' 0 811
+'wscn_waterflux_ocn' 0 812 'zonwind_atm' 0 813)

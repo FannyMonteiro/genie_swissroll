@@ -1,0 +1,1 @@
+write_netcdf_genie.o write_netcdf_genie.dep : write_netcdf_genie.f90 netcdf.inc 

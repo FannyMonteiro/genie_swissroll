@@ -1,0 +1,10 @@
+
+copied genie-cgoldstein files
+deleted all except ocean part
+first changes: 
+cp mains.F goldstein.F
+cp gseto.F initialize_ocean.F
+cp mains.F end_ocean.F
+
+Andrew & Bob, 28/11
+

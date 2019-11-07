@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job author="config2xml.py - automatic conversion of ASCII text config file">
+	<vars>
+		<var name="EXPID">genie_eb_go_gs_ac_bg</var>
+	</vars>
+	<config>
+		<model name="atchem"/>
+		<model name="goldstein"/>
+		<model name="goldsteinseaice"/>
+		<model name="biogem"/>
+		<model name="embm"/>
+	</config>
+	<parameters>
+		<control>
+			<param name="write_flag_atm">.false.</param>
+			<param name="ksic_loop">5</param>
+			<param name="genie_timestep">63115.2</param>
+			<param name="write_flag_sic">.false.</param>
+			<param name="kocn_loop">5</param>
+			<param name="lgraphics">.false.</param>
+		</control>
+		<model name="atchem">
+		</model>
+		<model name="goldstein">
+			<param name="scf">1.531013488769531300</param>
+			<param name="temp1">0.0</param>
+			<param name="tdatafile">worap2.k1_T.silo</param>
+			<param name="sdatafile">worap2.k1_S.silo</param>
+			<param name="rel">0.9000000</param>
+			<param name="world">worap2</param>
+			<param name="temp0">0.0</param>
+			<param name="adrag">2.710164785385131800</param>
+			<paramArray name="diff">
+				<param index="2">0.000025363247914356</param>
+				<param index="1">1494.438354492187500000</param>
+			</paramArray>
+		</model>
+		<model name="goldsteinseaice">
+			<param name="world">worap2</param>
+			<param name="diffsic">3573.718017578125000000</param>
+		</model>
+		<model name="biogem">
+		</model>
+		<model name="embm">
+			<param name="scf">1.531013488769531300</param>
+			<param name="atchem_radfor">n</param>
+			<param name="difflin">0.090003050863742828</param>
+			<param name="diffwid">1.410347938537597700</param>
+			<param name="world">worap2</param>
+			<param name="scl_fwf">0.726862013339996340</param>
+			<paramArray name="diffamp">
+				<param index="2">1173269.250000000000000000</param>
+				<param index="1">5204945.000000000000000000</param>
+			</paramArray>
+			<paramArray name="betaz">
+				<param index="1">0.001037851092405617</param>
+				<param index="2">0.164652019739151000</param>
+			</paramArray>
+			<paramArray name="betam">
+				<param index="1">0.0000000E+00</param>
+				<param index="2">0.164652019739151000</param>
+			</paramArray>
+		</model>
+	</parameters>
+	<build>
+		<make-arg name="IGCMATMOSDP">TRUE</make-arg>
+		<make-arg name="GENIEDP">TRUE</make-arg>
+		<macro handle="GENIENXOPTS" status="defined">
+			<identifier>GENIENX</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLONSOPTS" status="defined">
+			<identifier>GOLDSTEINNLONS</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLATSOPTS" status="defined">
+			<identifier>GOLDSTEINNLATS</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLEVSOPTS" status="defined">
+			<identifier>GOLDSTEINNLEVS</identifier>
+			<replacement>16</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNTRACSOPTS" status="defined">
+			<identifier>-DGOLDSTEINNTRACS</identifier>
+			<replacement>2</replacement>
+		</macro>
+		<macro handle="GENIENYOPTS" status="defined">
+			<identifier>GENIENY</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GENIENLOPTS" status="defined">
+			<identifier>-DGENIENL</identifier>
+			<replacement>1</replacement>
+		</macro>
+	</build>
+	<testing>
+	</testing>
+</job>

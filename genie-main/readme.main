@@ -1,0 +1,160 @@
+============
+GENERAL INFO
+============
+
+28/07/03
+
+
+SYNCHRONISING LOCAL FILES WITH THE CVS
+
+CVS module genie-main contains a shell script called 'startup'.  After
+checking out genie-main you can run this script to perform the
+following: (1) check that your local directory structure is consistent
+with the CVS GENIE modules, and (2) update your local GENIE
+directories and files to conform with those on the CVS system,
+incorporating amendments previously added and committed.
+
+After running 'startup' a set of directories will
+exist on your local file-tree within genie/ allowing you to run the
+GENIE model.  Amendments you previously made to GENIE files within
+your 'genie' parent directory will not be written over.
+
+Directories will not be created in your local parent 'genie' directory
+where the corresponding CVS GENIE modules contain no files.
+
+
+Procedure:
+
+1. Ensure you are within a directory called 'genie'.  This must be the
+GENIE parent directory.  If you have no parent 'genie' directory,
+simply create a new 'genie' directory:
+
+> mkdir genie
+> cd genie
+
+Thus, your present working directory is now 'genie'.
+
+2. Log into the GENIE CVS system.
+
+3. Check-out the startup script 'startup' within 'genie-main'.  The
+script is written for tcsh, however it will run within whatever shell
+you normally use, provided that your machine has tcsh (which is
+virtually certain.  ).  This is because executing 'startup' will cause
+a tcsh shell to be spawned, which will close down once the script has
+finished running, thus reverting to the prior shell.
+
+To check-out the start-up script:
+
+> cvs co genie-main/startup
+
+4. Check the permissions for this file:
+
+> ls -l genie-main/startup
+
+It must be executable by the user.  If not, then the permissions need
+to be changed:
+
+> chmod 500 genie-main/startup
+
+5. Execute the startup script :
+
+> ./genie-main/startup
+
+6. If you are not doing development work on the cb-goldstein code but
+are simply running the model, logout from CVS:
+
+> cvs logout
+
+
+The GENIE directory tree which should now exist on your local machine
+will be as follows:
+
+
+parent directory	sub-directory		sub-sub-dir
+----------------	-------------		-----------
+genie/			genie-atchem/
+			genie-biogem/
+			genie-cgoldstein/
+			genie-data/
+			genie-fixedocean/
+			genie-fixedseaice/
+			genie-embm/
+			genie-gemlite/
+			genie-goldstein/
+			genie-icesheet/
+			genie-igcm3/
+			genie-land/
+			genie-main/
+			genie-matlab/		figures/
+			genie-seaice/
+			genie-sedgem/
+			genie-slabocean/
+			genie-slabseaice
+			genie-topo/
+			results/
+			restart/
+			spinup/
+
+
+with the following caveat, as stated above: where a CVS GENIE module
+contains no files, no directory will be created in the local genie/
+file-tree.
+
+
+RUNNING THE MODEL
+
+The model can now be run from genie-cgoldstein/ 
+At the risk of repeating information already provided in readme.cgv1
+et al, and using biogeochemistry as an example :
+
+1. Select requisite options (debug, biogem etc) and cut/paste correct compiler into : Makefile 
+2. Select options in:
+
+biogem_config.par
+gem_config_atm.par
+gem_config_ocn.par
+gem_config_sed.par
+
+3.	Ensure var.cmn and biogem_lib.f90 are set up for the correct number of tracers.
+4.	Select number of timesteps for C_GOLDSTEIN in:  goin
+5.	Choose from 'new/continuing?' in:  goin
+6.	Select end and start times for BIOGEM in:  goin
+7.	Enter a suitable run-ID in:  goin
+8.	Ensure you are within directory:  genie-cgoldstein, and run model:
+
+> make
+> ./cb_goldstein < goin
+
+
+The executable will save appropriate files during the run into the
+directory:  results/
+
+
+
+VISUALISATION OF RESULTS
+
+For visualisation of model results:
+
+1.	Change directory into genie-matlab/
+
+> cd ../genie-matlab
+
+2.	Execute matlab :     
+
+> ./matlab &
+
+3.	Choose required plotting routine (eg. biogem_plot_lonlat_fill.m)
+and execute it.  For example:
+
+>> biogem_plot_lonlat_fill
+> Enter run identifier: run_test
+> Enter time-slice identifier: 1000
+> Enter data identifier: ocn_O2
+> Enter k value for lon-lat section: 8
+> Enter data scale factor: 1000000
+> Enter minium contour value: 0.0
+> Enter maximum contour value: 500.0
+> Enter number of contours: 20
+
+More detailed information will be given in the biogem user manual,
+presently under development.

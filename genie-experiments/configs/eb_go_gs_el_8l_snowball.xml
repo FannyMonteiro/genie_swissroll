@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <vars>
+    <var name="EXPID">eb_go_gs_el_8l_snowball</var>
+  </vars>
+  <config>
+    <model name="goldstein"/>
+    <model name="goldsteinseaice"/>
+    <model name="embm"/>
+    <model name="ents"/>
+  </config>
+  <parameters>
+    <control>
+      <param name="write_flag_atm">.false.</param>
+      <param name="ksic_loop">5</param>
+      <param name="klnd_loop">5</param>
+      <param name="koverall_total" exposed="true">1000000</param>
+      <param name="write_flag_sic">.false.</param>
+      <param name="kocn_loop">5</param>
+      <param name="dt_write">50000</param>
+      <param name="lgraphics">.false.</param>
+      <param name="lgraphics">.false.</param>
+      <param name="genie_solar_constant" exposed="true">1290.0</param>
+      <param name="fname_restart_main">../../genie-main<sep/>data<sep/>input<sep/>main_restart_0.nc</param>
+      <param name="fname_fluxrestart">../../genie-main<sep/>data<sep/>input<sep/>main_fluxes_0</param>
+      <param name="lrestart_genie">.true.</param>
+    </control>
+    <model name="goldstein">
+      <param name="rstdir_name">../eb_go_gs_el_8l_spinup/goldstein</param>
+      <param name="lin">spn.0</param>
+      <param name="indir_name">.<sep/>input<sep/>genie-goldstein<sep/>data<sep/>input</param>
+      <param name="iwstp">100</param>
+      <param name="ans">c</param>
+      <param name="ianav">100</param>
+      <param name="itstp">25</param>
+      <param name="npstp">10000</param>
+      <param name="temp1">20.</param>
+      <param name="temp0">20.</param>
+      <param name="scf" exposed="true">2.00</param>
+      <param name="diff(1)" exposed="true">2000.</param>
+      <param name="diff(2)" exposed="true">1.0e-5</param>
+      <param name="ieos" exposed="true">0</param>
+      <paramArray name="diff">
+      <param index="2">1.e-4</param>
+    </paramArray>
+  </model>
+  <model name="goldsteinseaice">
+    <param name="ans">c</param>   
+    <param name="rstdir_name">../eb_go_gs_el_8l_spinup/goldsteinseaice</param>
+    <param name="lin">spn.0</param>
+    <param name="indir_name">.<sep/>input<sep/>genie-goldsteinseaice<sep/>data<sep/>input</param>
+    <param name="npstp">10000</param>
+    <param name="ianav">100</param>
+    <param name="itstp">25</param>
+    <param name="iwstp">100</param>
+  </model>
+<model name="embm">
+  <param name="ans">c</param>  
+  <param name="rstdir_name">../eb_go_gs_el_8l_spinup/embm</param>
+  <param name="lin">spn.0</param>
+  <param name="indir_name">.<sep/>input<sep/>genie-embm<sep/>data<sep/>input</param>
+  <param name="npstp">10000</param>
+  <param name="ianav">100</param>
+  <param name="itstp">25</param>
+  <param name="iwstp">100</param>
+  <param name="tatm">20.0</param>
+  <paramArray name="diffamp">
+    <param index="1">3.8e6</param>
+  </paramArray>
+  <param name="ents_radfor">y</param>
+  <param name="orbit_radfor">y</param>
+  <param name="radfor_scl_co2" exposed="true">1.0</param>
+  <param name="filenameorog">./input/genie-embm/data/input/orography.dat</param>
+  <param name="filenamelice">./input/genie-embm/data/input/icemask.dat</param>
+</model>
+<model name="ents">
+    <param name="indir_name">.<sep/>input<sep/>genie-ents<sep/>data</param>
+    <param name="condir_name">.<sep/>input<sep/>genie-ents<sep/>config</param>
+  <param name="ents_npstp">10000</param>
+  <param name="ents_ianav">100</param>
+  <param name="ents_itstp">25</param>
+  <param name="ents_iwstp">100</param>
+  <param name="ents_restart">c</param>
+  <param name="ents_restart_file">spn.sland</param>
+  <param name="ents_filenetin">../eb_go_gs_el_8l_spinup/ents/spn_restart_0000001999_12_30.nc</param>
+</model>
+
+</parameters>
+<build>
+  <make-arg name="IGCMATMOSDP">TRUE</make-arg>
+  <make-arg name="GENIEDP">TRUE</make-arg>
+  <macro handle="GENIENYOPTS" status="defined">
+    <identifier>GENIENY</identifier>
+    <replacement>36</replacement>
+  </macro>
+  <macro handle="GENIENXOPTS" status="defined">
+    <identifier>GENIENX</identifier>
+    <replacement>36</replacement>
+  </macro>
+</build>
+</job>

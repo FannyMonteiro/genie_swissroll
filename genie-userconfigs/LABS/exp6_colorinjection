@@ -1,0 +1,66 @@
+#
+#
+# --- CLIMATE ---------------------------------------------------------
+#
+#
+# --- BIOLOGICAL NEW PRODUCTION ---------------------------------------
+#
+# No biology
+bg_par_bio_prodopt='NONE'
+#
+# --- ORGANIC MATTER EXPORT RATIOS ------------------------------------
+#
+#
+# --- INORGANIC MATTER EXPORT RATIOS ----------------------------------
+#
+#
+# --- REMINERALIZATION ------------------------------------------------
+#
+#
+# --- TRACE METALS ----------------------------------------------------
+#
+#
+# --- SEDIMENTS -------------------------------------------------------
+#
+#
+# --- WEATHERING ------------------------------------------------------
+#
+#
+# --- DATA SAVING -----------------------------------------------------
+#
+# save frequency definitions
+bg_par_infile_slice_name='save_timeslice.dat'
+bg_par_infile_sig_name='save_sig.dat'
+# data saving options
+bg_ctrl_data_save_slice_fairsea=.false.
+bg_ctrl_data_save_slice_bio=.false.
+bg_ctrl_data_save_slice_carb=.false.
+bg_ctrl_data_save_slice_ocnsed=.true.
+bg_ctrl_data_save_sig_fexport=.false.
+bg_ctrl_data_save_sig_fairsea=.false.
+bg_ctrl_data_save_sig_ocnsed=.false.
+bg_ctrl_data_save_sig_focnsed=.false.
+bg_ctrl_data_save_sig_fsedocn=.false.
+bg_ctrl_data_save_sig_carb_sur=.false.
+bg_ctrl_data_save_sig_diag=.false.
+bg_ctrl_data_save_slice_misc=.true.
+bg_ctrl_data_save_derived=.true.
+# select atm saving
+bg_ctrl_data_save_slice_ocnatm=.true.
+#
+# --- FORCINGS --------------------------------------------------------
+#
+bg_ctrl_force_oldformat=.false.
+bg_par_forcing_name="pyyyyz_Fred"
+bg_par_force_point_i=22
+bg_par_force_point_j=33
+bg_par_force_point_k=8
+bg_par_ocn_force_scale_val_48=0.0
+#
+# --- MISC ------------------------------------------------------------
+#
+# turn off tracer 'auditing'
+bg_ctrl_audit=.false.
+#
+# --- ADDITIONAL ------------------------------------------------------
+#

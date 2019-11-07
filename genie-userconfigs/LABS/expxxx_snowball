@@ -1,0 +1,67 @@
+#
+#
+# --- CLIMATE ---------------------------------------------------------
+#
+# solar constant reduced by 5.6% for late Neoproterozoic: 1285.92 W m-2
+ma_genie_solar_constant=1285.92
+# set no seasonal cycle
+ea_dosc=.false.
+go_dosc=.false.
+gs_dosc=.false.
+# scaling for atmospheric CO2 radiative forcing, relative to 278 ppm
+ea_radfor_scl_co2=20.0
+#
+# --- BIOLOGICAL NEW PRODUCTION ---------------------------------------
+#
+# No biology
+bg_par_bio_prodopt='NONE'
+#
+# --- ORGANIC MATTER EXPORT RATIOS ------------------------------------
+#
+#
+# --- INORGANIC MATTER EXPORT RATIOS ----------------------------------
+#
+#
+# --- REMINERALIZATION ------------------------------------------------
+#
+#
+# --- TRACE METALS ----------------------------------------------------
+#
+#
+# --- SEDIMENTS -------------------------------------------------------
+#
+#
+# --- WEATHERING ------------------------------------------------------
+#
+#
+# --- DATA SAVING -----------------------------------------------------
+#
+# save frequency definitions
+bg_par_infile_slice_name=save_timeslice.dat
+bg_par_infile_sig_name=save_sig.dat
+# deselect carbonate chemsitry data saving
+bg_ctrl_data_save_sig_carb_sur=.false.
+bg_ctrl_data_save_slice_carb=.false.
+bg_ctrl_data_save_slice_carbconst=.false.
+# deselect ocean-sediment interface data saving
+bg_ctrl_data_save_slice_ocnsed=.false.
+bg_ctrl_data_save_slice_focnsed=.false.
+bg_ctrl_data_save_slice_fsedocn=.false.
+# deselect biogeochem diagnostics
+bg_ctrl_data_save_slice_diag=.false.
+bg_ctrl_data_save_derived=.false.
+# select misc data
+bg_ctrl_data_save_slice_misc=.true.
+# select atm saving
+bg_ctrl_data_save_slice_ocnatm=.true.
+#
+# --- FORCINGS --------------------------------------------------------
+#
+# use internal wind-speed
+bg_ctrl_force_windspeed=.false.
+#
+# --- MISC ------------------------------------------------------------
+#
+#
+# --- ADDITIONAL ------------------------------------------------------
+#

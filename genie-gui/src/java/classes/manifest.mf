@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Created-By: 1.3.0 (Sun Microsystems Inc.)
+Main-Class: GenieGUI
+Class-Path: serializer.jar xml-apis.jar xercesImpl.jar xalan.jar
+
+
+

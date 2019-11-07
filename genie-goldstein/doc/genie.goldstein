@@ -1,0 +1,84 @@
+03/02/04 (Andrew Yool; axy@soc.soton.ac.uk)
+========
+
+- Summary
+
+c-GOLDSTEIN v2 adapted to fit within componentised GENIE framework.
+Code broken up into ocean, atmosphere and sea-ice components.  The
+surface fluxes between these components are handled via a separate
+surface flux routine (almost identical to surflux.f), but this is part
+of the atmosphere component at this time.
+
+This portion of the componentised code deals solely with the ocean
+component, GOLDSTEIN.
+
+- General overview
+
+The GENIE version of GOLDSTEIN is composed primarily of three main
+routines : initialise_ocean.F, goldstein.F and end_ocean.F.  These are
+called from the genie.f main routine and themselves call routines
+derived from c-GOLDSTEIN.
+
+# initialise_ocean.F is called first and initialises the ocean grid,
+state variables and constants.  This routine also calculates the grid
+variables necessary to interpolate between submodel grids (though it
+might not do so perfectly at the moment).
+
+# goldstein.F is the main ocean routine, and is called during a
+simulation to time-step the ocean.  It requires several fluxes (heat
+and freshwater) and returns several ocean properties.  These are
+detailed below.  It also controls in-simulation output of ocean
+properties (although not in netCDF format at present).
+
+# end_ocean.F essentially closes the ocean component and deals with
+final output operations.
+
+- Some specifics
+
+Below are the lists of what each of these three routines wants from
+the GENIE main routine.
+
+# initialise_ocean.F
+	- GENIE variables for defining the ocean grid
+	- blank arrays for initial values of SST, SSS, surface ocean
+	  velocity (u and v components), surface albedo, and a few
+	  basin defining variables to be passed to the EMBM (if it's
+	  used)
+
+# goldstein.F
+	- timestep iteration number (for output timing)
+	- latent, sensible, net solar, net longwave and sea-ice heat
+	  fluxes
+	- evaporation, precipitation, runoff and sea-ice freshwater
+	  fluxes
+	- surface wind stresses (handled strangely at present)
+	- output arrays for SST, SSS, surface ocean velocity and
+	  surface albedo
+
+# end_ocean.F
+	- doesn't want anything
+
+05/02/04
+========
+
+- Routine arguments
+
+# goldstein.F
+	: in order, this routine requires
+	- ocean timestep (integer)
+	- latent heat flux (W / m2)
+	- sensible heat flux (W / m2)
+	- net solar heat flux (W / m2)
+	- net longwave heat flux (W / m2)
+	- sea-ice heat flux (W / m2)
+	- evaporation (m / s)
+	- precipitation (m / s)
+	- runoff (m / s)
+	- sea-ice FW flux (m / s)
+	- wind stresses (u and v components) (N / m2)
+
+	: in order, this routine supplies
+	- ocean surface temperature (degrees C)
+	- ocean surface salinty (PSU, but relative to 34.9)
+	- ocean velocity components (non-dimensional, as used by sea-ice)
+	- ocean albedo (non-dimensional, planetary)

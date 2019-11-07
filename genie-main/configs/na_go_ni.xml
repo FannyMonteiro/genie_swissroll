@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job author="config2xml.py - automatic conversion of ASCII text config file">
+	<vars>
+		<var name="EXPID">genie_na_go_ni</var>
+	</vars>
+	<config>
+		<model name="fakeatmos"/>
+		<model name="goldstein"/>
+	</config>
+	<parameters>
+		<control>
+			<param name="ksic_loop">1</param>
+			<param name="koverall_total">1800</param>
+			<param name="kocn_loop">1</param>
+			<param name="dt_write">180</param>
+		</control>
+		<model name="fakeatmos">
+			<param name="srest_flag">.false.</param>
+			<param name="trest_flag">.true.</param>
+			<param name="fname_climate"><varref>CODEDIR</varref>/genie-fakeatmos/data/input/bcond2d_embm_kevin.nc</param>
+		</model>
+		<model name="goldstein">
+			<param name="ianav">180</param>
+			<param name="itstp">180</param>
+			<param name="iwstp">1800</param>
+			<param name="npstp">1800</param>
+			<param name="nyear">180</param>
+			<param name="yearlen">360</param>
+		</model>
+	</parameters>
+	<build>
+		<make-arg name="IGCMATMOSDP">TRUE</make-arg>
+		<make-arg name="GENIEDP">TRUE</make-arg>
+	</build>
+	<testing>
+	</testing>
+</job>

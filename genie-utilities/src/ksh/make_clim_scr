@@ -1,0 +1,76 @@
+#!/bin/ksh
+
+# This script is used to make a fixedatmos forcing
+#   file from genie-main output
+
+# month+year start will be included in average
+# month+year end will be excluded from average
+
+monthstart=$1
+yearstart=$2
+monthend=$3
+yearend=$4
+expt=$5
+
+monthname[1]='01'
+monthname[2]='02'
+monthname[3]='03'
+monthname[4]='04'
+monthname[5]='05'
+monthname[6]='06'
+monthname[7]='07'
+monthname[8]='08'
+monthname[9]='09'
+monthname[10]='10'
+monthname[11]='11'
+monthname[12]='12'
+
+datadir=$6'/'$expt'/main'
+
+cd $datadir
+
+year=$yearstart
+month=$monthstart
+
+until [[ $year -eq $yearend && $month -eq $monthend ]] ; do
+
+echo $year'_'$month
+
+arraynames[$month]="${arraynames[$month]} "genie_"$year"_"${monthname[$month]}"_30_ocn.nc
+arraycount[$month]=$((${arraycount[$month]}+1))
+
+month=$(($month+1))
+if [ $month -eq 13 ]; then
+  month=1
+  year=$(($year+1))
+fi
+
+done
+
+
+
+
+echo ${arraycount[*]}
+echo ${arraynames[*]}
+
+
+
+
+for month in 1 2 3 4 5 6 7 8 9 10 11 12 ; do
+
+ncea -O ${arraynames[$month]} genie_climate_"${monthname[$month]}".nc
+echo ${arraynames[$month]} genie_climate_"${monthname[$month]}".nc
+
+done
+
+
+ncecat -O genie_climate_??.nc genie_climate.nc
+
+ncrename -v precip,prate genie_climate.nc
+
+\rm genie_climate_??.nc
+
+
+
+
+

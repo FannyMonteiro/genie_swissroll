@@ -1,0 +1,80 @@
+03/02/04 (Andrew Yool; axy@soc.soton.ac.uk)
+========
+
+- Summary
+
+c-GOLDSTEIN v2 adapted to fit within componentised GENIE framework.
+Code broken up into ocean, atmosphere and sea-ice components.  The
+surface fluxes between these components are handled via a separate
+surface flux routine (almost identical to surflux.f), but this is part
+of the atmosphere component at this time.
+
+This portion of the componentised code deals solely with the EMBM
+component.
+
+Note : at present the surface fluxes routines are contained within
+this component.  This will likely change when the fluxes between GENIE
+components are reorganised.  Some fluxes (e.g. precipitation) can be
+calculated entirely within their component, while others
+(e.g. evaporation) can only be calculated with information from two or
+more components.  Resolving how/where exactly these fluxes will be
+calculated will be a major future alteration to this code.
+
+- General overview
+
+The GENIE version of the EMBM is composed primarily of four main
+routines : initialise_embm.F, embm.F, end_embm.F and surflux.F.
+These are called from the genie.f main routine and themselves call
+routines derived from c-GOLDSTEIN.
+
+# initialise_embm.F is called first and initialises the atmospheric
+grid, state variables and constants.  This routine also calculates the
+grid variables necessary to interpolate between submodel grids (though
+it might not do so perfectly at the moment).
+
+# embm.F is the main EMBM routine, and is called during a simulation
+to time-step the atmosphere.  It requires several fluxes (heat and
+freshwater) and returns several atmospheric properties including the
+wind field.  These are detailed below.  It also controls in-simulation
+output of atmospheric properties (although not in netCDF format at
+present).
+
+# end_embm.F essentially closes the EMBM component and deals with
+final output operations.
+
+# surflux.F performs most of the functions previously associated with
+its namesake in c-GOLDSTEIN.  Properties from the ocean, atmosphere
+and sea-ice are used to calculate the fluxes between these components
+(the sole exceptions are sea-ice heat and freshwater fluxes to the
+ocean - these are calculated by the sea-ice timestep routine).
+
+- Some specifics
+
+Below are the lists of what each of these three routines wants from
+the GENIE main routine.
+
+# initialise_embm.F
+	- GENIE variables for defining the atmospheric grid
+	- ocean basin variables determined by the GOLDSTEIN module
+	- ocean SST (required to setup specific humidity)
+	- blank arrays for initial values of atmosphere properites
+	  (such as air temperature, specific humidity, pCO2 and wind
+	  fields)
+
+# embm.F
+	- timestep iteration number (for output timing)
+	- heat and freshwater fluxes
+	- output arrays for wind, air temperature and specific
+	  humidity fields
+	- sub-timestep iteration number (will be removed when time-
+	  stepping keyed to EMBM properly)
+
+# end_embm.F
+	- doesn't want anything
+
+# surflux.F
+	- timestep iteration number
+	- properties from ocean, atmosphere and sea-ice (including
+	  wind fields)
+	- output arrays for heat and freshwater fluxes, sea-ice
+	  changes and albedo

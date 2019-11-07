@@ -1,0 +1,73 @@
+
+ 01 02 03   04 05 06  07  08  09
+ \/ \/ \/   \/ \/ \/  \/  \/  \/
+
+-START-OF-DATA-
+ f  t  0.1  F  F   2  01  01  01  '[temperature (K)]'
+ f  t  0.1  f  f   2  01  01  01  '[salinity (PSU)]'
+ f  t  0.1  f  f   0  10  10  05  '[dissolved inorganic carbon (DIC) (mol kg-1)]'
+ F  T  1.0  f  f   0  10  10  05  '[d13C of DIC (o/oo)]'
+ F  T  1.0  f  f   0  10  10  05  '[d14C of DIC (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved nitrate (NO3) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[d15N of NO3 (o/oo)]'
+ f  t  0.1  f  f   2  01  01  01  '[dissolved phosphate (PO4) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved iron (Fe) (mol kg-1)]'
+ f  t  0.5  F  F   2  01  01  01  '[dissolved oxygen (O2) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[d18O of O2 (o/oo)]'
+ f  t  0.1  F  F   2  01  01  01  '[alkalinity (ALK) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[aqueous silicic acid (H4SiO4) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[d30Si of H4SiO4 (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved organic matter (DOM); carbon (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[d13C of DOM-C (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[d14C of DOM-C (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved organic matter; nitrogen (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[d15N of DOM-N (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved organic matter; phosphorous (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved organic matter; cadmium (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved organic matter; iron (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[ligand-bound Fe (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[free ligand (iron binding) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved methane (CH4) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[d13C of CH4 (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[d14C of CH4 (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved ammonium (NH43) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[d15N of NH4 (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved nitrogen (N2) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[d15N of N2 (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved nitrous oxide (N2O) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[d15N of N2O (o/oo)]'
+ f  T  1.0  F  F   2  01  01  01  '[dissolved cadmium (Cd) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved calcium (Ca) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved boron (B) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved florine (F) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved sulphate (SO4) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[32S of SO4 (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved hydrogen sulphide (H2S) (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[32S of H2S (o/oo)]'
+ F  T  1.0  F  F   2  01  01  01  '[gemanium (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[231Pa (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[230Th (mol kg-1)]'
+ F  T  1.0  f  F   2  01  01  01  '[dissolved CFC-11 (mol kg-1)]'
+ F  T  1.0  f  F   2  01  01  01  '[dissolved CFC-12 (mol kg-1)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved sulphur hexafloride (SF6) (mol kg-1)]'
+ F  T  1.0  f  F   2  01  01  01  '[RED numerical (color) tracer (n/a)]'
+ F  T  1.0  f  F   2  01  01  01  '[BLUE numerical (color) tracer (n/a)]'
+ F  T  1.0  F  F   2  01  01  01  '[dissolved Magnesium (Mg) (mol kg-1)]'
+-END-OF-DATA-
+
+ /\ /\ /\   /\ /\ /\  /\  /\  /\
+ 01 02 03   04 05 06  07  08  09
+
+DATA FORMAT AND ORDER
+---------------------
+
+COLUMN #01: include restoring forcing of tracer? [DATA FORMAT: 'T'/'F' ('t'/'f')]
+COLUMN #02: restrict restoring forcing to surface? [DATA FORMAT: 'T'/'F' ('t'/'f')]
+COLUMN #03: time constant of restoring forcing (years) [DATA FORMAT: real]
+COLUMN #04: include flux forcing of tracer? [DATA FORMAT: 'T'/'F' ('t'/'f')]
+COLUMN #05: scale flux forcing of tracer? [DATA FORMAT: 'T'/'F' ('t'/'f')]
+COLUMN #06: make forcing uniform over this dimension (2 = 2D, 0 = point, ELSE spatially explicit forcing) [DATA FORMAT: interger]
+COLUMN #07: i grid location of point forcing [DATA FORMAT: interger]
+COLUMN #08: j grid location of point forcing [DATA FORMAT: interger]
+COLUMN #09: k grid location of point forcing [DATA FORMAT: interger]
+COLUMN END: TRACER DESCRIPTION

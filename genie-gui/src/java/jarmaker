@@ -1,0 +1,4 @@
+#!/bin/bash
+
+jar cvfm GenieGUI.jar manifest.mf *.class util/misc/*.class util/xml/*.class
+

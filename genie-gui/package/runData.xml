@@ -1,0 +1,26 @@
+<run>
+	<name>ENGAGEtest</name>
+    <outputDir>/share/genie/engage/genie/genie-experimentS</outputDir>
+	<runDir>ENGAGEtest</runDir>
+	<initialDir>ENGAGEtest</initialDir>
+	<program>./genie_wrapper.sh</program>
+	<definitionXMLFile>definition.xml</definitionXMLFile>
+	<jobXMLFile>ENGAGEtest.xml</jobXMLFile>
+	<graphVarFile>graphVarData.xml</graphVarFile>
+	<mapVarFile>mapVarData.xml</mapVarFile>
+	<RUNTIME_ROOT>../../genie</RUNTIME_ROOT>
+	<RUNTIME_OUTDIR>.</RUNTIME_OUTDIR>
+</run>
+<run>
+	<name>ENGAGEtest (Windows version)</name>
+	<outputDir>/cygdrive/c/Engage/genie_output</outputDir>
+	<runDir>ENGAGEtest</runDir>
+	<initialDir>ENGAGEtest</initialDir>
+	<program>genie.exe</program>
+	<definitionXMLFile>definition.xml</definitionXMLFile>
+	<jobXMLFile>ENGAGEtest.xml</jobXMLFile>
+	<graphVarFile>graphVarData.xml</graphVarFile>
+	<mapVarFile>mapVarData.xml</mapVarFile>
+	<RUNTIME_ROOT>../../genie</RUNTIME_ROOT>
+	<RUNTIME_OUTDIR>.</RUNTIME_OUTDIR>
+</run>

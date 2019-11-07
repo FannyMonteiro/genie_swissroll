@@ -1,0 +1,61 @@
+
+ 01 02 03  04  05
+ \/ \/ \/  \/  \/
+
+-START-OF-DATA-
+ F  F   2  01  01  '[dummy index (n/a)]'
+ F  F   2  01  01  '[dummy index (n/a)]'
+ f  f   2  01  01  '[particulate organic carbon (POC) (wt%)]'
+ F  F   2  01  01  '[d13C of POC (o/oo)]'
+ F  F   2  01  01  '[d14C of POC (o/oo)]'
+ F  F   2  01  01  '[particulate organic nitrogen (PON) (wt%)]'
+ F  F   2  01  01  '[d15N of PON (o/oo)]'
+ f  f   2  01  01  '[particulate organic phosphate (POP) (wt%)]'
+ f  f   2  01  01  '[particulate organic cadmium (POCd) (wt%)]'
+ F  F   2  01  01  '[particulate organic iron (POFe) (wt%)]'
+ f  f   2  01  01  '[POM scavenged 231Pa (wt%)]'
+ f  f   2  01  01  '[POM scavenged 230Th (wt%)]'
+ f  f   2  01  01  '[POM scavenged Fe (wt%)]'
+ F  F   2  01  01  '[calcium carbonate (CaCO3) (wt%)]'
+ F  F   2  01  01  '[d13C of CaCO3 (o/oo)]'
+ F  F   2  01  01  '[d14C of CaCO3 (o/oo)]'
+ F  F   2  01  01  '[d18O of CaCO3 (o/oo)]'
+ F  F   2  01  01  '[CaCO3 incorporated cadmium (wt%)]'
+ f  f   2  01  01  '[CaCO3 scavenged 231Pa (wt%)]'
+ f  f   2  01  01  '[CaCO3 scavenged 230Th (wt%)]'
+ f  f   2  01  01  '[CaCO3 scavenged Fe (wt%)]'
+ f  F   2  01  01  '[detrital (refractory) material (wt%)]'
+ f  f   2  01  01  '[detrital scavenged 231Pa (wt%)]'
+ f  f   2  01  01  '[detrital scavenged 230Th (wt%)]'
+ F  F   2  01  01  '[detrital scavenged Fe (wt%)]'
+ F  F   2  01  01  '[opal (wt%)]'
+ F  F   2  01  01  '[d30Si of opal (o/oo)]'
+ F  F   2  01  01  '[opal incorporated germanium (wt%)]'
+ f  f   2  01  01  '[opal scavenged 231Pa (wt%)]'
+ f  f   2  01  01  '[opal scavenged 230Th (wt%)]'
+ f  f   2  01  01  '[opal scavenged Fe (wt%)]'
+ f  F   2  01  01  '[ash (wt%)]'
+ F  F   2  01  01  '[n/a]'
+ F  F   2  01  01  '[n/a]'
+ F  F   2  01  01  '[n/a]'
+ F  F   2  01  01  '[CaCO3 numerical age tracer (years)]'
+ F  F   2  01  01  '[planktic foraminiferal CaCO3 d13C (o/oo)]'
+ F  F   2  01  01  '[planktic foraminiferal CaCO3 d14C (o/oo)]'
+ F  F   2  01  01  '[planktic foraminiferal CaCO3 d18O (o/oo)]'
+ F  F   2  01  01  '[benthic foraminiferal CaCO3 d13C (o/oo)]'
+ F  F   2  01  01  '[benthic foraminiferal CaCO3 d14C (o/oo)]'
+ F  F   2  01  01  '[benthic foraminiferal CaCO3 d18O (o/oo)]'
+-END-OF-DATA-
+
+ /\ /\ /\  \/  \/
+ 01 02 03  04  05
+
+DATA FORMAT AND ORDER
+---------------------
+
+COLUMN #01: include flux forcing of tracer? [DATA FORMAT: 'T'/'F' ('t'/'f')]
+COLUMN #02: scale flux forcing of tracer? [DATA FORMAT: 'T'/'F' ('t'/'f')]
+COLUMN #03: make forcing uniform over this dimension (3 = 3D, 2 = 2D, 0 = point, ELSE spatially explicit forcing) [DATA FORMAT: interger]
+COLUMN #04: i grid location of point forcing [DATA FORMAT: interger]
+COLUMN #05: j grid location of point forcing [DATA FORMAT: interger]
+COLUMN END: TRACER DESCRIPTION

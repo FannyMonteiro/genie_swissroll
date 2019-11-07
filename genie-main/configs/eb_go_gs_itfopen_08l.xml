@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job author="config2xml.py - automatic conversion of ASCII text config file">
+	<vars>
+		<var name="EXPID">genie_eb_go_gs</var>
+	</vars>
+	<config>
+		<model name="goldstein"/>
+		<model name="goldsteinseaice"/>
+		<model name="embm"/>
+	</config>
+	<parameters>
+		<control>
+			<param name="write_flag_atm">.false.</param>
+			<param name="ksic_loop">5</param>
+			<param name="koverall_total">2500000</param>
+			<param name="write_flag_sic">.false.</param>
+			<param name="kocn_loop">5</param>
+			<param name="dt_write">50000</param>
+			<param name="lgraphics">.false.</param>
+		</control>
+		<model name="goldstein">
+			<param name="ianav">20000</param>
+			<param name="itstp">5000</param>
+			<param name="npstp">50000</param>
+			<param name="iwstp">10000</param>
+			<param name="tdatafile">worap3.k1_T.silo</param>
+			<param name="sdatafile">worap3.k1_S.silo</param>
+			<param name="world">worap3</param>
+		</model>
+		<model name="goldsteinseaice">
+			<param name="npstp">50000</param>
+			<param name="itstp">5000</param>
+			<param name="iwstp">10000</param>
+			<param name="world">worap3</param>
+			<param name="ianav">20000</param>
+		</model>
+		<model name="embm">
+			<param name="npstp">50000</param>
+			<param name="ianav">20000</param>
+			<param name="itstp">5000</param>
+			<param name="iwstp">10000</param>
+			<param name="world">worap3</param>
+		</model>
+	</parameters>
+	<build>
+		<make-arg name="IGCMATMOSDP">TRUE</make-arg>
+		<make-arg name="GENIEDP">TRUE</make-arg>
+		<macro handle="GENIENXOPTS" status="defined">
+			<identifier>GENIENX</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLONSOPTS" status="defined">
+			<identifier>GOLDSTEINNLONS</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLATSOPTS" status="defined">
+			<identifier>GOLDSTEINNLATS</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLEVSOPTS" status="defined">
+			<identifier>GOLDSTEINNLEVS</identifier>
+			<replacement>8</replacement>
+		</macro>
+		<macro handle="GENIENYOPTS" status="defined">
+			<identifier>GENIENY</identifier>
+			<replacement>36</replacement>
+		</macro>
+	</build>
+	<testing>
+	</testing>
+</job>

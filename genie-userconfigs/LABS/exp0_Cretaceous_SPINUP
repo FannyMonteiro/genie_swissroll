@@ -1,0 +1,64 @@
+#
+#
+# --- CLIMATE ---------------------------------------------------------
+#
+#
+# --- BIOLOGICAL NEW PRODUCTION ---------------------------------------
+#
+# No biology
+bg_par_bio_prodopt='NONE'
+#
+# --- ORGANIC MATTER EXPORT RATIOS ------------------------------------
+#
+#
+# --- INORGANIC MATTER EXPORT RATIOS ----------------------------------
+#
+#
+# --- REMINERALIZATION ------------------------------------------------
+#
+#
+# --- TRACE METALS ----------------------------------------------------
+#
+#
+# --- SEDIMENTS -------------------------------------------------------
+#
+#
+# --- WEATHERING ------------------------------------------------------
+#
+#
+# --- DATA SAVING -----------------------------------------------------
+#
+# save frequency definitions
+bg_par_infile_slice_name='save_timeslice.dat'
+bg_par_infile_sig_name='save_sig.dat'
+# deslect biogeochem 
+bg_ctrl_data_save_sig_carb_sur=.false.
+bg_ctrl_data_save_slice_carb=.false.
+#
+# --- FORCINGS --------------------------------------------------------
+#
+#
+# --- MISC ------------------------------------------------------------
+#
+# turn off tracer 'auditing'
+bg_ctrl_audit=.false.
+#
+# --- ADDITIONAL ------------------------------------------------------
+#
+# === ATMOSPHERE ===
+# CO2 radiative forcing scaling factor [DEFAULT = 4.0]
+ea_radfor_scl_co2=4.0
+# CH4 radiative forcing scaling factor [DEFAULT = 1.0]
+ea_radfor_scl_ch4=1.0
+# Equator-to-pole difference in planetary albedo [DEFAULT = 0.260]
+ea_albedop_amp=0.260
+# Baseline planetary albedo [DEFAULT = 0.200]
+ea_albedop_offs=0.200
+# atmospheric diffusivity of temperature (horizontal) [DEFAULT = 5.0e6]
+ea_12=5.0e6
+# === OCEAN ===
+# ocean diffusivity of temperature + salinity (horizontal) [DEFAULT = 1494.438354492187500000]
+go_14=1494.438354492187500000
+# scaling for wind stress (set values of both identical) [DEFAULT = 1.531013488769531300]
+go_13=1.531013488769531300
+ea_11=1.531013488769531300

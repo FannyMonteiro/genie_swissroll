@@ -1,0 +1,84 @@
+24/03/04
+========
+
+- netCDF-writing routines developed by Paul Valdes for c-GOLDSTEIN
+  added to GOLDSTEIN sea-ice module
+- at present, netCDF files are written at the same time as restart
+  files (variable iwstp in the GOIN file)
+- data are instantaneous measures of sea-ice properties, incoming 
+  and outgoing fluxes (see header information below)
+- note : there may be some outstanding issues regarding the latitude
+  arrays - when plotted the data don't seem to extend to the poles
+
+- a typical header follows :
+
+netcdf gsic_dan_da_0010_00 {
+dimensions:
+	longitude = 36 ;
+	longitude_1 = 36 ;
+	longitude_2 = 36 ;
+	latitude = 36 ;
+	latitude_1 = 36 ;
+	latitude_2 = 36 ;
+	time = 1 ;
+variables:
+	float longitude(longitude) ;
+		longitude:long_name = "longitude" ;
+		longitude:units = "degrees_east" ;
+		longitude:missing_value = -99999.f ;
+	float longitude_1(longitude_1) ;
+		longitude_1:long_name = "longitude" ;
+		longitude_1:units = "degrees_east" ;
+		longitude_1:missing_value = -99999.f ;
+	float longitude_2(longitude_2) ;
+		longitude_2:long_name = "longitude" ;
+		longitude_2:units = "degrees_east" ;
+		longitude_2:missing_value = -99999.f ;
+	float latitude(latitude) ;
+		latitude:long_name = "latitude" ;
+		latitude:units = "degrees_north" ;
+		latitude:missing_value = -99999.f ;
+	float latitude_1(latitude_1) ;
+		latitude_1:long_name = "latitude" ;
+		latitude_1:units = "degrees_north" ;
+		latitude_1:missing_value = -99999.f ;
+	float latitude_2(latitude_2) ;
+		latitude_2:long_name = "latitude" ;
+		latitude_2:units = "degrees_north" ;
+		latitude_2:missing_value = -99999.f ;
+	float time(time) ;
+		time:long_name = "time" ;
+		time:units = "years" ;
+		time:missing_value = -99999.f ;
+	float sic_height(time, latitude, longitude) ;
+		sic_height:long_name = "Sea-ice height" ;
+		sic_height:units = "m" ;
+		sic_height:missing_value = -99999.f ;
+	float sic_cover(time, latitude, longitude) ;
+		sic_cover:long_name = "Sea-ice fractional cover" ;
+		sic_cover:units = "dimensionless" ;
+		sic_cover:missing_value = -99999.f ;
+	float sic_temp(time, latitude, longitude) ;
+		sic_temp:long_name = "Sea-ice temperature" ;
+		sic_temp:units = "K" ;
+		sic_temp:missing_value = -99999.f ;
+	float delta_height(time, latitude, longitude) ;
+		delta_height:long_name = "Change in sea-ice height" ;
+		delta_height:units = "m/s" ;
+		delta_height:missing_value = -99999.f ;
+	float delta_cover(time, latitude, longitude) ;
+		delta_cover:long_name = "Change in sea-ice fractional cover" ;
+		delta_cover:units = "dimensionless" ;
+		delta_cover:missing_value = -99999.f ;
+	float sic_heat(time, latitude, longitude) ;
+		sic_heat:long_name = "Sea-ice heat flux" ;
+		sic_heat:units = "W/m2" ;
+		sic_heat:missing_value = -99999.f ;
+	float sic_fw(time, latitude, longitude) ;
+		sic_fw:long_name = "Sea-ice freshwater flux" ;
+		sic_fw:units = "m/s" ;
+		sic_fw:missing_value = -99999.f ;
+
+// global attributes:
+		:title = "Produced using writenc6 program by PJV" ;
+}

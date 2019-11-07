@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job author="config2xml.py - automatic conversion of ASCII text config file">
+	<vars>
+		<var name="EXPID">genie</var>
+	</vars>
+	<config>
+		<model name="fixedchem"/>
+		<model name="fixedseaice"/>
+		<model name="fixedicesheet"/>
+		<model name="fixedocean"/>
+		<model name="igcm"/>
+	</config>
+	<parameters>
+		<control>
+			<param name="koverall_total">72</param>
+		</control>
+		<model name="fixedchem">
+		</model>
+		<model name="fixedseaice">
+		</model>
+		<model name="fixedicesheet">
+		</model>
+		<model name="fixedocean">
+		</model>
+		<model name="igcm">
+			<param name="ldaily">.true.</param>
+		</model>
+	</parameters>
+	<build>
+	</build>
+	<testing>
+		<var name="TESTFILE">igcm/igcm_da_2000_01.nc</var>
+	</testing>
+</job>

@@ -1,0 +1,183 @@
+
+package atmosphere version 0.1.1 {
+  
+  interface embm_interface{
+    int initialise(
+         out array<double, 1> alon1_atm_bbl,
+	 out array<double, 1> alat1_atm_bbl,
+         out array<double, 1> alon2_atm_bbl,
+	 out array<double, 1> alat2_atm_bbl,
+	 out array<double, 1> alon3_atm_bbl,
+	 out array<double, 1> alat3_atm_bbl,
+         out array<double, 1> aboxedge1_lon_atm_bbl,
+	 out array<double, 1> aboxedge1_lat_atm_bbl,
+         out array<double, 1> aboxedge2_lon_atm_bbl,
+	 out array<double, 1> aboxedge2_lat_atm_bbl,
+         out array<double, 1> aboxedge3_lon_atm_bbl,
+	 out array<double, 1> aboxedge3_lat_atm_bbl,
+         out array<int, 2> ilandmask1_atm_bbl,
+	 out array<int, 2> ilandmask2_atm_bbl,
+	 out array<int, 2> ilandmask3_atm_bbl,
+         in array<int, 1> ias_out_bbl,
+	 in array<int, 1> iaf_out_bbl,
+	 in array<int, 1> ips_out_bbl,
+	 in array<int, 1> ipf_out_bbl,
+         in array<double, 2> tstar_ocn_bbl,
+         in int koverall_total_bbl,
+         out array<double, 2> co2_atm_bbl,
+         out array<double, 2> ocean_stressx2_ocn_bbl,
+	 out array<double, 2> ocean_stressy2_ocn_bbl,
+         out array<double, 2> ocean_stressx3_ocn_bbl,
+	 out array<double, 2> ocean_stressy3_ocn_bbl,
+         out array<double, 2> tstar_atm_bbl,
+	 out array<double, 2> surf_qstar_atm_bbl,
+	 out double atmos_dt_tim_bbl,
+	 out double go_solconst_bbl
+    );
+
+    int run(
+         in  int istep_atm_bbl,
+         in  array<double, 2> surf_latent_atm_bbl,
+         in  array<double, 2> surf_sensible_atm_bbl,
+         in  array<double, 2> netsolar_atm_bbl,
+         in  array<double, 2> netlong_atm_bbl,
+         in  array<double, 2> evap_atm_bbl,
+         in  array<double, 2> precip_atm_bbl,
+         out array<double, 2> ocean_stressx2_ocn_bbl,
+         out array<double, 2> ocean_stressy2_ocn_bbl,
+         out array<double, 2> ocean_stressx3_ocn_bbl,
+         out array<double, 2> ocean_stressy3_ocn_bbl,
+         out array<double, 2> tstar_atm_bbl,
+	 out array<double, 2> surf_qstar_atm_bbl,
+         in  int koverall_bbl
+    );
+        
+    
+    int run_surflux(
+         in  int istep_ocn_bbl,
+         in  array<double, 2> tstar_ocn_bbl,
+	 in  array<double, 2> sstar_ocn_bbl,
+         in  array<double, 2> tstar_atm_bbl, 
+	 in  array<double, 2> surf_qstar_atm_bbl,
+         in  array<double, 2> hght_sic_bbl,
+	 in  array<double, 2> frac_sic_bbl,
+	 in  array<double, 2> temp_sic_bbl,
+	 in  array<double, 2> albd_sic_bbl,
+         in  array<double, 2> ocean_stressx2_ocn_bbl,
+	 in  array<double, 2> ocean_stressy2_ocn_bbl,
+         in  array<double, 2> ocean_stressx3_ocn_bbl,
+	 in  array<double, 2> ocean_stressy3_ocn_bbl,
+         in  array<double, 2> co2_atm_bbl,
+         out array<double, 2> albedo_ocn_bbl,
+	 out array<double, 2> latent_ocn_bbl,
+	 out array<double, 2> sensible_ocn_bbl,
+         out array<double, 2> netsolar_ocn_bbl,
+	 out array<double, 2> netlong_ocn_bbl,
+         out array<double, 2> evap_ocn_bbl,
+	 out array<double, 2> precip_ocn_bbl,
+	 out array<double, 2> runoff_ocn_bbl,
+         out array<double, 2> surf_latent_atm_bbl,
+	 out array<double, 2> surf_sensible_atm_bbl,
+         out array<double, 2> netsolar_atm_bbl,
+	 out array<double, 2> netlong_atm_bbl,
+         out array<double, 2> evap_atm_bbl,
+	 out array<double, 2> precip_atm_bbl,
+         out array<double, 2> dhght_sic_bbl,
+	 out array<double, 2> dfrac_sic_bbl,
+         out array<double, 2> atmos_lowestlh_atm_bbl,
+	 out array<double, 2> go_solfor_bbl,
+	 out array<double, 3> go_tau_bbl
+    );  
+  
+  }
+
+  class embm implements embm_interface{
+    int initialise(
+         out array<double, 1> alon1_atm_bbl,
+	 out array<double, 1> alat1_atm_bbl,
+         out array<double, 1> alon2_atm_bbl,
+	 out array<double, 1> alat2_atm_bbl,
+	 out array<double, 1> alon3_atm_bbl,
+	 out array<double, 1> alat3_atm_bbl,
+         out array<double, 1> aboxedge1_lon_atm_bbl,
+	 out array<double, 1> aboxedge1_lat_atm_bbl,
+         out array<double, 1> aboxedge2_lon_atm_bbl,
+	 out array<double, 1> aboxedge2_lat_atm_bbl,
+         out array<double, 1> aboxedge3_lon_atm_bbl,
+	 out array<double, 1> aboxedge3_lat_atm_bbl,
+         out array<int, 2> ilandmask1_atm_bbl,
+	 out array<int, 2> ilandmask2_atm_bbl,
+	 out array<int, 2> ilandmask3_atm_bbl,
+         in array<int, 1> ias_out_bbl,
+	 in array<int, 1> iaf_out_bbl,
+	 in array<int, 1> ips_out_bbl,
+	 in array<int, 1> ipf_out_bbl,
+         in array<double, 2> tstar_ocn_bbl,
+         in int koverall_total_bbl,
+         out array<double, 2> co2_atm_bbl,
+         out array<double, 2> ocean_stressx2_ocn_bbl,
+	 out array<double, 2> ocean_stressy2_ocn_bbl,
+         out array<double, 2> ocean_stressx3_ocn_bbl,
+	 out array<double, 2> ocean_stressy3_ocn_bbl,
+         out array<double, 2> tstar_atm_bbl,
+	 out array<double, 2> surf_qstar_atm_bbl,
+	 out double atmos_dt_tim_bbl,
+	 out double go_solconst_bbl
+    );
+
+    int run(
+         in  int istep_atm_bbl,
+         in  array<double, 2> surf_latent_atm_bbl,
+         in  array<double, 2> surf_sensible_atm_bbl,
+         in  array<double, 2> netsolar_atm_bbl,
+         in  array<double, 2> netlong_atm_bbl,
+         in  array<double, 2> evap_atm_bbl,
+         in  array<double, 2> precip_atm_bbl,
+         out array<double, 2> ocean_stressx2_ocn_bbl,
+         out array<double, 2> ocean_stressy2_ocn_bbl,
+         out array<double, 2> ocean_stressx3_ocn_bbl,
+         out array<double, 2> ocean_stressy3_ocn_bbl,
+         out array<double, 2> tstar_atm_bbl,
+	 out array<double, 2> surf_qstar_atm_bbl,
+         in  int koverall_bbl
+    );
+        
+    
+    int run_surflux(
+         in  int istep_ocn_bbl,
+         in  array<double, 2> tstar_ocn_bbl,
+	 in  array<double, 2> sstar_ocn_bbl,
+         in  array<double, 2> tstar_atm_bbl, 
+	 in  array<double, 2> surf_qstar_atm_bbl,
+         in  array<double, 2> hght_sic_bbl,
+	 in  array<double, 2> frac_sic_bbl,
+	 in  array<double, 2> temp_sic_bbl,
+	 in  array<double, 2> albd_sic_bbl,
+         in  array<double, 2> ocean_stressx2_ocn_bbl,
+	 in  array<double, 2> ocean_stressy2_ocn_bbl,
+         in  array<double, 2> ocean_stressx3_ocn_bbl,
+	 in  array<double, 2> ocean_stressy3_ocn_bbl,
+         in  array<double, 2> co2_atm_bbl,
+         out array<double, 2> albedo_ocn_bbl,
+	 out array<double, 2> latent_ocn_bbl,
+	 out array<double, 2> sensible_ocn_bbl,
+         out array<double, 2> netsolar_ocn_bbl,
+	 out array<double, 2> netlong_ocn_bbl,
+         out array<double, 2> evap_ocn_bbl,
+	 out array<double, 2> precip_ocn_bbl,
+	 out array<double, 2> runoff_ocn_bbl,
+         out array<double, 2> surf_latent_atm_bbl,
+	 out array<double, 2> surf_sensible_atm_bbl,
+         out array<double, 2> netsolar_atm_bbl,
+	 out array<double, 2> netlong_atm_bbl,
+         out array<double, 2> evap_atm_bbl,
+	 out array<double, 2> precip_atm_bbl,
+         out array<double, 2> dhght_sic_bbl,
+	 out array<double, 2> dfrac_sic_bbl,
+         out array<double, 2> atmos_lowestlh_atm_bbl,
+	 out array<double, 2> go_solfor_bbl,
+	 out array<double, 3> go_tau_bbl
+    );
+
+  }
+}

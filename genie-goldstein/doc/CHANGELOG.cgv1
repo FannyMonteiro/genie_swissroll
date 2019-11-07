@@ -1,0 +1,405 @@
+Note that these are code development notes: the inside story of the 
+development of the code in chronological order. Condensed version to help 
+running the code to follow...
+
+Errors and changes to v1 starting from Bob's code and later restarting from
+ocean code v3_1.
+
+cos and sin factors updated from v3_1 to allow compilation with th1=pi/2
+dsc multiple definition removed
+sensflux_seaice line too long in surflux.f, caused value to be taken as
+zero at this point. All other lines in new code .le.72 chars checked okay.
+multiple definition of most geometrical coefficients between gseto and gseta
+(gseto called first).
+dimensional scale values and pi put in common block var.cmn
+
+24/7/2 code now compiles -C and runs at least 1000 steps
+new topography worbob5000.k1 has land in at least two wet points of old
+topography worba1.k1 
+psi grid topography file was not apparently recomputed, therefore island
+circulations were in error.
+
+26/7/2 even with wrong psi topog. file and sensflux_seaice taken as 0 I still
+don't exactly repeat goout.bob beyond about 5 d.p. after 1000 steps. No idea
+why unless meaningless geometric coefficients were actually used somewhere.
+
+The only new subroutines c-gold vs original (~v2 goldstein) are
+surflux gseta readroff thermo_seaice transp_seaice tstepa
+
+Main changes to final output values from Bob's to current corrected are
+average net heat flux in atmos changes from 0.34 to 0.77 and
+average net surface heat flux over sea ice from 0.07 to -0.21
+
+29/7/2 error in original increases l=2 moisture diffusion instead of l=1 heat
+under increased precipitation. Corrected. Results identical to 1000 steps, ie
+option never exercised in that time. 
+
+30/7/2 cpu on phkup10 44.75u  for 1000 100 1000 1000 goin.tmp > goout.nre2
+precipitation-induced diffusion tidied, cpu now 44.5u
+Bob claims fixing surflux error above necessitates fudging wind in Artic, but
+plot of wind shows already smooth and well-behaved there. Hence left alone here
+but code therefore not guaranteed by Bob to work.
+May be a problem having wind=0 => no sensible heat flux. Hence a min wind
+might be appropriate.
+diffatm should be a vector with 3 comp'ts, currently diffatm(l,1,j),
+diffatmn(l,1,j) and diffatm(l,2,j). diffatmn(l,2,j) is meaningless.
+diffatmn(l,1,0) not apparently used outside of gseta.
+Bob's desperate fudge of uatm=1 at j=36 does allow model to run to t>1 which
+is otherwise seemingly impossible irrespective of dt. ie model is critically
+unstable. Also diffusion in atm appears to stabilise, hence implicit diffusion
+will not (yet) help.
+
+8/8/2 surflux tidied (lines 1-194) 
+for clarity including many name changes _seaice -> sic
+_atmos -> a, flux -> fx.
+hatmbl/dsc means dz in atm.
+ERROR uatm read in vel'y not mass flux as stated in comments but multiplied
+by usc so dimensionally wrong.  
+Note no sensible heat over land      (? as land heat capacity = 0?)
+ERROR diagnostic bug in latflux_ocean output, as undefined at some wet points.
+
+9/8/2 fast ice freezing requires dt/dz1>ch_ice*u_tau_ice, dt=17.5 days is
+minimum at current dz1. Otherwise make instantaneous?
+rho0sea removed for simplicity and set to rho0, all final diagnostics same to
+about 5 d.p. (std output now goout.nre5)
+surflux.f tidied and put in to sensible order. Number of operations could 
+probably be greatly reduced.
+
+12/8/2 Split timestep still in use for ice, transport and thermodynamics done
+with intermediate updating.
+h < 0.001 disallowed in transport routine, h=0 => A=0 and 0.le.A.le.1 also
+enforced there.
+
+13/8/2 Ice transport is probably intrinsically unstable, as uses FTCS scheme 
+with no diffusion; simplest cure probably upstream weighting? (see 22/8/2)
+Error exact continuation failed, fixed by writing and reading tsa, and fixing an
+Error in i/o, tq i/o not matching. Corrected to write only lower atm layer
+as upper layer is never used for anything.
+qsata(i,j,m) last index refers to atm levels (pointless in current code).
+ 
+Output; P,E,P-E, P-E+R all multiplied by secs/yr for 2-d output but not
+for line 6 averages, rel. humidity multiplied by 100. 
+
+fxflux_qb implied by ice freezing/melting altered to account for limit if all
+ice is melted but...
+
+14/8/2 qb itself must be limited, not just its appearance in freshwater budget
+else heat is defined to come out of ocean but is not allowed to go in to ice.
+Std output unaffected (goout.nre6) as limit does not occur in 1st 1000 dt.
+Undefined variable error for qb over land points (results unaffected unless
+infinite).
+Changes to fwflux etc don't affect oscillatory behaviour of h,E and P.
+or stability.
+
+16/8/2 Timing test, approx, gives cost per routine at ndta=10 of
+ocean stuff = 0.9
+thermosic   = 0.2 (10 calls)
+tstepa      = 0.9 (10 calls)
+tranpsic    = 0.05
+surflux     = 2   (10 calls)
+
+19/8/2 Numerous changes required to sea-ice code due to errors in Weaver report
+and old code, new version agreed with Masakazu.
+Either 100x slower or instantaneous   precipitation are more stable than the
+scary 1-dt version in Bob's original. Instantaneous  pptn default in 
+current version, equivalent to ocean convection philosophy.
+Also some division removed by defining solfor(j) and rescaling extra0.
+
+Correcting evap to A*sublimation + (1-A)*evap doubles net E-P (-ve) at 1000 dt.
+(goout.nre7)
+Correcting atmostpheric latent heat flux to ignore snow, which is not accounted
+for, makes average atm and oceanic latent heat fluxes 100x more similar at 1000
+steps. (goout.nre8)
+Note ocean and ice emissivities are assumed equal.
+
+20/8/2 Sea-ice equations largely rewritten. Notes; old code disallows freezing
+until whole upper layer drops below freezing point!
+
+21/8/2 New sea-ice code at 1000 steps, gives 5x bigger H_max and avge H. fwflux
+2x bigger, net surface heat flux over sea-ice sign reversal +0.14 to -0.11. 
+Ocean and atm. very similar.
+
+Notes on T_ice iteration; cpu 5% bigger for 100 iterations than 1 (with no 
+termination clause), cpu difference 1 to 20 iterations is noise level (1%).
+Set to .le. 20 iters with termination if change .le. 1e-10. Convergence is 
+slow during start up, 1 iter gives 1e-3 occasionally 1e-1 changes, 10 iters
+gives typically 1e-6, 20 gives 1e-10 100 gives 1e-15 max. Newton should be a 
+lot faster, but would require a division (very slow). Near a steady state 
+any method will require fewer iterations.
+Output with dhlim=0.2 in goout.nre9 Numerically identical answers at 1000
+steps with dhlim = 1 suggests limit not active <1000 steps.
+End-of-run diagnostics redone. Fluxes globally averaged  and quantities 
+averaged in their domain in general. New diags, same code, in goout.nre9a
+New std parameters, ocean diff scale factors (6,2) timestep (0.00125,10)
+Ice transport subroutine changed to diffuse as well as advecting as
+theoretically unstable otherwise. Diffusion same as ocean used ie diff(1).
+Results at 1000 dt = 1.25 similar, max ice height reduced from 15 to 12.
+
+Error of massive proportions; sea ice updated very dtatm, but update uses
+dt_ocean, ie O(10) x too big. Results very different, corrected results
+typically have 'less' ice.
+input goin.nre10, output in goout.nre10
+
+22/8/2 Albedo data as in albedo.dat (from Graves 1993?) are close to 
+simple cosine function. Hence hard to justify not using latter as simpler.
+Average planetary albedo reduced by 2% (previously wrongly interpolated anyway
+at poles) and results changed typically by 5 to 10%, except atmos temp. which
+changes from -0.09 to 0.14.
+Putting surflux and thermosic outside the inner dt loop is now stable 
+(wasn't before above errors corrected) if atmospheric timestep is split.
+Requires changes in mains (no averaging of tsa) thermosic (dtatm used) and
+surflux (dt occurs in precipitation and partial update and qb defn).
+Results somewhat different, atm not as cold and rel. humidity average 109%.
+output in goout.nre12
+Dimless height of atmosphere set to 1 to avoid division and confusion in 
+tstepa.
+Zonally averaged wind data are not very smooth, scaled upside-down and 
+rampantly fail mass conservation as dv/dy .ne. 0. Changed to remove v and
+scale u correctly, differences very small (atm still dominated by diffn?).
+Results in goout.nre13
+
+23/8/2 Order of calling subroutines to update components has become strange
+(mostly nre changes) reorder to call surflux first, obviates tsa i/o for
+exact continuation and is a bit more logical. Results appear disturbingly
+different, particularly as atm. extrema change significantly and monotonically
+through inner timestep loop. Latest version possibly marginally preferable.
+goout.nre14 
+exact continuation repaired after correcting nre error in timing of qb defn.
+Zonal temperature advection reintroduced (beta(1)=1), results similar, 1~5%.
+goout.nre15
+Error extra precipitation not defined at exactly correct points
+
+JGS/nre Implicit atmosphere code written in tstipa.f Verifies exact 
+agreement with old code in the case cimp=0 for predictor or corrector
+(as correct = true or false). Differences from explicit solution increase
+as dt_atm increases but runs stably for dt_a at least equal to 5e-3 which
+should be dt_ocean limit if nii=number of inner iterations = 8. At this 
+point rel hum. becomes very large, averaging almost 2 and minimum q goes -ve. 
+
+26/8/2 Implicit atmosphere timestep now a CPP option using different source
+code file. Quick comparison of averages and maxima from 20-yr spin-up shows
+implicit with 4 inner iters and 4 inner timesteps (nii=ndta=4) is close to
+explicit at same ocean dt=0.005 (~1 week) with differences between maxima of
+around 5% (atm) 1% (sea ice) and 0.1% (ocean). Implicit is then 2.25 times 
+faster. Possible to go about 10% faster again using nii=4,ndta=2 or ndta=1,
+nii=8 (ie synchronous).
+Default set to nii=ndta=4, cimp=0.5 dt_o=0.005 output goout.nre16, 
+cpu=20s phkup10,
+diff(j=0) removed as never referenced
+
+lal2sil edited from laz2siz to interpolate ncep surface winds for goldstein
+grid. uncep.silo and vncep.silo created. Old diffusivity and wind read-in and
+interpolation within gseta removed as messy and not appropriate to do every run.
+
+27/8/2 Note that even zonally averaging u and setting v=0 will not satisfy
+mass conservation unless ubar is independent of x. 
+Mass conservation failures in atm probably not important in this 1-layer
+version.
+ncep winds averaged in x at j=1,2,35,36 as too messy there. Resulting set
+runs okay to 1000 steps at same explicit dt as before. Weaver 'advdif' 
+diffusivities cause 2 of 4x dt reduction. Simpler and smaller values 
+set with diffusivity same for both T and q = (2 + cos(2.lat))*1e6. Works
+well to 1000 dt.
+Old fudge (see 30/7/2) for usurf for bulk transfer not necessary as now 
+works ok if use
+zonal average at j=1,2,35,36 as for advection (may be ok with no 'tampering'
+but not tested). Answers similar with old fudge or averaging. 
+2000 year run done.
+code copied to v1 and old files removed. Development files kept in v1_0 
+directory.
+
+29/8/2 v3_1 isoneutral code incorporated, all variable names now declared
+(phew).
+
+2/9/2 initial S=saln0 instead of 0, ie no salinity offset, surprisingly 
+different answers (agree to only 12 s.f. at 100 steps).
+Agreement now exact between new version with v3_1 ocean as basis and old 
+cgv1 with Bob's code as basis. Error in Bob's code revealed in process; 
+wind stress not correctly incorporated despite warnings about notation.
+
+ias and ips ocean positions in nre code fiddled by judicious choice of
+start point of search so that 2 extra cells are
+defined to be in each of Pac and Atlantic at jmax-1 and whole
+Arctic in Atl. for compatibility with Bob's fresh water flux adjustment.
+Changes in flux adjusments and forcings eg co2 conc, deleted pending 
+removal to more sensible location in mains or tstepa.
+
+diagend created and linked in to Makefile to contain all end-of-run diags
+now, and previously, in mains. Not yet copied in. Main diagnostic, to
+check global conservation of heat and water, not yet written.
+
+Tests with implicit and explicit dt. Exp. ocean and Imp. atm. runs to
+t=500 at dt_a=0.00125, dt_o=0.0025, nii=4. Implicit ocean appears to hit
+instability at dt_o > 0.005 or so (same as exp limit) independent of dt_a and
+ndta at least at nii=4 in both atm and  ocean steps. Possibly limited by
+the 3 fast timescales inherent in the ice code viz, 1. the surface freezing
+timescale (rsictscsf), 2. ice area decay scale proportional to h0sic and 
+potentially arb'y small (but I doubt this is a problem) 3. scale related 
+to fast melting currently limited by dhlim to a certain fraction per step,
+but note this ignores possible reduction of ice height by advection. More
+tests show apparent limit to dt_ocean unrelated to these ice timescales,
+more likely due to equatorial waves, even though 5x tighter than in 
+ocean-only case? Or possibly excessive length of atmospheric integration
+(indep't of no. atmospheric dt between ocean and surface calculations, 
+possibly caused by splitting atmospheric timestep). 
+
+to do; check unsplit atm. dt by incorporating source term in tstipa.f and
+trivial change to surflux.
+
+4/9/2 tice and evapsic defined where A=0 to avoid out-of-date values 
+appearing in these arrays when ice retreats. 
+
+6/9/2 Massive error (nre) melting term in salinity forcing of ocean wrong
+sign. Global integral of freshwater exactly conserved (see diaga.f) for 
+at least 1000 dt but only if adjustments of H using set0 are turned off. 
+(and after improvements to nre rewrite of FW flux adjustments)
+
+17/9/2 Error (nre) heat flux into open ocean must allow for growth of ice.
+
+TO DO rename varice as hasic?
+      check runoff into ocean?
+
+18/9/2 Unsplit sea-ice timestep makes only very small differences and runs
+at same dt. Typically 1e-4 changes even in max H ice after 1000 steps at
+t=2.5. 
+Code reordered, exact agreement, velc call and t=t+dt moved into mains,
+sea-ice timestep moved into surflux to enable adjustment of fluxes when
+ice height is adjusted. 
+Adjustments of heat and freshwater fluxes now made if h has to be adjusted
+to correctly account for implied heat and fresh water changes. Global
+balance of heat and fresh water now exact, heat calculated in form;
+Sum of fluxes into system ie fluxes into atm + fluxes into ice or ocean
+= change of measurable heat content - amount used to melt ice. Latent heat
+is automatically included in net heat fluxes across surface as defined.
+Changes due to this correction around 1% at t=2.5 in all variables.
+As a corollary to tidy implementation of limit on ice height, effect
+on ocean heat flux Q_b is not directly calculated. Limit on heat flux is 
+calculated a postiori and hence does not ignore advective changes or
+possible freezing over open water while ice is melting. 'Extra' heat
+flux into ocean will not all be in Q_b unless ice is simultaneously 
+growing and melting, otherwise it will be A*modification to Q_b (I think).
+Limiting fractional reduction in ice height dhlim removed as not a logically
+consistent concept.
+Unsplit atmospheric timestep trivially reintroduced as an option in tstipa.f.
+Exact agreement with tstepa.f checked. Much better behaved in that values
+do not change radically during atmospheric timestep. Exact conservation
+of water etc now only valid at the end of the atm step. Stability constraints
+apparently not greatly affected. Unsplit now the default.
+
+Bob suggests extra heat diffn under strong pptn unnecessary, hence turned off
+as default. Fresh water flux adjustments also. Long run to 005 sent.
+1/(dt(kmax)*tsc) defined to tidy and speed up surflux. Spurious lmax removed
+from tstipa.f
+
+19/9/2 NCEP atmospheric winds rotated wrong amount E-W cf topography and 
+SOC data for ocean winds. Corrected by rewriting uncep and vncep.silo offset
+by 2 dphi. Grid should be 260W to 100E.
+
+14/10/2 Changed timestep input to dimensional input of ocean dt. 
+Updated version of key to variable names created in readme.key.
+
+21/10/2 Topography files with open Gibralter Strait created as wormed.k1 and
+wormed.psiles. Since there is no mechanism for equilibriation of salinity in
+enclosed seas, they don't make any sense for equilibrium runs. New topog. may
+be a better compromise despite huge width or strait. 
+Note that hot starts T0=25 in ocean are possible at same dt=3.5 days,
+total heat content then non-zero at start (as it is for a continuing run) but
+should still remain const through a run.
+
+22/10/2 Open Med does look better. 
+const1 renormalised into kg/kg in gseta and surflux to avoid unnecessary 
+multiplication
+
+24/10/2 NCEP data for monthly mean tq(1 and tq(2, downloaded in netCDF 
+using data/ncep/pressure/test.f and .../read.f interpolated onto 
+goldstein grid using lal2sil.f 
+Levitus data reinterpolated using correct 100 degree rotation in laz2siz.f 
+with far=true for salinity and temperature. 
+
+28/10/2 Bering also opened for diffusion only, not obviously very different 
+results.
+Modification to sea-ice area equation suggested by Masa, melting term should 
+probably
+be proportional to AG_i not G, else freezing is counted twice. This only matters
+if freezing and melting happen simultaneously, but this is not as unlikely as it
+sounds as ice fraction is normally much colder than water fraction so not 
+losing as much heat and may even be melting while water is freezing. Test run to
+~100 yrs not identical, largest difference about 0.5% in net freshwater flux to 
+ocean. However, Hibler actually used G, thus ignoring this possible effect.
+
+29/10/2 Model-data error diagnostic corrected to account for g/kg units in 
+NCEP data and salinity offset currently in use in goldstein. Weights 
+adjustable in diagend.f  Best so far run 017 rms error of 3.59 with weights=1
+in ocean and 0.5 in atm. (in g/kg for q).
+
+Currently using worber.k1 with Med open to baroclinic flow and Bering open for
+diffusion only, ie at k1=7 and k1=8 resp.
+
+diag3 tidied
+
+30/10/2 Recheck of speed shows implicit ocean dt about 2x slower than explicit
+for std params, same with ice turned off. Recall implicit step can run at much
+longer dt if rel increased but for large rel unphysical oscillations occur.
+With dto/dta = 5, ocean and ice use about 2x the cpu of atm.
+
+fudge factor for atmospheric advection split into zonal and meridional parts
+betaz(l) and betam(l). JGS claims betam(1)=0 justified by vertical structure 
+but zonal advection important. However, results clearly worse with betaz(1)=
+0.4 than betaz(1)=0, hence beta*(1)=0 kept as default.
+
+31/10/2 Spooky freshwater leak couldn't be found, but vanished on compilation
+although Makefile apparently complete.
+
+Sea-ice conductivity difsic renamed to consic. diffsic introduced to be eddy
+diffusivity for sea ice, formerly assumed = diff(1). Verified identical results
+when same value.
+
+Main ocean parameters put into goin to be read in at runtime. Atm. and 
+sea-ice parameters also.
+
+7/11/2 Atmospheric advection fields generated for 500 mb (instead of 1000 mb)
+long-term annual means, u500_ncep.dat v500_ncep.dat, to address poor heat
+advection results. Unfortunately heat advection no better and doesn't cure the
+problem of freshwater flux adjustment either. Looks as if SAT errors may have 
+more to do with lack of land-surface scheme, 'improving' the atmospheric 
+winds thus simply shows up these errors more starkly perhaps?
+
+11/11/2 Latent heats must satisfy hls = hlv + hlf to avoid a failure of 
+heat conservation which goes unnoticed in the heat conservation calculation.
+
+scaling factor scf for wind stress, justified to some extent by PDK's theory,
+should not, however, be included in usurf calculation in gseta.f (although
+run 039 suggests this reduces error, we have no physical justification for
+doing it) hence scf->var.cmn and divided out of usurf.
+
+multiple runs; goins.f creates a sequence of semi-random goin files, goins.sh
+sends all the jobs. Had to change length of lin (which has no effect) and lout.
+Latter makes 7 char output names essential, due to changes in mains, diagend
+Note this stuff not included in 'released' version.
+
+14/11/2 Bob's annual CO_2 increase reinstated exactly as in his version but note
+that so-called annual rate read in is used as an instantaneous rate, ie NOT
+compounded.
+
+26/11/2 Error; introduced by me into Bob's code for once, 
+ryear = 1/(365*86400) == 0
+(integer arithmetic) hence rate of warming was being set to 0 in gseta.f.
+
+17/12/2 resurrecting 18x18 version: very quick way to do it for testing, still
+reading 36x36 data but ignoring it. world1.k1 file including very simple
+runoff field created. Other changes commented cAR in gseto and gseta. 
+goin.18x18 has workable parameter values. Changes are: gseto: ocean location 
+points ias(), un-comment 8 lines setting idealised wind stress, reintroduce
+ta0 as coefficient, set world to world1, set imax,jmax (optionally also in
+var.cmn), in gseta, redefine regions for FW flux adjustment on 6 lines, 
+in goin set beta=0 to ignore atm winds, increase ocean diffusivity, 
+Note that 'error' estimate is meanginless. 
+
+29/1/3 Fortran format of output of files from diagend rationalised to reduce
+size of these files by about 1/3.
+
+28/2/3 Problem with tracers; different answers for lmax>2. dxts dyts dzts
+should be dimensioned to maxl in tstepo.F but not in tstipo.F
+
+3/3/3 goin.048.16 included; about the best set of parameter values from a set
+of 200 chosen semi-randomly.

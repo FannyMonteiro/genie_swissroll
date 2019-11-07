@@ -1,0 +1,147 @@
+Code development notes on c-goldstein version 2 with seasonality starting
+from v1 copied from my website at 30/5/3 Neil R. Edwards
+
+This version is essentially as v1 but with a seasonal cycle of insolation. 
+The insolation cycle is calculated at the start and stored in an array.
+The goin file is altered in certain ways including a parameter 'ianav' to 
+control the output of annually averaged data (see below). 
+
+Only a few example diagnostics are calculated for the annual average, but the
+framework is fully set up. It only remains to copy in the diagnostics you 
+want (see below).
+
+Exact restarts are possible at any timestep of the year. When continuing from a 
+restart dump, the program calculates the initial timestep from the time t 
+recorded in the restart file.
+
+Currently, it is not necessary to define the length of the year 
+(eg 360 vs 365.25)
+only the number of timesteps nyear in a year. This will only change when daily 
+processes are resolved, eg within a land scheme. Furthermore, the
+oscillation period need not be a year, although potentially large internal 
+2d arrays would be created if the period was many thousand of timesteps. Simple
+interpolation would allow extension to the case of arbitrarily long periods...
+
+lin/lout character variables extended in mains.F as per v1work
+
+Altered files are 
+var.cmn mains.F readme.cgv2 surflux.f Makefile
+also (see below) diagend.f diagosc.F radfor.F gseto.F gseta.F (previously
+gseto.f and gseta.f)
+
+Checks; mean of solfor(j,istep) in time is similar to old annual average 
+insolation function, eg old max=423, new max=418, but not higher everywhere.
+
+13/6/3
+iteration for sea-ice temperature in surflux failing every year during melting
+period, but unimportant, particularly as usually fails when approaching a 
+solution > 0, which is subsequently ignored (set to 0). Causes blow-up if a bad
+unconverged value taken, less likely to happen with an odd number of iterations.
+
+Correct continuation from any point in the year ensured by calculating isteps
+from t0 read in from restart file. This will fail if t/dt is not calculated
+accurately enough, eg ~10^8 steps in real*4, should never be a problem in 
+double precision ie real*8.
+
+16/6/3 variable-width exponential function copied from /v1work, as per Edwards 
+(?) tune2 paper, instead of cosine for atm. heat diff. 
+NB this means different goin files required
+
+jbar.f edited to remove uninitialised variables which were occuring where
+k1=kmax which could cause a loss of significance, despite exact discrete 
+cancellation of the unset bottom pressure values in jbar calculation.
+
+18/6/3 sea-ice non-convergence and resulting blow-up of code in melting 
+conditions mostly due to lazy approximation leaving out evap term in tice 
+iteration. With evap term iteration is almost exactly Newton Raphson and 
+always converges very fast. Since the function is monotonic, can also avoid
+unnecessary calculation by jumping out early when f>0 at tice>tfreez, as this
+proves the soln is > tfreez and will ultimately be reset to tfreez. 2000-year
+rerun of best run from tune2 paper => new method identical results at 2000 years
+to 9 sig figs even for h max itself.
+
+diag.f old stuff removed incl alarming and technically irrelevant Peclet no.
+diagnostics.
+
+19/6/3 Copied over new standard 36x36x8 ocean topography files with corrected 
+Bering Strait, worbe2.*.
+
+basic annual (or general, oscillation) diagnostic framework created using new 
+parameter in goin, ianav, and new routine diagosc.f. Every ianav steps a 
+standard output file with the extension .avg (cf a restart) is written 
+containing the average over the previous nyear steps (if nyear>ianav
+otherwise the file is never written although cpu time would be wasted). 
+Diagnostics (not yet written) on the average should go in diagosc.f by copying
+bits from other diag*.f, or else can create info by running one step from .avg
+output file. diagosc.f also writes a file with the extension .osc containing
+time series for the same nyear steps, at the moment only an example 
+variable, N. Hemi surface air temp., is written (also max sea-ice height).
+
+updated notes from v1work/readme.cgv1 follow:
+2 higher-resolution topographies included, wor16b with k=16 smoothing 
+length 10 degrees, runoff same as Bob's original and worber.k1, coastline 
+modified at 2 pts in Med and 1 in Gulf. As used for Edwards and Marsh write-up 
+but Bering corrected. wor72b has imax=jmax=72, automatically generated runoff
+and corrected Bering Strait. Appropriate wind-stress, wind, topography,
+runoff, and Levitus and NCEP data all included. Note that also need to
+change limits in gseta.F for FW flux adjustment at jmax=72.
+Simple automatic ocean location becoming more
+unsatisfactory at high resolution, some alterations made to diag2.f s.t. certain
+Arctic points defined to be in Atlantic instead of 'Indian' which also includes
+some other 'stray' points eg in N.Pacific. Alterations needed in gseto.f
+for FWF adjustment as ips, ipf includes more dry points at 72x72 resolution.
+Limits of tropical N and S areas for FWFA are 'hard coded' in gseto.f and thus
+need alteration for 36x36 or 72x72. Averaging of wind near jmax was 'hard coded'
+in gseta, now updated to depend correctly on jmax. Note that opening of
+Gibralter without changing ias iaf definition means that 'Atlantic' eg
+overturning values, include a strip of points in Med., somewhat spuriously.
+Really need much more complicated 2-d mask to fix this, but stick with simple
+and easy solution for now.
+
+diagend modified including variance-weighted error as used in Edwards+Marsh.
+
+oscillatory forcing now switchable by precompiler switch -dosc in Makefile.
+When this is not on, forcing is averaged over the year and average values 
+fill the array solfor(j,*). As a result, gseto and gseta change suffix, which
+creates problems in CVS.
+
+Occasional strange problem with non-conservation of total water at restart.
+Problem went away, but not fully explained.
+
+24/6/3 Speed test, 1000 steps, no output, T0=7. v1, 25.4 s; v2 -dosc 24.4 s;
+v2 const forcing option 23.7 s. Variations probably due to variations in 
+amounts of convection and sea ice due to slightly different diffusivities and
+seasonal variation. Constant forcing version of v2 is faster if avg arrays are
+removed from var, but not straightforward to enclose them in #ifdef loop.
+
+test goin file included goin.test should give output goout.test.dosc with 
+oscillatory forcing option -Ddosc and output goout.test.steady without this
+option, ie with steady forcing.
+
+Two suggested goin files included for 2000-year runs, based on parameters from
+Edwards and Marsh (goin1) and Edwards (goin2). The latter gives lower mean
+error but has some less desirable features, eg weak zonally averaged E-P 
+forcing.
+
+1/7/3 diagosc output format error 3e14.7->3e15.7
+
+10/7/3 bp initialisation error in gseto corrected, probably benign....
+-ve evaporation E disallowed in surflux.f, requires fiddly changes to sea-ice
+temperature iteration. E<0 likely over ice, esp. at very low temp. when atm.
+is warming, thus probably only relevant with annual cycle. Steady oscillatory
+state using goin2 about 0.5 C cooler in Arctic. But this could be due to 
+increasing max ice albedo from 0.6 to 0.7 on JGS's suggestion.
+
+24/7/3 dxts loop dimension error corrected in tstipo.F 
+
+31/7/3 error; time scale in years printed out by gseto incorrect.
+
+6/10/3 error; OLWR calculated before precip P. Inconsistent with instant P
+assumption. Non-instant P implies strong dt-dependence so keep instant P and
+move rq calculation to after P. Also need to set tq() = tq1() after P as
+tstipa assumes both are equal at first (a separate error). Also (a 3rd error)
+need to write out post-P q field in diagend.f for analysis purposes as this 
+is the most representative q field but can't simply use it for restart as 
+information is lost when P calculated. Phew.
+
+6/10/3 rather messy atm. heat flux calculation added to diagend.f 

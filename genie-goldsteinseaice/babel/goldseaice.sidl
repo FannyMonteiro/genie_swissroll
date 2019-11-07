@@ -1,0 +1,97 @@
+
+package seaice version 0.1.1 {
+  
+  interface goldseaice_interface {
+
+    int initialise(
+    
+	 out array<double, 1> alon1_sic_bbl,
+	 out array<double, 1> alat1_sic_bbl,
+	 out array<double, 1> alon2_sic_bbl,
+	 out array<double, 1> alat2_sic_bbl,
+	 out array<double, 1> alon3_sic_bbl,
+	 out array<double, 1> alat3_sic_bbl,
+	 out array<double, 1> aboxedge1_lon_sic_bbl,
+	 out array<double, 1> aboxedge1_lat_sic_bbl,
+	 out array<double, 1> aboxedge2_lon_sic_bbl,
+	 out array<double, 1> aboxedge2_lat_sic_bbl,
+	 out array<double, 1> aboxedge3_lon_sic_bbl,
+	 out array<double, 1> aboxedge3_lat_sic_bbl,
+	 
+	 out array<int, 2> ilandmask1_sic_bbl,
+	 out array<int, 2> ilandmask2_sic_bbl,
+	 out array<int, 2> ilandmask3_sic_bbl,
+	 in int koverall_total_bbl,
+
+	 out array<double, 2> hght_sic_bbl,
+	 out array<double, 2> frac_sic_bbl,
+	 out array<double, 2> temp_sic_bbl,
+	 out array<double, 2> albd_sic_bbl,
+	 out double test_energy_seaice_bbl
+    );
+    
+    int run(
+         in int istep_sic_bbl,
+         in array<double, 2> dhght_sic_bbl,
+	 in array<double, 2> dfrac_sic_bbl,
+         in array<double, 2> ustar_ocn_bbl,
+	 in array<double, 2> vstar_ocn_bbl,
+         out array<double, 2> hght_sic_bbl,
+	 out array<double, 2> frac_sic_bbl,
+	 in array<double, 2> temp_sic_bbl,
+	 in array<double, 2> albd_sic_bbl,
+         out array<double, 2> waterflux_ocn_bbl,
+	 out array<double, 2> conductflux_ocn_bbl,
+         out double test_energy_seaice_bbl,
+	 out double test_water_seaice_bbl,
+         in int koverall_bbl
+    );
+  }
+  
+  class goldseaice implements goldseaice_interface{
+
+    int initialise(
+    
+	 out array<double, 1> alon1_sic_bbl,
+	 out array<double, 1> alat1_sic_bbl,
+	 out array<double, 1> alon2_sic_bbl,
+	 out array<double, 1> alat2_sic_bbl,
+	 out array<double, 1> alon3_sic_bbl,
+	 out array<double, 1> alat3_sic_bbl,
+	 out array<double, 1> aboxedge1_lon_sic_bbl,
+	 out array<double, 1> aboxedge1_lat_sic_bbl,
+	 out array<double, 1> aboxedge2_lon_sic_bbl,
+	 out array<double, 1> aboxedge2_lat_sic_bbl,
+	 out array<double, 1> aboxedge3_lon_sic_bbl,
+	 out array<double, 1> aboxedge3_lat_sic_bbl,
+	 
+	 out array<int, 2> ilandmask1_sic_bbl,
+	 out array<int, 2> ilandmask2_sic_bbl,
+	 out array<int, 2> ilandmask3_sic_bbl,
+	 in int koverall_total_bbl,
+
+	 out array<double, 2> hght_sic_bbl,
+	 out array<double, 2> frac_sic_bbl,
+	 out array<double, 2> temp_sic_bbl,
+	 out array<double, 2> albd_sic_bbl,
+	 out double test_energy_seaice_bbl
+    );
+    
+    int run(
+         in int istep_sic_bbl,
+         in array<double, 2> dhght_sic_bbl,
+	 in array<double, 2> dfrac_sic_bbl,
+         in array<double, 2> ustar_ocn_bbl,
+	 in array<double, 2> vstar_ocn_bbl,
+         out array<double, 2> hght_sic_bbl,
+	 out array<double, 2> frac_sic_bbl,
+	 in array<double, 2> temp_sic_bbl,
+	 in array<double, 2> albd_sic_bbl,
+         out array<double, 2> waterflux_ocn_bbl,
+	 out array<double, 2> conductflux_ocn_bbl,
+         out double test_energy_seaice_bbl,
+	 out double test_water_seaice_bbl,
+         in int koverall_bbl
+    );
+  }
+}

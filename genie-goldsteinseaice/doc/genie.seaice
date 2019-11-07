@@ -1,0 +1,89 @@
+03/02/04 (Andrew Yool; axy@soc.soton.ac.uk)
+========
+
+- Summary
+
+c-GOLDSTEIN v2 adapted to fit within componentised GENIE framework.
+Code broken up into ocean, atmosphere and sea-ice components.  The
+surface fluxes between these components are handled via a separate
+surface flux routine (almost identical to surflux.f), but this is part
+of the atmosphere component at this time.
+
+This portion of the componentised code deals solely with the sea-ice
+component.
+
+- General overview
+
+The GENIE version of c-GOLDSTEIN sea-ice is composed primarily of
+three main routines : initialise_seaice.F, seaice.F and end_seaice.F.
+These are called from the genie.f main routine and themselves call
+routines derived from c-GOLDSTEIN.
+
+# initialise_seaice.F is called first and initialises the ocean grid,
+state variables and constants.  This routine also calculates the grid
+variables necessary to interpolate between submodel grids (though it
+might not do so perfectly at the moment).
+
+# seaice.F is the main sea-ice routine, and is called during a
+simulation to time-step the ocean.  It requires height and area change
+fluxes, as well as surface ocean velocities, and returns several
+sea-ice properties, plus heat and freshwater fluxes for the ocean
+(these are calculated here rather than in the surface flux routine as
+they relate to sea-ice melting when it's too thin).  These fluxes and
+outputs are detailed below.  It also controls in-simulation output of
+sea-ice properties (although not in netCDF format at present).
+
+# end_sea-ice.F essentially closes the sea-ice component and deals with
+final output operations.
+
+- Some specifics
+
+Below are the lists of what each of these three routines wants from
+the GENIE main routine.
+
+# initialise_seaice.F
+	- GENIE variables for defining the ocean grid
+	- blank arrays for initial values of sea-ice height, area and
+	  temperature
+
+# seaice.F
+	- timestep iteration number (for output timing)
+	- sea-ice height and area changes
+	- surface ocean velocity
+	- output arrays for sea-ice height, area and temperature
+	- output heat and freshwater fluxes for the ocean component
+
+# end_seaice.F
+	- doesn't want anything
+
+23/09/04 (Andrew Yool; axy@soc.soton.ac.uk)
+========
+
+- Updates
+
+The IGCM3 requires average ocean grid cell temperature and albedo in
+order to calculate net SW and LW heat fluxes.  These properties are
+averages of their corresponding ocean and sea-ice components (in the
+case of albedo, this average is simple, in the case of temperature,
+it is slightly more complicated).  
+
+Of note here is these averages are needed in the new surf_ocn_sic.F 
+routine to de-convolute the net heat fluxes supplied by the IGCM3.  
+Unfortunately, that means that for restarts to be perfect, the 
+averages must also be stored.  
+
+This is relatively easy, except that sea-ice albedo (which, unlike 
+ocean albedo [*] is not a constant) is not treated as a "state"
+variable like sea-ice temperature and so is not stored across 
+restarts.  The updates today redress this.
+
+Changes include :
+
+- albedo is now part of the sea-ice common block
+- restart files (and average files) now contain sea-ice albedo
+- sea-ice albedo max, min and average are diagnosed during a run
+
+Consequently, most subroutines have experienced some minor changes,
+though only the input/output routines have serious changes.
+
+[*] In this version of the model - who knows what the future holds.

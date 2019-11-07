@@ -1,0 +1,143 @@
+24/03/04
+========
+
+- netCDF-writing routines developed by Paul Valdes for c-GOLDSTEIN
+  added to GOLDSTEIN module
+- at present, netCDF files are written at the same time as restart
+  files (variable iwstp in the GOIN file)
+- data are instantaneous measures of ocean bulk properties, global
+  and basin meridional streamfunctions, incoming and outgoing fluxes,
+  and ocean bathymetry (see header information below)
+- note : there may be some outstanding issues regarding the latitude
+  arrays - when plotted the data don't seem to extend to the poles
+
+- a typical header follows :
+
+netcdf gold_dan_da_0010_00 {
+dimensions:
+	longitude = 36 ;
+	longitude_1 = 36 ;
+	longitude_2 = 36 ;
+	latitude = 36 ;
+	latitude_1 = 36 ;
+	latitude_2 = 36 ;
+	depth = 8 ;
+	depth_1 = 9 ;
+	time = 1 ;
+variables:
+	float longitude(longitude) ;
+		longitude:long_name = "longitude" ;
+		longitude:units = "degrees_east" ;
+		longitude:missing_value = -99999.f ;
+	float longitude_1(longitude_1) ;
+		longitude_1:long_name = "longitude" ;
+		longitude_1:units = "degrees_east" ;
+		longitude_1:missing_value = -99999.f ;
+	float longitude_2(longitude_2) ;
+		longitude_2:long_name = "longitude" ;
+		longitude_2:units = "degrees_east" ;
+		longitude_2:missing_value = -99999.f ;
+	float latitude(latitude) ;
+		latitude:long_name = "latitude" ;
+		latitude:units = "degrees_north" ;
+		latitude:missing_value = -99999.f ;
+	float latitude_1(latitude_1) ;
+		latitude_1:long_name = "latitude" ;
+		latitude_1:units = "degrees_north" ;
+		latitude_1:missing_value = -99999.f ;
+	float latitude_2(latitude_2) ;
+		latitude_2:long_name = "latitude" ;
+		latitude_2:units = "degrees_north" ;
+		latitude_2:missing_value = -99999.f ;
+	float depth(depth) ;
+		depth:units = "m" ;
+		depth:positive = "down" ;
+		depth:missing_value = -99999.f ;
+	float depth_1(depth_1) ;
+		depth_1:units = "m" ;
+		depth_1:positive = "down" ;
+		depth_1:missing_value = -99999.f ;
+	float time(time) ;
+		time:long_name = "time" ;
+		time:units = "years" ;
+		time:missing_value = -99999.f ;
+	float opsi(time, depth_1, latitude_2) ;
+		opsi:long_name = "Global Meridional Streamfucntion" ;
+		opsi:units = "Sv" ;
+		opsi:missing_value = -99999.f ;
+	float opsi_a(time, depth_1, latitude_2) ;
+		opsi_a:long_name = "Atlantic Meridional Streamfucntion" ;
+		opsi_a:units = "Sv" ;
+		opsi_a:missing_value = -99999.f ;
+	float opsi_p(time, depth_1, latitude_2) ;
+		opsi_p:long_name = "Pacific Meridional Streamfucntion" ;
+		opsi_p:units = "Sv" ;
+		opsi_p:missing_value = -99999.f ;
+	float temp(time, depth, latitude, longitude) ;
+		temp:long_name = "Temperature" ;
+		temp:units = "K" ;
+		temp:missing_value = -99999.f ;
+	float salinity(time, depth, latitude, longitude) ;
+		salinity:long_name = "Salinity" ;
+		salinity:units = "PSU" ;
+		salinity:missing_value = -99999.f ;
+	float density(time, depth, latitude, longitude) ;
+		density:long_name = "Density" ;
+		density:units = "ks/m3" ;
+		density:missing_value = -99999.f ;
+	float uvel(time, depth, latitude_1, longitude_1) ;
+		uvel:long_name = "Ocean Eastward Current" ;
+		uvel:units = "m/s" ;
+		uvel:missing_value = -99999.f ;
+	float vvel(time, depth, latitude_2, longitude_2) ;
+		vvel:long_name = "Ocean Northward Current" ;
+		vvel:units = "m/s" ;
+		vvel:missing_value = -99999.f ;
+	float wvel(time, depth_1, latitude, longitude) ;
+		wvel:long_name = "Vertical Current" ;
+		wvel:units = "m/s" ;
+		wvel:missing_value = -99999.f ;
+	float latent(time, latitude, longitude) ;
+		latent:long_name = "Latent heat flux" ;
+		latent:units = "W/m2" ;
+		latent:missing_value = -99999.f ;
+	float sensible(time, latitude, longitude) ;
+		sensible:long_name = "Sensible heat flux" ;
+		sensible:units = "W/m2" ;
+		sensible:missing_value = -99999.f ;
+	float netsolar(time, latitude, longitude) ;
+		netsolar:long_name = "Net solar heat flux" ;
+		netsolar:units = "W/m2" ;
+		netsolar:missing_value = -99999.f ;
+	float netlong(time, latitude, longitude) ;
+		netlong:long_name = "Net longwave heat flux" ;
+		netlong:units = "W/m2" ;
+		netlong:missing_value = -99999.f ;
+	float sic_heat(time, latitude, longitude) ;
+		sic_heat:long_name = "Sea-ice heat flux" ;
+		sic_heat:units = "W/m2" ;
+		sic_heat:missing_value = -99999.f ;
+	float evap(time, latitude, longitude) ;
+		evap:long_name = "Evaporation" ;
+		evap:units = "m/s" ;
+		evap:missing_value = -99999.f ;
+	float pptn(time, latitude, longitude) ;
+		pptn:long_name = "Precipitation" ;
+		pptn:units = "m/s" ;
+		pptn:missing_value = -99999.f ;
+	float runoff(time, latitude, longitude) ;
+		runoff:long_name = "Runoff" ;
+		runoff:units = "m/s" ;
+		runoff:missing_value = -99999.f ;
+	float sic_fw(time, latitude, longitude) ;
+		sic_fw:long_name = "Sea-ice freshwater flux" ;
+		sic_fw:units = "m/s" ;
+		sic_fw:missing_value = -99999.f ;
+	float bathymetry(latitude, longitude) ;
+		bathymetry:long_name = "Ocean depth" ;
+		bathymetry:units = "m" ;
+		bathymetry:missing_value = -99999.f ;
+
+// global attributes:
+		:title = "Produced using writenc6 program by PJV" ;
+}

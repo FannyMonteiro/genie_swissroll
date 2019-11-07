@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+	<vars>
+		<var name="EXPID">ENGAGEtest</var>
+	</vars>
+	<config>
+		<model name="goldstein"/>
+		<model name="goldsteinseaice"/>
+		<model name="embm"/>
+		<model name="ents"/>
+		<model name="igcm"/>
+	</config>
+	<parameters>
+		<control>
+			<param name="write_flag_atm">.false.</param>
+			<param name="ksic_loop">5</param>
+			<param name="klnd_loop">5</param>
+			<param name="koverall_total">100000</param>
+			<param name="write_flag_sic">.false.</param>
+			<param name="kocn_loop">5</param>
+			<param name="dt_write">50000</param>
+			<param name="lgraphics">.false.</param>
+		</control>
+		<model name="igcm">
+			<param name="LNOISE" exposed="true">.true.</param>
+		</model>
+		<model name="goldstein">
+			<param name="iwstp">100</param>
+			<param name="ianav">100</param>
+			<param name="itstp">25</param>
+			<param name="npstp">10000</param>
+			<param name="temp1">20.</param>
+			<param name="temp0">20.</param>
+			<paramArray name="diff">
+				<param index="2" exposed="true" min="0" max="1" interval="0.1">4.4e-4</param>
+			</paramArray>
+		</model>
+		<model name="goldsteinseaice">
+			<param name="npstp">10000</param>
+			<param name="ianav">100</param>
+			<param name="itstp">25</param>
+			<param name="iwstp">100</param>
+		</model>
+		<model name="embm">
+			<param name="npstp">10000</param>
+			<param name="ianav">100</param>
+			<param name="itstp">25</param>
+			<param name="iwstp">100</param>
+			<param name="tatm">20.0</param>
+			<paramArray name="diffamp">
+				<param index="1" exposed="true">3.8e6</param>
+			</paramArray>
+			<param name="ents_radfor">y</param>
+			<param name="orbit_radfor">y</param>
+		</model>
+		<model name="ents">
+			<param name="ents_npstp">10000</param>
+			<param name="ents_ianav">100</param>
+			<param name="ents_itstp">25</param>
+			<param name="ents_iwstp">100</param>
+		</model>
+
+	</parameters>
+	<build>
+		<make-arg name="IGCMATMOSDP">TRUE</make-arg>
+		<make-arg name="GENIEDP">TRUE</make-arg>
+		<macro handle="GENIENYOPTS" status="defined">
+			<identifier>GENIENY</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GENIENXOPTS" status="defined">
+			<identifier>GENIENX</identifier>
+			<replacement>36</replacement>
+		</macro>
+	</build>
+</job>

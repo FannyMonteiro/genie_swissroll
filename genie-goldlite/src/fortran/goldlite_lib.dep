@@ -1,0 +1,1 @@
+goldlite_lib.o goldlite_lib.dep : goldlite_lib.f90 

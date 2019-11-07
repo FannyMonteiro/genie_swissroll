@@ -1,0 +1,61 @@
+05/12/03
+========
+
+- surflux.F created
+- arguments list augmented to include fluxes needed by GOLDSTEIN and
+  EMBM
+- Bob added a few lines to assign values to these fluxes
+- Bob hacked out section at end of surflux.F that normally alters
+  values of ocean properties
+
+09/12/03
+========
+
+- arguments list augmented to include surface properties used to
+  calculate surface fluxes (ocean T & S; atmos T & Q; ice height,
+  area & T)
+- references to surface properties in surflux.F replaced by these
+  new arguments
+- commented out code removed
+- reference to land routine removed (i.e. back to c-GOLDSTEIN)
+- arguments declared
+
+10/12/03
+========
+
+- surflux causing all manner of grief
+- will try again with a "clean" version of the code
+- will implement changes made previously and tease out sea-ice
+  as previously
+
+*** surflux_NEW.F ***
+
+- isolated output arguments for ocean, atmos and seaice in surflux.F
+- ocean heat fluxes modified separately for influence of seaice
+  (previously this was done for just the net flux)
+- atmosphere given an explicit precip flux instead of the implicit
+  change to atmospheric humidity in c-GOLDSTEIN - am fairly sure
+  I've done this correctly, though might be worth running it passed
+  Bob
+- commented out call to seaice timestep module and code that
+  alters ocean fluxes in response to this call (the code deals with
+  negative seaice heights)
+- plan is to isolate seaice call - perhaps could pass ocean fluxes
+  through the seaice timestep module to "correct" them for the
+  changes introduced by the seaice timestep
+
+17/12/03
+========
+
+- spoke to Bob about surflux issues
+- he suggested keeping surflux part of the EMBM
+- given that the EMBM (as was) was mostly surflux anyway, and that
+  surflux (as is) assumes the EMBM in many of its calculations this
+  makes sense
+- copying surflux.F over to genie-embm
+- this will actually make sorting out the model a bit easier, since
+  we can leave a lot of the surflux.F setup stuff that's currently
+  in initialise_embm.F
+
+*** File ends here.  Further modifications to surflux.F are now
+detailed in the README.embm.axy file ***

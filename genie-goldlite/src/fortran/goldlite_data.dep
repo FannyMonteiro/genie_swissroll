@@ -1,0 +1,1 @@
+goldlite_data.o goldlite_data.dep : goldlite_data.f90 

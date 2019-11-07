@@ -1,0 +1,6 @@
+<?xml version="1.0" ?> 
+<scl>
+  <library uri="/homes/sp1003/genie-babel/genie-goldstein/babel/wrapper/libocean.so" scope="global" resolution="lazy" > 
+      <class name="ocean.goldstein" desc="java" />
+  </library>
+</scl>

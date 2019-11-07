@@ -1,0 +1,1 @@
+rokgem_data_netCDF.o rokgem_data_netCDF.dep : rokgem_data_netCDF.f90 

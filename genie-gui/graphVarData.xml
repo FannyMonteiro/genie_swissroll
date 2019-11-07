@@ -1,0 +1,135 @@
+<variable>
+	<name>Northern hemisphere air temperature</name>
+	<units><degrees/>C</units>
+	<file col="2" nCols="9" nHeaderLines="3">
+		embm/spn.airt
+	</file>
+</variable>
+<variable>
+	<name>Southern hemisphere air temperature</name>
+	<units><degrees/>C</units>
+	<file col="3" nCols="9" nHeaderLines="3">
+		embm/spn.airt
+	</file>
+</variable>
+<variable>
+	<name>N. America land temperature</name>
+	<units><degrees/>C</units>
+	<file col="2" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>N. Africa & Eurasia land temperature</name>
+	<units><degrees/>C</units>
+	<file col="3" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>S. America land temperature</name>
+	<units><degrees/>C</units>
+	<file col="4" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>S. Africa & Australasia land temperature</name>
+	<units><degrees/>C</units>
+	<file col="6" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>Vegetation carbon</name>
+	<units>GtC</units>
+	<file col="11" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>N. America vegetation carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file col="12" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>N. Africa & Eurasia vegetation carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file col="13" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>S. America vegetation carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file col="14" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>S. Africa & Australasia vegetation carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file col="15" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>Soil carbon</name>
+	<units>GtC</units>
+	<file col="16" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>N. America soil carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file col="17" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>N. Africa & Eurasia soil carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file col="18" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>S. America soil carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file col="19" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>S. Africa & Australasia soil carbon</name>
+	<units>kgC m<sup>-2</sup></units>
+	<file col="20" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>Atmospheric carbon</name>
+	<units>GtC</units>
+	<file col="21" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>Atmospheric pCO2</name>
+	<units>ppm</units>
+	<file col="22" nCols="22" nHeaderLines="1">
+		ents/spn.slandt
+	</file>
+</variable>
+<variable>
+	<name>Ocean carbon</name>
+	<units>GtC</units>
+	<file col="3" nCols="3" nHeaderLines="1">
+		biogem/biogem_series_ocn_DIC.res
+	</file>
+</variable>
+<end></end>
+

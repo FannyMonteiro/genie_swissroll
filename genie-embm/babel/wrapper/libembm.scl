@@ -1,0 +1,6 @@
+<?xml version="1.0" ?> 
+<scl>
+  <library uri="/homes/sp1003/genie-babel/genie-embm/babel/wrapper/libatmos.so" scope="global" resolution="lazy" > 
+      <class name="atmosphere.embm" desc="java" />
+  </library>
+</scl>

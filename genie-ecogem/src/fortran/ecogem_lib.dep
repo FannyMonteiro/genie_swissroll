@@ -1,0 +1,1 @@
+ecogem_lib.o ecogem_lib.dep : ecogem_lib.f90 

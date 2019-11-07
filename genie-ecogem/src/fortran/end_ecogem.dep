@@ -1,0 +1,1 @@
+end_ecogem.o end_ecogem.dep : end_ecogem.f90 

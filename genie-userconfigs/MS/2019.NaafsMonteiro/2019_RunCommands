@@ -1,0 +1,10 @@
+Configuration files for the different experiments are:
+
+Modern
+cgenie_eb_go_gs_ac_bg_itfclsd_16l_JH_BASEFe_Nnewcycle / preind_NFeT_exp23_Nitri9 (N, P and Fe nutrient limitations)
+
+Aptian
+cgenie_eb_go_gs_ac_bg_foam_aptian_36x36x16_Nnewcycle / Aptian120c_NT_05P4C_exp23_Nitri9 (N and P nutrient limitations - for sensitivity experiments)
+
+Cenomanian-Turonian
+cgenie_eb_go_gs_ac_bg_foam_CT_36x36x16_Nnewcycle / CT93k_NT_1P2C_DeeperAtl_exp23_Nitri9 (N and P nutrient limitations - for OAE2 experiments)

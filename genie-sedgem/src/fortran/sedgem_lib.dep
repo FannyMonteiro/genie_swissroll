@@ -1,0 +1,1 @@
+sedgem_lib.o sedgem_lib.dep : sedgem_lib.f90 

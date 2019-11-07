@@ -1,0 +1,1 @@
+end_goldlite.o end_goldlite.dep : end_goldlite.f90 

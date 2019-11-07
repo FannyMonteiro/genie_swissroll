@@ -1,0 +1,595 @@
+03/12/03
+========
+
+- Little done, beyond setting up initialise_embm.F, embm.F and
+  end_embm.F from mains.F and gseta.F files.
+
+04/12/03
+========
+
+*** initialise_embm.F ***
+
+- Added in list of incoming variables
+- This includes boxedge variables, etc. from IGCM framework.  No
+  reason not to include these here.
+  *** Question for Dan - why are three variables passed for lat, and
+  lon in the ocean model, but only two for the IGCM (and, by extension
+  the EMBM)?  Almost certainly a trivial concern, but it does affect
+  their definition.  ***
+- Copied in gseto.F variables that may be necessary for EMBM.  Can
+  sort through them later.  Haven't included things that obviously
+  aren't relevant.
+- Issue arises re: winds.  These (or something like them) are read in
+  both gseto.F and gseta.F - what gives?  Is there someway of
+  converting from one to the other?  That would make sense, since we
+  don't want to be reading in two sets for the EMBM (one to use for
+  advection, the other to be passed to GOLDSTEIN).
+- Added code from (in order) : mains.F, gseto.F, gseta.F, mains.F
+- inm.f modified to inm_embm.f to read in EMBM (and sea-ice) fields
+- The sea-ice part of this will DEFINITELY need to be removed at
+  some later date.  It might even be removed soon if we stick to the
+  sic_dummy.f routine for calculating sea-ice.
+- Section of initialise_embm.F after inm_embm.f updated to remove
+  ocean setup code.
+- Copied Dan's grid set-up code from initialise_ocean.F to set up
+  EMBM grid (which is the same as the GOLDSTEIN one).
+
+*** embm.F ***
+
+- Added headers
+- Added arguments list (similar to IGCM, but added precip, evap,
+  runoff)
+- Removed initial reference to genie-land
+- Added (as yet undecided) extra.cmn block
+- Added definitions of arguments list
+- Removed variables no longer needed (or in extra_embm.cmn)
+- Left a gap where changes to incoming fields can take place (as an
+  aide memoire)
+- Removed all code down to point where time loop starts
+- Commented out time loop
+- Removed ocean velocity calculations
+- First EMBM calculations are now in surflux.F
+- Followed by tstepa/tstipa.  Looping around these removed because
+  looping will take place in genie.f instead.
+  *** Note : this will mean that surflux.F will be called more times
+  than previous - where it was only called once per ocean time step.
+  The summing up of the fluxes during this period appears like it
+  will be handled in genie.f (is done so at present for IGCM).  ***
+- Subroutine diaga.f altered to remove ocean references
+  *** Note : there are conservation calculations in c-GOLDSTEIN (re:
+  heat and water) that no longer performed because of the split into
+  GOLDSTEIN and EMBM.  It might be an idea to reinstate these some-
+  how.  Perhaps by making relevant outputs of the modules that are
+  them summed up in genie.f or a special subroutine of it. ***
+- diag3.f does not need changing.
+- diagosc.f has similiar conservation calculations in it.  Also
+  removed for now.
+
+05/12/03
+========
+
+*** end_embm.F ***
+
+- Hacked out pre-end code.
+- Call to diagend.f ...
+	- editted to remove GOLDSTEIN references
+- Call to diagend_land.f excised
+- COST code excised
+- Barotropic SF code excised
+- Meridional SF code excised
+- Pacific and Atlantic overturning SF code excised
+- Zonal overturning SF code excised
+- Poleward heat flux code excised
+- Potential vorticity/density code excised
+- Essentially, end_EMBM.F is going to be very, very short
+
+11/12/03
+========
+
+- Return to embm after time spent on goldstein, surflux and sea-ice
+- Begun to remove surflux code from embm routines.  Lots of it in
+  there at present.
+- Removed bathymetry and runoff maps.  Seems like a good idea, but I
+  can foresee problems.  Probably need to reverse this.
+- Both wind data sets should be read in EMBM - one deals with
+  advection in the atmosphere, other deals with wind stress at base
+  of atmosphere.
+- Latter wind stress information needed in GOLDSTEIN, surflux and in
+  sea-ice.  Ironically, not needed in EMBM, but should stay here.
+- Wind stress is read in as 4 2D arrays, dztau(1,2) dztav(1,2), and
+  used to calculate 2 2D arrays, tau(1,2).  Array tau is used in
+  surflux and sea-ice routines, but both tau and dztau are used in
+  GOLDSTEIN.  Ideally should calculate tau from dztau in GOLDSTEIN.
+  Similarly perhaps in surflux and sea-ice.
+- Will need to discuss the above with Bob.
+
+16/12/03
+========
+
+*** embm.F ***
+
+- Tidied up code handling the incoming fluxes from surflux.F
+- Net heat and FW fluxes created and transferred to tqa arrays
+- Added 't' variable definition (used in diagosc as time), but still 
+  need to address time issues properly in all code modules
+- Updated code for *.airt and *.q output files.  As with similar
+  goldstein.F files, these are updated throughout a run, and rather
+  than leaving the output channel open constantly, this code opens,
+  appends data then shuts the file.  Related code can be found in
+  initialise_embm.F where the files are created then shut.
+- Furthermore, the file closure stuff that used to take place after
+  the timeloop finished in mains.F has now been completely excised
+  as the files are shut as above.
+- EMBM outputs required in other modules are setup at the end of
+  embm.F
+- Note : wind stress is fed out as four fields (two vector points
+  for u and v components).  surflux.F only needs two fields, but
+  goldstein.F needs all four.  I may have misunderstood what's
+  going on here though.
+
+*** initialise_embm.F ***
+
+- Hadn't thought about this before, but should possibly pass out
+  initial values for the arguments that are passed between the
+  various modules during the timestep of genie.f
+- Haven't done it just yet, but should bear it in mind
+- Same goes for initialise_ocean.F (and initialise_seaice.F)
+
+17/12/03
+========
+
+- Spoke with Bob about progress so far
+- Bob suggests an alternate structure in which surflux.F is part of
+  the EMBM, rather a completely separate structure as it is now.
+- Given the simplicity of the EMBM, and the assumptions about the EMBM
+  in surflux.F, this is a good idea
+- Should move surflux.F to genie-embm and alter code appropriately
+
+19/12/03
+========
+
+*** embm.cmn ***
+
+- Common blocks renamed with EMBM prefix to separate them from those
+  used in other blocks (e.g. GOLDSTEIN, etc.)
+
+*** surflux.F ***
+
+- Corrected wind stress calculations to use fields sent in by
+  embm.F
+- These calculate dztau, dztav and tau as per gseto.F previously
+- Not 100% on the units - can't find a reference to these in the
+  code, so they might not yet match up with IGCM, etc.
+- Inclusion of these calculations raises an issue ...
+- If the model's using the simple EMBM, it only needs to calculate
+  the wind stresses once, and then can just use the same values
+  again and again.  Hence the if (igcm.or.timestep=1) statement.
+- If using a complex atmosphere, e.g. IGCM, then the calculations
+  are done every time.
+- To go back to the EMBM case, if the calculations are only done
+  once, the variables associated with them (dztau, dztav, tau)
+  need to be in the common block.  Otherwise the values assigned
+  to them might get lost (I understand that this can happen with
+  some compilers/compiler options).
+
+- With regards to the above, some redundancy has crept back into
+  the code.  Originally, the EMBM and surflux were to be separate
+  routines, but they've now been brought back together.  They also
+  now share a common block.  Which makes the passing of certain
+  fields, like wind stresses, a bit redundant.  Still, leave it
+  this way for just now since GOLDSTEIN still needs said wind
+  stresses, even if surflux doesn't need to have them passed this
+  way.
+- In fact, surflux uses the same variables to store these fields
+  as the EMBM does.  Which is confusing.  Rather than rip up a
+  lot of code right now, I'm going to rename the dztau and dztav
+  in the EMBM sections of the code so that they are separate from
+  that used in surflux and GOLDSTEIN (which makes sense given that
+  the versions used in these latter routines have been non-
+  dimensionalised).  
+- *** Bob - these changes may seem a bit silly to you.  I'm making
+  them to try to keep things consistent with a completely
+  separated out structure for the model.  You may disagree, so feel 
+  free to alter back as you see fit. ***
+
+- pmeadj(i,j) has an unusual status in a split-apart model.  Up to
+  now I've ignored it, but have now introduced it at the end of
+  surflux.F where the precip/evap/runoff fluxes are prepared for
+  passing to the atmosphere and ocean.  At present it is merely
+  added to precip rather than being specified as a separate field
+  that needs to be passed.
+- Note : strictly an ocean flux - has no atmospheric component (as
+  it is a redistribution of FW between ocean basins), hence no
+  reference to the atmospheric fluxes where it is applied to the
+  ocean precip flux.
+
+- Added "flux" terms for sea-ice changes.  These are declared at
+  the head of the routine, and then defined lower down.  The old
+  variable, dtha, has been commented out wherever necessary.  The
+  two new terms are dhght_sic and darea_sic.
+- There may be an issue with sea-ice temperature.  It's passed in
+  as a diagnostic at present then adjusted by surflux.F.  It isn't
+  a state variable as such (hence not in varice) but it may not be
+  getting handled in an appropriate manner here.
+
+*** initialise_embm.F ***
+
+- Location where dztau and dztav variables setup altered so that
+  new fields us_dztau and us_dztav used instead.  These contain
+  the unscaled data.  Only involves the part of the code where
+  the data fields are read in from inputdata files.
+
+- pmeadj(i,j), as described above, has an unusual place in a split-
+  apart model.  Reintroduced now.  Initialised here (read in via
+  GOIN file as per usual) and passed via the common block to
+  surflux.F
+
+*** embm.F ***
+
+- As above.  Only involves the part of the code where these fields
+  are passed out to other routines (surflux and GOLDSTEIN).
+
+*** makefile ***
+
+- Modified to match that used to compile GOLDSTEIN code
+- As with GOLDSTEIN, needed to compile as F90 rather than F77 (as the
+  makefile originally stood, it made use of ifc, a compiler we don't
+  have here)
+- Need F90 because of the code I added to both EMBM and GOLDSTEIN
+  to set up and use timeseries output files, since my code makes use
+  of append functionality of F90
+- surflux.F added to compile objects (surflux.F doesn't call any
+  routines [*] so doesn't need any other routines added to the compile
+  objects list)
+- [*] Except tstepsic.F, but this is due to exist as a separate
+  module anyway.  Currently it is only commented out of surflux.F.
+
+*** embm.cmn ***
+
+- Going through this to eliminate unnecessary variables
+- (still not done!)
+
+07/01/04
+========
+
+- read runoff restored
+- its common block updated
+- nothing else done to it
+
+08/01/04
+========
+
+- Dan's visit
+- lots and lots sorted out
+
+- radiative forcing (seasonal) restored
+- its common block updated
+- nothing else done to it
+
+09/01/04
+========
+
+- diagosc.F altered
+- references to sea-ice removed
+- reference to lout (now a common block variable) removed
+- nothing else done to it
+
+- initialise_embm.F altered
+- sea-ice variables reintroduced for SURFLUX
+- sea-ice diagnostic variables excised
+- moved statement that closes GOIN file read-in - it now reads in
+  everything before closing!
+- reinstated 'ans' and 'lin' local variables
+- nothing else done to it
+
+- end_embm.F altered
+- removed definitions of 100 and 110 file formats
+
+- diagend_embm.f altered
+- variable 'lout' (now in common block) excised
+
+- embm.F altered
+- load of new test variables introduced (marked as such for later
+  removal)
+- added variable 'ext', removed variable 'lout'
+
+- surflux.F altered
+- ocean fluxes over land set to zero - "just in case"
+
+11/01/04
+========
+
+- surflux.F altered
+- test variables introduced (can be removed later)
+
+13/01/04
+========
+
+- initialise_embm examined
+- declaration of dt(k), etc. reintroduced
+
+14/01/04
+========
+
+- diag3.f examined
+- seems to be a problem with its calculations, causes model to fail
+  when executed - temporary solution is to stop calling it
+- error undiagnosed at this time
+- nothing else done to it
+
+- embm.F examined
+- as above, cannot understand problem with diag3.f
+
+15/01/04
+========
+
+- embm.F altered
+- needed to switch sign of precipitation being passed to tstepa/tstipa
+
+- surflux.F altered
+- variable 'istot' set to istep value
+
+16/01/04
+========
+
+- initialise_embm examined
+- introduced read in and definition of scf variable from GOLDSTEIN
+
+- surflux.F altered
+- local CO2 variable setup by incoming CO2 value
+- 
+
+20/01/04
+========
+
+- tstepa and tstipa altered
+- real*4 reference of precipitation altered
+- note : this was part of a wider witch-hunt against real*4 references
+- real*4 crept into the code via Paul's older attempt to couple the
+  IGCM with c-GOLDSTEIN
+- other routines altered to remove real*4 in GOLDSTEIN and EMBM
+
+21/01/04
+========
+
+- surflux.F altered
+- variable store_itemp introduced to help error checking of sea-ice
+  code (should be removed later)
+
+22/01/04
+========
+
+- surflux altered
+- resetting tice(i,j) with itemp(i,j) from genie.f
+- this allows sea-ice code to properly access ice temperature,
+  otherwise tice remains at the value to which is was initialised
+
+- with Jeff Blundel's assistance, worked out why there are problems
+  with some parts of the code
+- local variables in modules are sometimes used between iterations
+  and are not reset at the start of a module call
+- thus, their values are sometimes used without being reset, and since
+  their values are not maintained between iterations one sometimes
+  just gets a gibberish value
+- solution : ensure that all local variables are either a) reset prior
+  to being used (i.e. set to zero or whatever), or b) if their values
+  are needed between iterations, they should be promoted up to global
+  variables instead
+- this diagnosis may help with persistent NaNs in ocean diagnostics,
+  the problem with diag3 calls and the blow-ups I've been getting with
+  the sea-ice module
+- an alternate solution (though unsatisfactory in the long-term) is to
+  compile the code with the -static option switched on
+- this allocates each variable, global or local, a constant place in
+  memory space; thus, between iterations values are not lost, even for
+  local variables
+- however, this is really missing the point - I should ensure that
+  variables are used properly in the first place
+
+- after testing the code with this compilation option activated, the
+  ocean diagnostic NaN and sea-ice blow-ups have stopped (haven't
+  looked at diag3.f)
+
+23/01/04
+========
+
+- revisited GOLDSTEIN in the light of yesterday's developments
+- altered ocean.cmn and goldstein.F so that rate-of-change
+  calculations (previously spitting back NaNs) now use a global
+  variable, ts_store(l,i,j,k), to hold onto ts values between model
+  iterations
+
+- delving into SURFLUX for similar attempt to resolve issues
+- examining surflux.F variable by variable
+
+- imax : global
+- jmax : global
+- dztau : global, assigned at first appearance
+- scf : global
+- stressx_ocn : argument list
+- rh0sc : global
+- dsc : global
+- usc : global
+- fsc : global
+- dzz : global
+- dztav : global, assigned at first appearance
+- stressy_ocn : argument list
+- tau : global, assigned at first appearance
+- cd : global, assigned at first appearance (for some reason)
+- tv3 : local, assigned at first appearance
+- tv : local, assigned at first appearance (in if..elseif loop)
+- tv2 : loval, as tv
+- usurf : global, assigned at first appearance (local?)
+- rhoair : global
+- co2 : local assigned at first appearance
+- co2_in : argument list
+- istot : local, assigned at first appearance
+- istep : argument list
+- tice : global, but assigned to itemp (argument list) at first appearance
+- itemp : argument list
+- evap, pptn, runoff : local, zeroed at first appearance
+- *_ocn : argument list, zeroed at first appearance
+- *_atm : argument list, zeroed at first appearance
+- *_sic : argument list, zeroed at first appearance
+- qsata : global, assigned at first appearance (local?)
+- const1 : global
+- const4 : global
+- atemp : argument list
+- const5 : global
+- ashum : argument list
+- rmax : global
+- rhoao : global
+- hatmbl : global
+- rdtdim : global
+- rq : local, assigned at first appearance
+- albedo : global, assigned at first appearance (local?)
+- albcl : global
+- fxsw : global, assigned at first appearance (local?)
+- nyear : global
+- tv0, tv1 : local, assigned at first appearance
+- b0*, b1*, b2* : global
+- fxplw : global, assigned at first appearance (local?)
+- delf2x : global
+- co20 : global
+- fxlata : global, assigned at first appearance (local?)
+- rho0 : global
+- hlv : global
+- k1 : global
+- kmax : global
+* entering IF ocean _or_ sea-ice ENDIF loop
+- alw : local, assigned at first appearance
+- zeroc : local, defined by parameter statement
+- salt : local, assigned at first appearance (non-zero over land!)
+- saln0 : global
+- osaln : argument list
+- tsfreeze : global, assigned at first appearance (local?)
+- qb : global, assigned at first appearance (local?)
+- rsictscsf : global
+- ifrac : argument list
+* entering IF sea-ice ENDIF loop
+- albsic : local, assigned at first appearance (sea-ice only!)
+- fxswsic : local, assigned at first appearance
+- store_itemp : local, assigned at first appearance
+- iter : local, loop variable
+* entering DO sea-ice iteration ENDDO loop
+- itice : local, defined by parameter statement
+- ticold : local, assigned at first appearance
+- cesic : local, assigned at first appearance
+- chsic : local, assigned at first appearance
+- cfxsensic : local, assigned at first apppearance
+- cpa : global
+- qsatsic : local, assigned at first appearance
+- const2 : global
+- const3 : global
+- evapsic : global, assigned at first appearance (local?)
+- tieqn : local, assigned at first appearance
+- ihght : argument list
+- ca : global
+- emo : global
+- hls : global
+- consic : global
+- dtieq : local, assigned at first appearance
+- tol : local, defined by parameter statement
+* exiting DO sea-ice iteration ENDDO loop
+
+- the error I've been getting occurs at this point, suggesting that
+  the parameter problem should have occurred by now
+- not sure how to proceed
+- have now run model and found that without -static options the model
+  still fails in the sea-ice section, but that the GOLDSTEIN diag3.f
+  problem has been resolved
+- tried running with a greater number of allowable iterations for
+  sea-ice temperature, but the model fails exactly the same
+- trying again but with -static option restored to only the EMBM
+  makefile
+- model now fails even earlier (~100 time steps)
+- trying again but with -static option restored to only the sea-ice
+  makefile
+- model now works properly (no fail by 1000 time steps)
+- does this suggest error lies within sea-ice module?
+- trying again but with -static option restored to only GOLDSTEIN
+  makefile
+- model now fails in the traditional manner (~600 time steps)
+- trying again but with -static option restored to only GENIE
+  makefile
+- model now fails in the traditional manner (~600 time steps)
+- summary :
+	GENIE		~600
+	GOLDSTEIN	~600
+	EMBM		~100
+	SEA-ICE		SUCCESS!
+- suggests that the SEA-ICE module is probably to blame ...
+- which, given that it's sea-ice that causes the code to fail, is
+  perhaps not really all that much of a surprise!
+- further, since error occurs after a successful period of simulation,
+  the subroutine seaice.F is suspected
+
+- editting seaice.F
+- changed reference to ice area to ice frac
+- repeat variables exercise from earlier
+
+- i : local, loop variable
+- imax : global
+- j : local, loop variable
+- jmax : global
+- tice : global
+- temp_sic : argument list
+- dtha : global
+- dhght_sic : argument list
+- dfrac_sic : argument list
+- u : global
+- ustar_ocn : argument list
+- vstar_ocn : argument list
+- fw_delta : local, zeroed at first appearance
+- fx_delta : local, zeroed at first appearance
+
+* tstepsic called
+- j : local, assigned at first appearance
+- i : local, loop variable
+- imax : global
+- l : local, loop variable
+- fs : local, assigned at first appearance
+- jmax : global
+- kmax : global
+- k1 : global
+- fw : local, assigned at first appearance
+- u : global
+- rc : global
+- varice : global
+- rdphi : global
+- diffsic : global 
+- fwsave : local, assigned at first appearance
+- fe : local, assigned at first appearance
+- fn : local, assigned at first appearance
+- rds : global
+- dt : global
+- tsc : global
+- dtha : global
+* return from tstepsic call
+
+- kmax : global
+- k1 : global
+- rhoio : global
+- varice : global
+- hmin : global 
+- rhoice : global 
+- hlf : global
+- rdtdim : global
+- l : local, loop variable
+- t : local, assigned at first appearance
+- istep : argument list
+- dt : global
+- t0 : global
+- iwstp : global
+- ext : local, assigned at first appearance
+- iw : global
+- outdir_name : global
+- lout : global
+- itv : local, assigned at first appearance
+- nyear : global
+- ianav : global
+- iout : local, assigned at first appearance
+- npstp : global
+
+- again, couldn't find anything in this code to suggest an error
+- setting to zero in tstepsic altered to 0. rather than 0

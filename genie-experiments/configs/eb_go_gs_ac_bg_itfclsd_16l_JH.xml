@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job author="config2xml.py - automatic conversion of ASCII text config file">
+	<vars>
+		<var name="EXPID">eb_go_gs_ac_bg_itfclsd_16l_JH</var>
+	</vars>
+	<config>
+		<model name="atchem"/>
+		<model name="goldstein"/>
+		<model name="goldsteinseaice"/>
+		<model name="biogem"/>
+		<model name="embm"/>
+	</config>
+	<parameters>
+		<control>
+			<param name="write_flag_atm">.false.</param>
+			<param name="ksic_loop">5</param>
+			<param name="koverall_total">100000</param>
+			<param name="genie_timestep">63115.2</param>
+			<param name="write_flag_sic">.false.</param>
+			<param name="kocn_loop">5</param>
+			<param name="lgraphics">.false.</param>
+			<param name="par_gem_indir_name">./input/genie-main/data/input</param>
+ 			<paramArray name="atm_select">
+                                <param index="3">.true.</param>
+                                <param index="4">.true.</param>
+                                <param index="5">.true.</param>
+                                <param index="6">.true.</param>
+                                <param index="18">.true.</param>
+                                <param index="19">.true.</param>
+			</paramArray>
+ 			<paramArray name="ocn_select">
+                                <param index="3">.true.</param>
+                                <param index="4">.true.</param>
+                                <param index="5">.true.</param>
+                               <param index="8">.true.</param>
+                                <param index="10">.true.</param>
+                                <param index="12">.true.</param>
+                                <param index="15">.true.</param>
+                                <param index="16">.true.</param>
+                                <param index="17">.true.</param>
+                                <param index="20">.true.</param>
+                                <param index="35">.true.</param>
+                                <param index="45">.true.</param>
+                                <param index="46">.true.</param>
+                                <param index="50">.true.</param>
+			</paramArray>
+ 			<paramArray name="sed_select">
+                                <param index="3">.true.</param>
+                                <param index="4">.true.</param>
+                                <param index="5">.true.</param>
+                                <param index="8">.true.</param>
+                                <param index="14">.true.</param>
+                                <param index="15">.true.</param>
+                                <param index="16">.true.</param>
+                                <param index="22">.true.</param>
+                                <param index="32">.true.</param>
+                                <param index="33">.true.</param>
+                                <param index="34">.true.</param>
+                                <param index="36">.true.</param>
+			</paramArray>
+		</control>
+		<model name="atchem">
+			<param name="par_indir_name"><varref>RUNTIME_OUTDIR</varref><sep/>input<sep/>genie-atchem<sep/>data<sep/>input</param>
+            		<param name="par_rstdir_name"><varref>RUNTIME_OUTDIR</varref><sep/>input<sep/>genie-atchem<sep/>data<sep/>input</param>
+			<param name="ctrl_continuing">f</param>
+ 			<paramArray name="atm_init">
+                                <param index="3">278.0e-06</param>
+                                <param index="4">-6.5</param>
+                                <param index="5">0</param>
+                                <param index="6">0.2095</param>
+                                <param index="18">0</param>
+                                <param index="19">0</param>
+			</paramArray>
+		</model>
+		<model name="goldstein">
+			<param name="indir_name">.<sep/>input<sep/>genie-goldstein<sep/>data<sep/>input</param>
+			<param name="scf">1.531013488769531300</param>
+			<param name="temp1">0.0</param>
+			<param name="dosc">.true.</param>
+			<param name="tdatafile">worjh2.k1_T.silo</param>
+			<param name="sdatafile">worjh2.k1_S.silo</param>
+			<param name="rel">0.9000000</param>
+			<param name="world">worjh2</param>
+			<param name="temp0">0.0</param>
+			<param name="adrag">2.710164785385131800</param>
+			<paramArray name="diff">
+				<param index="2">0.000025363247914356</param>
+				<param index="1">1494.438354492187500000</param>
+			</paramArray>
+		</model>
+		<model name="goldsteinseaice">
+			<param name="dosc">.true.</param>
+			 <param name="indir_name">.<sep/>input<sep/>genie-goldsteinseaice<sep/>data<sep/>input</param>
+			<param name="world">worjh2</param>
+			<param name="diffsic">3573.718017578125000000</param>
+		</model>
+		<model name="biogem">
+			<param name="par_indir_name"><varref>RUNTIME_OUTDIR</varref><sep/>input<sep/>genie-biogem<sep/>data<sep/>input</param>
+            		<param name="par_rstdir_name"><varref>RUNTIME_OUTDIR</varref><sep/>input<sep/>genie-biogem<sep/>data<sep/>input</param>
+            		<param name="par_fordir_name"><varref>RUNTIME_OUTDIR</varref><sep/>input<sep/>genie-biogem<sep/>data<sep/>input<sep/>worjh2_preindustrial</param>
+
+                        <param name="ctrl_force_sed_closedsystem">.true.</param>
+                        <param name="ctrl_continuing">f</param>
+                        <param name="par_misc_t_runtime">1001</param>
+                        <param name="ctrl_audit">.false.</param>
+                        <param name="ctrl_data_save_sig_ascii">.false.</param>
+
+                        <param name="par_bio_k0_PO4" exposed="true">8.9876e-006</param>
+                        <param name="par_bio_c0_PO4">8.9369e-007</param>
+                        <param name="par_bio_red_DOMfrac">0.66</param>
+			<param name="par_bio_red_POC_CaCO3">0.0485</param>
+                        <param name="par_bio_red_POC_CaCO3_pP">0.7440</param>
+                        <param name="par_bio_remin_DOMlifetime">0.5</param>
+                        <param name="par_bio_remin_POC_frac2">0.055</param>
+                        <param name="par_bio_remin_POC_eL1">589.9451</param>
+                        <param name="par_bio_remin_POC_eL2">1000000.0</param>
+                        <param name="par_bio_remin_CaCO3_frac2">0.4</param>
+                        <param name="par_bio_remin_CaCO3_eL1">1.8905e+003</param>
+                        <param name="par_bio_remin_CaCO3_eL2">1000000.0</param>
+                        
+ 			<paramArray name="ocn_init">
+                                <param index="3">2.244E-03</param>
+                                <param index="4">0.4</param>
+                                <param index="5">0.0</param>
+                                <param index="8">2.159e-06</param>
+                                <param index="10">1.696e-04</param>
+                                <param index="12">2.363e-03</param>
+                                <param index="15">0.0</param>
+                                <param index="16">0.0</param>
+                                <param index="17">0.0</param>
+                                <param index="20">0.0</param>
+                                <param index="35">1.025e-02</param>
+                                <param index="45">0.0</param>
+                                <param index="46">0.0</param>
+                                <param index="50">5.282e-02</param>
+			</paramArray>
+		</model>
+		<model name="embm">
+			<param name="dosc">.true.</param>
+			 <param name="indir_name">.<sep/>input<sep/>genie-embm<sep/>data<sep/>input</param>
+			<param name="scf">1.531013488769531300</param>
+			<param name="difflin">0.090003050863742828</param>
+			<param name="diffwid">1.410347938537597700</param>
+			<!-- <param name="diffa_scl">0.25</param>
+			<param name="diffa_len">3</param> -->
+			<param name="world">worjh2</param>
+			<param name="scl_fwf">0.726862013339996340</param>
+			<paramArray name="diffamp">
+				<param index="2">1173269.250000000000000000</param>
+				<param index="1">5204945.000000000000000000</param>
+			</paramArray>
+			<paramArray name="betaz">
+				<param index="1">0.001037851092405617</param>
+				<param index="2">0.164652019739151000</param>
+			</paramArray>
+			<paramArray name="betam">
+				<param index="1">0.0000000E+00</param>
+				<param index="2">0.164652019739151000</param>
+			</paramArray>
+		</model>
+	</parameters>
+	<build>
+		<make-arg name="IGCMATMOSDP">TRUE</make-arg>
+		<make-arg name="GENIEDP">TRUE</make-arg>
+		<macro handle="GENIENYOPTS" status="defined">
+			<identifier>GENIENY</identifier>
+			<replacement>36</replacement>
+		</macro>
+
+ 		<macro handle="GOLDSTEINNTRACSOPTS" status="defined">
+        		<identifier>GOLDSTEINNTRACS</identifier>
+        		<replacement>16</replacement>
+      		</macro>
+		<macro handle="GOLDSTEINNLATSOPTS" status="defined">
+			<identifier>GOLDSTEINNLATS</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GENIENLOPTS" status="defined">
+			<identifier>-DGENIENL</identifier>
+			<replacement>1</replacement>
+		</macro>
+		<macro handle="GENIENXOPTS" status="defined">
+			<identifier>GENIENX</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLONSOPTS" status="defined">
+			<identifier>GOLDSTEINNLONS</identifier>
+			<replacement>36</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLEVSOPTS" status="defined">
+			<identifier>GOLDSTEINNLEVS</identifier>
+			<replacement>16</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNISLESOPTS" status="defined">
+			<identifier>GOLDSTEINNISLES</identifier>
+			<replacement>1</replacement>
+		</macro>
+	</build>
+	<testing>
+	</testing>
+</job>

@@ -1,0 +1,7 @@
+Configuration files for the different experiments are:
+
+Modern
+cgenie_eb_go_gs_ac_bg_itfclsd_16l_JH_BASEFe_Ncycle / preind_NFeT_exp12_Mu4 (N, P and Fe nutrient limitations)
+
+Cenomanian-Turonian
+cgenie_eb_go_gs_ac_bg_foam_CT_36x36x16_Ncycle / CT93k_NT_1P1C (N and P nutrient limitations - for REFERENCE and SENSITIVITY experiments)

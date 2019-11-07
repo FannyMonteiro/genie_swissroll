@@ -1,0 +1,81 @@
+#!/usr/bin/ksh
+
+# *****************************************
+
+# This script makes a monthly climatology file form igcm output,
+#   for use with the genie analysis package (see Dan for details).
+
+
+# *****************************************
+# THSE LINES TO BE EDITED / INPUT .....
+expt=$1
+yearstart=2001
+yearend=2009
+datadir='/home/ggdjl/genie_output/'$expt'/igcm'
+# *****************************************
+
+
+# *****************************************
+# This bit just makes a list, $yearlist, which contains the
+#   years over which the analysis is carried out, e.g.
+#   yearlist = 2001 2002 2003 2004 2005
+yearlist=''
+\rm $datadir'/'*avg*
+yearendplus=$(($yearend + 1))
+year=$yearstart
+until [[ $year -eq $yearendplus ]] ; do
+yearlist=$yearlist' '$year
+year=$(($year+1))
+done
+echo $yearlist
+# *****************************************
+
+
+# *****************************************
+# This bit averages all the jans, febs, etc in 12 files
+#   called, e.g. igcm_cl_jan_avg.nc
+for month in 01 02 03 04 05 06 07 08 09 10 11 12; do
+filelist=''
+for year in $yearlist; do
+filelist=$filelist' '$(ls $datadir'/igcm_cl_'$year'_'$month'.nc')
+done
+echo $filelist
+ncea -O $filelist $datadir'/igcm_cl_'$month'_avg.nc' 
+done
+# *****************************************
+
+
+# *****************************************
+# Now these monthly averages are averaged again to make seasonal 
+#   and annual mean files
+ncea -O $datadir'/igcm_cl_'{03,04,05}'_avg.nc' $datadir/igcm_cl_mam_avg.nc
+ncea -O $datadir'/igcm_cl_'{06,07,08}'_avg.nc' $datadir/igcm_cl_jja_avg.nc
+ncea -O $datadir'/igcm_cl_'{09,10,11}'_avg.nc' $datadir/igcm_cl_son_avg.nc
+ncea -O $datadir'/igcm_cl_'{12,01,02}'_avg.nc' $datadir/igcm_cl_djf_avg.nc
+ncea -O $datadir'/igcm_cl_'??'_avg.nc' $datadir/igcm_cl_ann_avg.nc
+# *****************************************
+
+
+# *****************************************
+# This bit jus changes some variable names.
+for season in ann djf mam jja son ; do
+ncap -O -s "precip=convrain+lscalerain" $datadir'/igcm_cl_'$season'_avg.nc' $datadir'/igcm_cl_'$season'_avg.nc' 
+
+ncap -O -s "cld=cloudl+cloudm+cloudh+cloudshc+cloudc" $datadir'/igcm_cl_'$season'_avg.nc' $datadir'/igcm_cl_'$season'_avg.nc' 
+ncap -O -s "cloud_step=1-ceil((abs(cld-1)-cld+1)/2.0)" $datadir'/igcm_cl_'$season'_avg.nc' $datadir'/igcm_cl_'$season'_avg.nc'
+ncap -O -s "cloud=cld-(cloud_step*(cld-1))" $datadir'/igcm_cl_'$season'_avg.nc' $datadir'/igcm_cl_'$season'_avg.nc'
+done
+# *****************************************
+
+fi
+
+
+
+
+
+
+
+
+
+
+

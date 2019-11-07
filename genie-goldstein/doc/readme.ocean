@@ -1,0 +1,384 @@
+This file contains chronological code development notes starting from 
+the first global ocean version and continuing until the first coupled 
+version, described in another file; readme.cgv1
+
+Small World version of goldstein, original simple boundary condition
+used. Includes extra condition in velc to allow 1pt-wide strait 
+running E-W only. Could easily generalise to allow any width strait
+anywhere in domain. Original velc.f code used including all if stmt's
+and divisions. Removal of these in other versions caused speed up of
+around 100%. Inflow periodicity assumes a re-entrant channel from
+j=1,...,jh at i=0,imax. Barotropic flow not calculated, so no wind
+or topography possible in current version. Both possible in principle.
+
+8/4/00
+velc now allows for straits running E-W of 1 or 2 points, by ignoring 
+N-S grad p (could do better). 
+Can now run at 2x resolution ie 36x36 using world2.k1. Need to change
+lines in mains.f to get Atlantic+Pacific Psi_M
+
+File Size opsip 14x9 or 27x9
+          opsia 16x9 or 31x9
+
+10/4/00
+Note that haven't got all the easy speeding up fixes that are in fortbc
+version into this version yet, minimising ifs and division.
+Removing division by h would also help with zero divide problems.
+
+Changed to allow for wind, ACC transport = hof*jh and topography.
+Needed various stuff from 'holes' version + allow for points where
+no Psi calc, or no p calc, in stream.f (by changing getp, getj in 
+gset.f), in invert.f and in hole.f. Initialise and output Psi not gb.
+
+Changed mk calc using wet point indicator to largest of surrounding 
+wet point k1's. CAN'T HAVE k1=kmax as this would give backward do
+loops in stream with the split of Jbar calc using mk.
+Changed to calc ub only if h>0 to avoid zero division.
+
+11/4/00
+Flat bottom calc updated
+
+19/4/00
+1. repeated runs enabled by changing lines in mains.f marked ``repeated 
+runs'' need 1 single run to create i.c. then separate forward and
+backward jobs for hysteresis runs
+2. corrected normalisations, see general notes below
+3. replaced most (not h) divisions by reciprocals in velc and tste2
+resulted in 41% speed-up. (still 1/h to do and w calc improving)
+
+General Notes on code:
+
+Barotropic flow through boundaries ie ACC only changes rhs of Psi eqn
+hence can call hole.f after inversion of Psi equation matrix in invert.f
+
+ntot=number of wet T,S points
+intot=number of wet dT/dz points
+iwets=number of ocean surface points
+
+ips,ipf,ias,iaf,isf = start and finish of Pacific, Atlantic etc
+
+11/5/00
+Error in stream corrected; was calculating bp at dry points and
+storing randomly. Now mk=0 if dry.
+
+6/2/1
+Islands, incl Antarctica, for given tau, Psi is determined on the bdy.
+Easiest solution is to calc error given homogeneous zero boundary 
+conditions then add c*Ub where Ub is flow due to non-zero b.c. on 
+Psi only and c=(error for homog Jbar+wind)/(error for non-zero b.c.)
+For N islands have N values of c and Ub and N^2 errors, solve 
+simultaneous linear equation.
+
+8/2/1
+periodicity error corrected; rho periodicity
+and conv call in wrong order, should have very small effect on all
+time-dep't solutions of legobox only.
+
+Also improved wind calculation which would have failed with non-zero 
+wind in the interior.
+
+Also removed jh entirely in favour of neater periodicity in i
+
+Makefile tidied 
+
+Note on direct linear inversion of Psi equation ; gap(k,l) * X(l) = gb(k)
+solution X is also written to gb. Banded structure is used to reduce
+size of matrix gap from (n*m)^2 to (n*m)*(2*n+3). Ordering works as follows.
+Set n=imax and m=jmax+1 and solve on i=1,imax, j=0,jmax+1.
+At (i,j), we have k=i + j*n, then l=1 refers to (i-1,j-1), l=2; (i,j-1),
+l=3, (i+1,j-1) then l=n+1; (i-1,j) etc and l=2n+1; (i-1,j+1) etc. 
+Periodicity requires to refer to points outside domain at i=0. 
+Psi(0,j)=Psi(imax,j) thus eg l=n+1 becomes the last Psi point in the row, 
+labelled l=2*n+1. See invert.f and sketch a diagram.
+
+15/2/2
+Error in diagnostic output of psi corrected; psi file now gives complete
+solution including correction due to island flow. 
+2-island version including code to calculate the flows around islands,
+ie through straits, by calculating certain path integrals around the islands.
+
+Assumes there are 'isles' islands (isles+1 landmasses) with position and 
+coastlines read from input files. isles=1 or 2 . If isles=2, the precompiler
+option -Ddisle2 must be set (this is checked by the code). With isles=1 the
+answers are exactly the same as v2/source except for small differences caused
+by the use of a more general and less accurate velocity code (see below). The
+old v2 code is technically inconsistent when there is topography in the ACC. 
+
+Extra code is included in 
+a new subroutine 'island' to calculate path integrals around the islands. 
+Two extra input files are now required in
+addition to the k1 topography file. Hence now have eg worli2.k1, worli2.psiles
+and worli2.paths . The second of these defines the location of islands on the
+psi grid. It is produced semi automatically (ie write out the wet/dry points 
+in gset then label the dry points according to which island they are on 
+manually). These two files MUST be consistent with each other but an automatic
+check would be very difficult to write. The 3rd file worli2.psiles contains
+the paths around the islands, consisting of a list of velocity points as triples
+l i j, where l=+-1 or +-2 indicating that the path goes in the +ve or -ve u or
+v dirn (as l=1 or 2) at the point i,j. The path lengths are given at the top
+of the file. The order of points on the path is irrelevant, and the paths only
+have to enclose the islands, and need not exactly follow the coast but the 
+paths (probably) have to be in the same order as the islands they correspond to 
+in worli2.psiles. Again NO CHECK is run that the coastlines and landmasses
+match up, suggest do a plot to verify at run time. Two paths integrals are
+needed for 2 islands, the path integral around the original landmass or '0th'
+island is a redundant constraint which can be used to check the consistency
+of the numerical scheme (see below). Extra paths are included in 
+worli2.paths.test for this purpose. It is possible to choose the extra path
+such that the integral along it is certain to be zero but in general it will 
+not be.
+
+Changes and notes:
+9/4/02 mk, bp and sbp need extension to imax+1 and periodic b.c.
+
+15/4/02
+For island integral to be exactly related to the barotropic streamfunction,
+psi, need a different form for the psi equation s.t. Coriolis term is an exact
+curl. This requires an extension of the stencil for the psi equation and
+invalidates the tridagonal solution method in the periodic domain. If the domain
+is closed invert.curl.f , which contain the relevant code, can be used, also
+need to change commented lines in island.f and its call from mains.
+In this case, after solution of the island problem for the given
+paths around both islands, the path integral around any other closed path
+including any or all landmasses should also be zero to machine error. 
+With the standard versions of mains and curl such other paths integrals can 
+only ever be 'small', and may not even be << 1. 
+
+Note Peter Killworth says 
+that the extended 9-point stencil is formally unstable (in case of full 
+equations?), so possible reason to avoid this method in general.
+
+Compatibility also requires the inclusion of the coriolis term in the path
+integral. This term can be ignored in theory if the path exactly follows the
+island edge but is probably always order(1) cf the other terms at very coarse
+resolution. Including the term has the advantage that the path is not 
+assumed to be along a psi 
+contour, ie exactly along the island edge, which it could never be anyway, 
+but requires extension of ub and ubloc in var, mains, ubarsolv and gset.
+NB Answers different at O(1), so Coriolis term is essential. 
+
+The unused constraint 
+around the 0th island can be exactly zero if it's chosen as a sum of the other 
+paths, but this is not unique unless the psi equation is made exactly
+compatible as described above.
+
+Different version of velc incorporated to allow arbitrary topography, copied
+from highres version, requires extended u(1) and u(2)
+
+Speed of this version, is cpu seconds for a standard test I found 
+13.2, cf 10.4 for flat case in version 2 and 12.7 for worall.k1 non-flat case.
+ie about 5 percent slower than single island standard v2 code. 
+The new version is, if anything, around 1% faster if isles=1.
+
+Setting isles=1 (and compiling without -Ddisle2) with a topograhy including 
+more than one island means that the barotropic circulation around the 2nd 
+island is simply ignored.
+
+Variable drag incorporated following Jeff/Bob, changes:
+a becomes drag(2,i,j), with basic value adrag (local variable) set in routine
+drgset.f. rtv and rtv3 in velc become arrays. No 'localisation' 
+errors are introduced by the definition of these values.
+
+Bob's world realistic topog 36x36 also included in this directory. The path data
+ignore the 2nd island (Greenland) so isles=1 is appropriate. 
+
+b.c's on k1 are now enforced (as in highres) at i=0 and imax+1 (not N and S).
+
+13/5/2
+1/h replaced by rh in: var,gset,invert,island,jbar,ubarsolv,velc,wind
+this fixes a possible NaN resulting from previously undefined ubarloc (not sure
+why this didn't cause problems in v2) and gives a speedup of about 7%, exactly
+same answers checked in worli2 and worall topographies. 
+
+13/5/2
+Note that the notation for tau and dztau is potentially confusing although not 
+in error. tau(1) is only needed at u points and tau(2) at v points but z-derivs
+are needed for both components at both points.
+23/5/2
+periodic b.c. error in drgset corrected
+7/6/2
+uninitialised variable causing errors when optimised corrected in ubarsolv.f 
+version 3 created starting from v2_1 at 13/5/2, see readme.v2_1
+
+This version now has switchable implicit timestep, real winds and topography and
+T and S. Will be used (?) as basis for isoneutral version.
+
+17/5/2 Conclusions of tests of 'real' winds and topography. 
+Topography derived as described in highres with averaging onto sin lat grid 
+then 5 degree smoothing of etopo5 data and some ad hoc changes to straits and
+seas (worbob.k1). Winds derived by interpolation of SOC wind data (Bob) or by 
+averaging of SOC 1-degree data onto sin lat grid using lalo2silo.f (NRE).
+
+Results;
+1. There appears to be a fundamental lack of a wind-driven barotropic ACC with 
+this resolution and treatment of data, but density-driven ACC compensates at
+steady state.
+2. Bob's topography worbob.k1 works okay with cosine winds
+3. SOC winds interpolated or averaged give barotropic flows around NZ which
+dominate Psi by up to an o.o.m. for all but some random choices of parameters.
+4. Flattening NZ to k1.le.3 (previously k1.le.5 ie already submerged) gives
+reasonable behaviour as long as minimum drag is at least 2/(2.5 days).
+5. kmxdrg=kmax slightly better than kmax/2 as doesn't damp flow in straits and
+seas, but doesn't significantly change ACC.
+6. Variable drag only slightly better than constant, up to 2x max Psi values
+can be obtained by 1/2 ing min value of drag in interior.
+7. Still get realistic ~40 Sv main gyres only by multiplying wind stresses by
+fudge factor of 5, no clear idea why this is needed. 
+8. Averaged and interpolated winds not much different, hence little 
+justification for thinking that Fourier filtering of winds or topog would help
+stability significantly. Smooth winds irrelevant for coupled model anyway?
+
+21/5/2 veldif.f included with this 'release'; a useful program to compare output
+files.
+22/5/2 ts bc must be set before first tstep call for implicit code.
+22/5/2 lmax.gt.2 allowed
+23/5/2 periodic b.c. errors in drgset and tstii4 corrected
+23/5/2 tests verify exact agreement between old explicit code (default) tste2.f
+and old explicit code obtained by changing 
+parameters in implicit timestep code tstii4.f. 
+Both versions, and implicit code verify exact (machine precision) periodic 
+b.c. as tested by rotating grid (4 lines in gset).
+Implicit and explicit versions also both verify exact continuation from 
+std output files.
+27/5/2 ocean basins are now defined for purposes of diag2 output and opsia, 
+opsip output, using arrays ias(j), iaf(j), ips(j, ipf(j), defining start and
+finish of Pacific and Atlantic basins at each latitude j, and jsf for finish
+of southern ocean. This is a rough separation and assumes that neither basin
+crosses the boundary at i=0. Arctic, Indian and Med. come into the 'rest of 
+world' category. Arctic defined as j=jmax plus bits of Atlantic and Pacific 
+not counted by the simple algorithm used, namely Labrador sea and i=11,12 at
+j=35 in the Pacific. Note also that allowing flow around Greenland (currently
+assumed zero) would invalidate the Psi values at j=35 in the Atlantic as there
+could be net inflow there.
+28/5/2 JGS/NRE modified implicit step altered to include John's implicitness
+parameter alpha=cimp, requires extension of ts1 in all directions in gset mains
+and tstii4. If cimp.ne.1, not fully implicit. If cimp=0, with appropriate
+changes to ups weighting and cofc=0, get identical answers to old explicit code
+whatever the values of nii and 'correct' as subsequent iterations and corrector
+step simply keep resetting ts to the explicit prediction.
+3/6/2
+Redundant pram.cmn removed.
+6/6/2
+array initialisations extended to avoid possible problems in tstep
+note for lmax.gt.2 upper b.c. in implicit timestep assumed to be same as for
+S ie not treated implicitly.
+7/6/2
+better T extrema diags in diag.f
+Isoneutral version developed from v3, using code from previous v3source thus
+incorporating isoneutral and implicit options.
+
+(Isoneutral calculation should be more realistic, but conceptually and 
+computationally more complicated, and slower.)
+
+Default option calls explicit timestep. Isoneutral option
+-Ddiso may requires shorter timestep or implicit timestep option
+because large vertical fluxes are generated.
+
+The maximum vertical flux is limited in regions where the squared slope
+exceeds ssmax, currently set in the timestep tstiii.F to 10, equivalent to
+a dimensional slope of around 1/300. The maximum diffusion number D is 
+calculated along with the number of flux-limited points. D<1 would be 
+necessary for the stability of an explicit scheme. The extra vertical flux
+is proportional to the horizontal diffusivity. So reducing diff(1) may 
+increase stability.
+
+Linearisation inherent in implicit timestep scheme means that fluxes are
+not exactly isoneutral except at steady state unless the linear coefficients 
+are recalculated before the corrector part of the timestep. This should make 
+the scheme more realistic but may or may not improve its numerical properties.
+Without recalculation the timestep code can be simpler (a version is kept in
+tstiis.F). The recalculation slows the code by about 10%, the resulting 
+increase in code complexity has only a very small effect on speed in itself.
+
+co.f call changed from 'call co' to 'call co(ts)' to allow flexibility in 
+choice of ts array which is subject to convection; helpful for recalculation of 
+coefficients. No slower in an approximate test.
+
+Given the very large relaxation of the velocity it does not seem relevant to 
+call velc again although this would be possible.
+
+Speed test: decreasing nii from 8 to 4 decreases cpu cost by one third. Usually
+has only very small effect on results
+
+14/6/2
+After a little experiment for one particular choice of forcing, my 'best
+choice' parameters, are horiz. diff 3000 m**2/s, dt=0.025 (5 weeks),
+velocity relaxation rel=0.9 corresponding to a relaxation 
+timescale of about dt/(1-rel) or about 1 year, max dimensional isopycnal 
+slope before flux is artificially
+limited about 1/300, corresponding to setting ssmax=10 in tstiii.F.
+This runs on our fastest workstations
+at 150 yrs/minute at 36x36x8 box 'resolution'. That's 200kyrs per day.
+(NO longer true see below).
+
+If you need to go faster than that you have 2 options; either run in
+non-isopycnal 'level-model' mode, at large horiz. diffusivity = 12000
+m**2/s, dt=20 weeks, rel=0.99 => velocity relaxation timescale =
+100 x dt=40 years.
+This runs at about 800 years a minute, 1 Myr/day; alternatively you could 
+run at lower horizontal resolution, eg the original legobox, but retain
+isoneutral tracer mixing. I haven't tried this yet but you should easily
+be able to go at a similar speed.
+
+goout is the output from a standard run from goin
+
+24/6/2 domain extended to poles. Changes required in gset, although only cv
+and cv2 are referred to at poles and nothing referred to beyond poles.
+
+Cn calculation corrected to include cos factors, new values about half as big.
+
+25/6/2 Diagnostic BUG in .cost convection measurement output; if you call co
+twice per step, you need to divide by twice the number of timesteps to get the
+average convection values.
+
+25/6/2 Error; not going to poles, ie th0=-70 degrees etc 
+
+26/6/2 Closer look at convergence shows oscillations at long times for 
+above suggested values. Oscillation period is exactly the velocity relaxation
+timescale. Only diff = 12000 SI gives acceptable results at
+dt=0.025 
+
+Band of large drag at equator widened from from 3 to 7 points. 
+Later made variable width 1+ 2*jeb
+
+27/6/2 Error in isoneutral coeffs corrected, improves stability near poles.
+Explicit (nii=1 etc) option now exactly same speed as implicit. 
+
+10/7/2 First Levitus-forced runs. Levitus data created from annually averaged 
+Levitus temperature and salinity data by interpolation program laz2siz.f.
+This defines a value at every point, wet or dry, on the goldstein 'sin(lat)'
+grid. wet/dry point distinction is then left undefined until the data are 
+read in during gset. Trilinear interpolation is used for all points which are
+surrounded by wet Levitus points. Otherwise, the value is set to that at a 
+nearby horizontal location, but always interpolating in z. If there are no 
+suitable points in the surrounding cell, the program searches along the 
+horizontal axes.
+
+Differences between worba1.k1 and Levitus grids mean that many points are set
+by 'near neighbour' interpolation.
+
+Relaxation b.c. used for S as well as T by changing 'reset  bc' lines in 
+tstiii.F and fc(2) and flux definition in gset.f
+
+10/7/2 matlab plotting programs improved a bit and output files modified to be
+directly readable by matlab load or unimap, using % comments.
+
+10/7/2 ***.flux output file changed to contain surface salinity flux
+Error in average T,S diagnostics corrected
+
+24/7/2 Corrected topography file introduced worbob5000.k1 No major changes
+to stability. 
+Further tests varying drag parameters suggest drgf=3 (or 4 for flatter topog)
+is possible, permitting 2 (or 4) x smaller minimum drag. This allows similar 
+max psi values in wind gyres for windscale 
+fudge factor=1 instead of 2, ie no artifical amplification of wind. 
+kmaxdrg=kmax/2 is needed, but jeb=1 or 2 give similar results.
+
+5/8/2 Upper b.c. appears to be consistent with linear interpolation of
+variable condition if only ts is updated outside tstiii.F
+
+29/8/2 error in ubarsolv.f attempting to set ub(2,i,jmax) in a j loop 
+probably dates from extension to poles (24/6/2).
+explicit timestep source code file updated to include isoneutral and upstream
+weighting, hence now exactly same as implicit code with explicit options but
+faster by about 15% due to lack of unecessary code.

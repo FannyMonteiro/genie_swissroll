@@ -1,0 +1,10 @@
+OUTROOT=/home/armillaire/cgenie.swissroll_Nitri_output
+CODEDIR=/home/armillaire/cgenie.swissroll_Nitri
+RUNTIME_ROOT=../../cgenie.swissroll_Nitri
+RUNTIME_OUTDIR=.
+EXPID=genie_eb_go_gs_ac_bg
+FIXEDATMOSFILE=data_fixedatmos
+GLIMMERFILE=data_glimmer.config
+igcm_module=genie-igcm
+BFGROOT=EMPTY
+MODULE_NAMES='embm goldstein goldsteinseaice biogem atchem '

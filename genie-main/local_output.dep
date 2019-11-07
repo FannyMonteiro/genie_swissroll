@@ -1,0 +1,1 @@
+local_output.o local_output.dep : local_output.f90 
